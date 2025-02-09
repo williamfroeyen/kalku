@@ -13,13 +13,14 @@ function updateResult() {
     if (!isNaN(input1Value) && !isNaN(input2Value)) {
         outputValue = input1Value/(1 - (input2Value / 100))
         outputValue = Math.round((outputValue + Number.EPSILON)*1000)/1000;
-    }
+        outputValueLength = (outputValue + '').replace('.', '').length;
 
-    outputValueLength = (outputValue + '').replace('.', '').length;
-
-    if (outputValueLength > 14) {
-        outputTextElement.textContent="For mange tall";
+        if (outputValueLength > 12) {
+            outputTextElement.textContent="For mange tall";
+        } else {
+            outputTextElement.textContent=`Resultat: ${outputValue}`;
+        }
     } else {
-        outputTextElement.textContent=`Resultat: ${outputValue}`;
+        outputTextElement.textContent="Resultat: ";
     }
 };

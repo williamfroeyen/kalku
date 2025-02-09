@@ -18,22 +18,22 @@ header {
     padding: 0px 100px;
 }
 
-menu ul {
+menu {
     padding: 23px;
 }
 
-menu ul li {
+menu li {
     display: inline-block;
     margin-right: 50px;
 }
 
-menu ul li a {
+menu li a {
     text-decoration: None;
     color: #f1f1f1;
     font-size: 18px;
 }
 
-menu ul li a:hover {
+menu li a:hover {
     color: #75ffed;
 }
 
@@ -90,6 +90,10 @@ ul {
     color: #75ffed;
 }
 
+.paragraph {
+    padding-bottom: 15px;
+}
+
 footer {
     position: relative;
     height: 60px;
@@ -97,16 +101,11 @@ footer {
     background-color: rgb(0, 75, 68);
     font-size: 18px;
     text-align: center;
-}
-
-footer {
     padding: 20px;
 }
 
 footer a {
     position: absolute;
-    right: 10%;
-    top: 33%;
     text-decoration: none;
     color: #f1f1f1;
 }
@@ -115,13 +114,19 @@ footer a:hover {
     color: #75ffed;
 }
 
+footer #footerFirstElement {
+    left: 10%;
+    top: 33%;
+}
+
+footer #footerLastElement {
+    right: 10%;
+    top: 33%;
+}
+
 @media only screen and (max-width: 1000px) {
     .categories {
         grid-template-columns: 1fr 1fr;
-    }
-    footer {
-        text-align: left;
-        padding-left: 10%;
     }
     header {
         padding: 0px 50px;
@@ -136,7 +141,7 @@ footer a:hover {
     #home-showcase h1 {
         font-size: 38px;
     }
-    menu ul {
+    menu {
         padding: 20px;
     }
 }
@@ -152,9 +157,6 @@ footer a:hover {
     header {
         padding: 0px 10px;
     }
-}
-
-@media only screen and (max-width: 550px) {
     footer {
         text-align: center;
         height: 90px;
@@ -163,18 +165,29 @@ footer a:hover {
     footer p {
         padding: 10px;
     }
-    footer a {
+    footer #footerFirstElement {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-right: 10px;
+    }
+
+    footer #footerLastElement {
         position: relative;
         top: 0;
         right: 0;
+        margin-left: 10px;
     }
+}
+
+@media only screen and (max-width: 550px) {
     .main-content {
         padding: 30px 20px;
     }
     header {
         padding: 0px;
     }
-    menu ul li {
+    menu li {
         margin-right: 15px;
     }
 }

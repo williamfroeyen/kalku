@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI (KMI) kalkulator</title>
+    <meta name="description" content="Regn ut BMI (KMI) raskt og presist med denne BMI-kalkulatoren. Få vite hvor din BMI ligger på BMI-skalaen."/>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../calcstyle.css"> 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="/index.html"><img id="logo" width="175px" height="70px" alt="logo" src="/kalku-70px.png"></img></a>
+        <menu>
+            <li>
+                <a href="/index.html">Hjem</a>
+            </li>
+            <li>
+                <a href="/kontakt.html">Kontakt</a>
+            </li>
+        </menu>
+    </header>
+    <section class="showcase" id="calc-showcase">
+        <h1>BMI kalkulator</h1>
+    </section>
+    <main id="calculator">
+        <div>
+            <div class="input">
+                <p>Høyde (cm)</p>
+                <input id="input1" type="number" placeholder="m">
+            </div>
+            <div class="input">
+                <p>Vekt (kg)</p>
+                <input id="input2" type="number" placeholder="kg">
+            </div>
+            <div id="oneResult">
+                <p id="oneResultText">Resultat:</p>
+            </div>
+            <div id="description">
+                Gjelder bare for voksne mellom 18 og 70 år:
+                <ul id="table">
+                    <li id="tre">Under eller lik 16: undervekt grad 3</li>
+                    <li id="to">Under eller lik 17: undervekt grad 2</li>
+                    <li id="en">Under 18,5: undervekt grad 1</li>
+                    <li id="null">Mellom 18,5 og 25: normal vekt</li>
+                    <li id="en">Over 25: overvekt</li>
+                    <li id="to">Over eller lik 30: fedme</li>
+                    <li id="tre">Over eller lik 35: alvorlig fedme</li>
+                    <li id="tre">Over eller lik 40: svært alvorlig fedme</li>
+                </ul>
+                <p class="paragraph">
+                    Vær obs på at BMI (KMI) kan slå ut på overvekt hvis du har mye muskelmasse eller er gravid, selv om du er normalvektig. For barn og de over 70 år vil verdien man får fra BMI endre betydning. For å regne ut BMI, deler man vekten (kg) på høyden (m) ganger høyden (m). Formelen for å regne ut BMI er: vekt / (høyde * høyde), hvor vekt er i kilogram og høyde er i meter. Si en person er 180cm høy og veier 75kg. Da blir utregningen slik: 75 / (1,80 * 1,80) = 23,15. 
+                </p>
+                <p class="paragraph">
+                    Kroppsmasseindeks (KMI), eller Body Mass Index (BMI) på engelsk, er en enkel metode for å vurdere en persons kroppsvekt i forhold til høyden. Formelen for å beregne KMI er kroppsvekt i kilo delt på høyde i meter opphøyd i andre. Dette gir et tall som plasserer en person i forskjellige kategorier, fra undervekt til fedme. Selv om KMI ofte brukes som en indikasjon på sunn eller usunn vekt, har metoden flere begrensninger.
+                </p>
+                <p class="paragraph">
+                    Et av hovedproblemene med KMI er at den ikke tar hensyn til kroppssammensetning. To personer med samme KMI kan ha svært ulik fettprosent og muskelmasse. En godt trent idrettsutøver med mye muskelmasse kan havne i kategorien «overvektig» eller til og med «fedme», selv om vedkommende er i topp fysisk form. På den andre siden kan en person med lav muskelmasse, men en høy fettprosent, ha en KMI innenfor det «normale» området, selv om de egentlig kan ha en usunn kroppssammensetning.
+                </p>
+                <p class="paragraph">
+                    KMI tar heller ikke hensyn til individuelle forskjeller som alder, kjønn eller genetikk. Eldre mennesker har ofte mer kroppsfett enn yngre personer med samme KMI, og kvinner har naturlig høyere fettprosent enn menn. I tillegg er det genetiske faktorer som påvirker hvor fett lagres på kroppen, noe som kan ha betydning for helserisikoen. For eksempel kan fett rundt organene, kjent som visceralt fett, være mer helseskadelig enn fett som lagres under huden.
+                </p>
+                <p class="paragraph">
+                    Til tross for disse svakhetene er KMI et nyttig verktøy i befolkningsstudier og helseundersøkelser, fordi den gir en rask og enkel oversikt over vektfordeling i en stor gruppe mennesker. Helsemyndigheter bruker ofte KMI for å kartlegge fedmeepidemier og planlegge tiltak for folkehelsen. For enkeltpersoner kan KMI gi en indikasjon på om vekten bør justeres, men det er viktig å ikke stole blindt på dette tallet.
+                </p>
+                <p class="paragraph">
+                    For å få en mer presis vurdering av helse og kroppssammensetning er det lurt å se på andre faktorer i tillegg til KMI. Målinger av midjeomkrets, fettprosent og generell fysisk form kan gi et bedre bilde av helsesituasjonen. I tillegg er livsstilsvaner, som kosthold, fysisk aktivitet og søvn, avgjørende for den generelle helsen. Det er derfor viktig å bruke KMI med forsiktighet og heller se det som en del av en større helhetsvurdering.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright 2025 © Kalku</p>
+        <a id="footerFirstElement" href="/vilkår-for-bruk.html">Vilkår for bruk</a>
+        <a id="footerLastElement" href="/personvern.html">Personvern</a>
+    </footer>
+    <script src="/helse/bmi-kalkulator.js"></script>
+</body>
+</html>

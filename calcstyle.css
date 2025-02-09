@@ -18,22 +18,22 @@ header {
     padding: 0px 100px;
 }
 
-menu ul {
+menu {
     padding: 23px;
 }
 
-menu ul li {
+menu li {
     display: inline-block;
     margin-right: 50px;
 }
 
-menu ul li a {
+menu li a {
     text-decoration: None;
     color: #f1f1f1;
     font-size: 18px;
 }
 
-menu ul li a:hover {
+menu li a:hover {
     color: #75ffed;
 }
 
@@ -107,6 +107,26 @@ menu ul li a:hover {
     list-style:square;
 }
 
+#calculator #table {
+    margin-bottom: 20px;
+}
+
+#calculator #null {
+    color: #b1ffe1
+}
+
+#calculator #en {
+    color: #faffb1
+}
+
+#calculator #to {
+    color: #ffd0b1
+}
+
+#calculator #tre {
+    color: #ffb1b1
+}
+
 #calculator ul a {
     text-decoration: none;
     color: #d4fff9;
@@ -127,16 +147,11 @@ footer {
     background-color: rgb(0, 75, 68);
     font-size: 18px;
     text-align: center;
-}
-
-footer {
     padding: 20px;
 }
 
 footer a {
     position: absolute;
-    right: 10%;
-    top: 33%;
     text-decoration: none;
     color: #f1f1f1;
 }
@@ -145,6 +160,15 @@ footer a:hover {
     color: #75ffed;
 }
 
+footer #footerFirstElement {
+    left: 10%;
+    top: 33%;
+}
+
+footer #footerLastElement {
+    right: 10%;
+    top: 33%;
+}
 
 @media only screen and (max-width: 1200px) {
     #calculator {
@@ -153,10 +177,6 @@ footer a:hover {
 }
 
 @media only screen and (max-width: 1000px) {
-    footer {
-        text-align: left;
-        padding-left: 10%;
-    }
     #calc-showcase h1 {
         font-size: 32px;
         padding: 110px 80px;
@@ -178,7 +198,7 @@ footer a:hover {
         font-size: 28px;
         padding: 120px 50px;
     }
-    menu ul {
+    menu {
         padding: 20px;
     }
 }
@@ -192,9 +212,6 @@ footer a:hover {
         width: 90vw;
         margin: 30px auto;
     }
-}
-
-@media only screen and (max-width: 550px) {
     footer {
         text-align: center;
         height: 90px;
@@ -203,11 +220,22 @@ footer a:hover {
     footer p {
         padding: 10px;
     }
-    footer a {
+    footer #footerFirstElement {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-right: 10px;
+    }
+
+    footer #footerLastElement {
         position: relative;
         top: 0;
         right: 0;
+        margin-left: 10px;
     }
+}
+
+@media only screen and (max-width: 550px) {
     #calculator {
         width: 95vw;
         margin: 20px auto;
@@ -215,7 +243,7 @@ footer a:hover {
     header {
         padding: 0px;
     }
-    menu ul li {
+    menu li {
         margin-right: 15px;
     }
 }
