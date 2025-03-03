@@ -18,22 +18,24 @@ header {
     padding: 0px 100px;
 }
 
-menu {
+#menu {
+    display: block;
+    list-style-type: none;
     padding: 23px;
 }
 
-menu li {
+#menu li {
     display: inline-block;
     margin-right: 50px;
 }
 
-menu li a {
+#menu li a {
     text-decoration: None;
     color: #f1f1f1;
     font-size: 18px;
 }
 
-menu li a:hover {
+#menu li a:hover {
     color: #75ffed;
 }
 
@@ -100,6 +102,12 @@ menu li a:hover {
     padding: 30px 10px;
     font-size: 18px;
     line-height: 35px;
+}
+
+#calculator #description img {
+    width: 100%;
+    padding: 20px 0px;
+    height: auto;
 }
 
 #calculator ul {
@@ -198,7 +206,7 @@ footer #footerLastElement {
         font-size: 28px;
         padding: 120px 50px;
     }
-    menu {
+    #menu {
         padding: 20px;
     }
 }
@@ -243,7 +251,7 @@ footer #footerLastElement {
     header {
         padding: 0px;
     }
-    menu li {
+    #menu li {
         margin-right: 15px;
     }
 }

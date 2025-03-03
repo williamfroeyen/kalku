@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finn lengden på hypotenusen med denne kalkulatoren</title>
+    <meta name="description" content="Med denne kalkulatoren kan du enkelt og raskt regne ut lengden på hypotenusen av en rettvinklet trekant. Kalkulatoren bruker Pytagoras' læresetning."/>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../calcstyle.css"> 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img id="logo" width="175px" height="70px" alt="logo" src="/kalku-70px.png"></img></a>
+        <ul id="menu">
+            <li>
+                <a href="../index.html">Hjem</a>
+            </li>
+            <li>
+                <a href="../kontakt.html">Kontakt</a>
+            </li>
+        </ul>
+    </header>
+    <section class="showcase" id="calc-showcase">
+        <h1>Finn lengden på hypotenusen</h1>
+    </section>
+    <main id="calculator">
+        <div>
+            <div class="input">
+                <p>Katet a</p>
+                <input id="input1" type="number" placeholder="">
+            </div>
+            <div class="input">
+                <p>Katet b</p>
+                <input id="input2" type="number" placeholder="">
+            </div>
+            <div id="oneResult">
+                <p id="oneResultText">Hypotenusen:</p>
+            </div>
+            <div id="description">
+                <p class="paragraph">
+                    Katetene er de to korteste sidelengdene i en rettvinklet trekant. Hypotenusen er den lengste siden i en rettvinklet trekant og ligger alltid motstående til den rette vinkelen. Enheten for hypotenusen er den samme som for sidene i trekanten, og lengden kan beregnes ved hjelp av Pytagoras' læresetning. Denne matematiske regelen sier at summen av kvadratene til de to kortere sidene, kalt katetene, er lik kvadratet av hypotenusen. Dette uttrykkes med formelen: c = sqrt(a^2+b^2), der a og b er katetene, og c er hypotenusen.
+                </p>
+                <img src="/geometri/pytagoras-setning.jpg" width="600px" height="400px" alt="Pytagoras' læresetning">
+                <p class="paragraph">
+                    Pytagoras' læresetning gjelder kun for trekanter der én av vinklene er nøyaktig 90 grader. Når man skal finne lengden av hypotenusen, starter man med å kvadrere lengdene av de to katetene. Deretter summerer man disse kvadratene, og til slutt tar man kvadratroten av summen for å finne selve hypotenusen. Dette prinsippet gjør det mulig å beregne den ukjente siden dersom man kjenner lengden på de to andre.
+                </p>
+                <p class="paragraph">
+                    Denne matematiske regelen har vært kjent i flere tusen år og tilskrives den greske matematikeren Pytagoras, selv om det finnes bevis for at den var kjent i andre kulturer lenge før hans tid. I dag brukes den i en rekke praktiske sammenhenger, blant annet i byggearbeid, navigasjon og kartlegging. Den gjør det enkelt å beregne avstander og høyder uten å måtte måle dem direkte.
+                </p>
+                <p class="paragraph">
+                    Et eksempel på bruk av Pytagoras' læresetning kan være en stige som står lent mot en vegg. Hvis man kjenner høyden fra bakken til toppen av stigen og avstanden fra veggen til stigens fot, kan man regne ut hvor lang stigen er. Dette er en av mange måter læresetningen forenkler praktiske beregninger i hverdagen.
+                </p>
+                <p class="paragraph">
+                    Til tross for at Pytagoras' læresetning er en grunnleggende del av matematikken, er det lett å gjøre feil dersom man forveksler hvilke sider som er kateter og hvilken som er hypotenusen. Hypotenusen er alltid den lengste siden, og dette må man være oppmerksom på når man setter opp beregningen. Feil kan også oppstå hvis man glemmer å ta kvadratroten på slutten av utregningen, noe som kan føre til et helt annet svar enn det riktige.
+                </p>
+                <p class="paragraph">
+                    I mange tilfeller brukes også læresetningen til å finne lengden av en ukjent katet, hvis hypotenusen og én av katetene er kjent. Dette gjøres ved å løse ut den ukjente siden fra formelen, slik at man trekker kvadratet av den kjente kateten fra kvadratet av hypotenusen før man tar kvadratroten.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright 2025 © Kalku</p>
+        <a id="footerFirstElement" href="/vilkår-for-bruk.html">Vilkår for bruk</a>
+        <a id="footerLastElement" href="/personvern.html">Personvern</a>
+    </footer>
+    <script src="/geometri/finn-hypotenus.js"></script>
+</body>
+</html>

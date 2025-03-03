@@ -18,22 +18,48 @@ header {
     padding: 0px 100px;
 }
 
-menu {
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.text-page p {
+    padding: 5px 10px;
+}
+
+.text-page ul {
+    padding: 10px 0px 10px 30px;
+}
+
+.text-page h2 {
+    padding: 20px 0px 10px 0px;
+}
+
+.text-page h3 {
+    padding: 20px 0px 10px 0px;
+}
+
+#menu {
+    display: block;
+    list-style-type: none;
     padding: 23px;
 }
 
-menu li {
+#menu li {
     display: inline-block;
     margin-right: 50px;
 }
 
-menu li a {
+#menu li a {
     text-decoration: None;
     color: #f1f1f1;
     font-size: 18px;
 }
 
-menu li a:hover {
+#menu li a:hover {
     color: #75ffed;
 }
 
@@ -64,16 +90,16 @@ menu li a:hover {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-ul {
-    list-style: none;
-}
-
 .category-field {
     padding: 10px 10px 20px 10px;
 }
 
 .category-field h2 {
     padding-bottom: 5px;
+}
+
+.category-field ul {
+    list-style: none;
 }
 
 .category-field ul li {
@@ -141,7 +167,7 @@ footer #footerLastElement {
     #home-showcase h1 {
         font-size: 38px;
     }
-    menu {
+    #menu {
         padding: 20px;
     }
 }
@@ -187,7 +213,7 @@ footer #footerLastElement {
     header {
         padding: 0px;
     }
-    menu li {
+    #menu li {
         margin-right: 15px;
     }
 }

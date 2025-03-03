@@ -11,16 +11,17 @@ function updateResult() {
     let outputValue = "";
 
     if (!isNaN(input1Value) && !isNaN(input2Value)) {
-        outputValue = input1Value/(1 - (input2Value / 100));
-        outputValue = Math.round((outputValue + Number.EPSILON)*1000)/1000;
+        outputValue = Math.sqrt(input2Value**2-input1Value**2);
+        outputValue = Math.round((outputValue + Number.EPSILON)*10000)/10000;
         outputValueLength = (outputValue + '').replace('.', '').length;
-
         if (outputValueLength > 12) {
             outputTextElement.textContent="For mange tall";
+        } else if (isNaN(outputValue)) {
+            outputTextElement.textContent="Katet: ";
         } else {
-            outputTextElement.textContent=`Resultat: ${outputValue}`;
+            outputTextElement.textContent=`Katet: ${outputValue}`;
         }
     } else {
-        outputTextElement.textContent="Resultat: ";
+        outputTextElement.textContent="Katet: ";
     }
 };
