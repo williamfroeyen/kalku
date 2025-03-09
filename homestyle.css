@@ -120,7 +120,18 @@ h3 {
     padding-bottom: 15px;
 }
 
-footer {
+footer #top-footer {
+    height: 40px;
+    background-color: rgb(0, 92, 84);
+    font-size: 18px;
+    text-align: center;
+}
+
+footer #top-footer p {
+    padding: 10px;
+}
+
+footer #bottom-footer {
     position: relative;
     height: 60px;
     border-top: 5px;
@@ -130,22 +141,22 @@ footer {
     padding: 20px;
 }
 
-footer a {
+footer #bottom-footer a {
     position: absolute;
     text-decoration: none;
     color: #f1f1f1;
 }
 
-footer a:hover {
+footer #bottom-footer a:hover {
     color: #75ffed;
 }
 
-footer #footerFirstElement {
+footer #bottom-footer #footerFirstElement {
     left: 10%;
     top: 33%;
 }
 
-footer #footerLastElement {
+footer #bottom-footer #footerLastElement {
     right: 10%;
     top: 33%;
 }
@@ -183,22 +194,22 @@ footer #footerLastElement {
     header {
         padding: 0px 10px;
     }
-    footer {
+    footer #bottom-footer {
         text-align: center;
         height: 90px;
         padding: 10px;
     }
-    footer p {
+    footer #bottom-footer p {
         padding: 10px;
     }
-    footer #footerFirstElement {
+    footer #bottom-footer #footerFirstElement {
         position: relative;
         top: 0;
         left: 0;
         margin-right: 10px;
     }
 
-    footer #footerLastElement {
+    footer #bottom-footer #footerLastElement {
         position: relative;
         top: 0;
         right: 0;
