@@ -148,6 +148,11 @@ header {
     padding-bottom: 15px;
 }
 
+#radio-field {
+    padding: 10px;
+    font-size: 18px;
+}
+
 footer #top-footer {
     height: 40px;
     background-color: rgb(0, 92, 84);
