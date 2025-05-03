@@ -110,6 +110,16 @@ header {
     height: auto;
 }
 
+#calculator #description a {
+    text-decoration: none;
+    color: #00e6c7;
+}
+
+#calculator #description a:hover {
+    text-decoration: none;
+    color: #8affef;
+}
+
 #calculator ul {
     margin-left: 30px;
     list-style:square;
@@ -133,15 +143,6 @@ header {
 
 #calculator #tre {
     color: #ffb1b1
-}
-
-#calculator ul a {
-    text-decoration: none;
-    color: #d4fff9;
-}
-
-#calculator ul a:hover {
-    color: #75ffed
 }
 
 .paragraph {
