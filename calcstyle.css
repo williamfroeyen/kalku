@@ -123,6 +123,7 @@ header {
 #calculator ul {
     margin-left: 30px;
     list-style:square;
+    margin-bottom: 20px;
 }
 
 #calculator #table {
