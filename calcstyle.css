@@ -120,6 +120,18 @@ header {
     color: #8affef;
 }
 
+#calculator #description table {
+    margin: 10px 10px 20px 10px;
+    border-collapse: collapse;
+}
+
+#calculator #description table td,
+#calculator #description table th {
+    text-align: left;
+    padding: 3px 10px;
+    border: 2px solid #00e6c7;
+}
+
 #calculator ul {
     margin-left: 30px;
     list-style:square;
@@ -267,11 +279,21 @@ footer #bottom-footer #footerLastElement {
     #menu li {
         margin-right: 15px;
     }
+    #calculator #description table {
+        margin: 10px 0px 20px 0px;
+    }
+    #calculator #description table td,
+    #calculator #description table th {
+        padding: 3px 10px;
+    }
 }
 
 @media only screen and (max-width: 500px) {
     #calc-showcase h1 {
         padding: 110px 40px;
+    }
+    #calculator #description table {
+        font-size: 14px;
     }
 }
 

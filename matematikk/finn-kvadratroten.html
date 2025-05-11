@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regn ut tyngden (Newton) med denne fysikk-kalkulatoren</title>
-    <meta name="description" content="Bruk vår fysikk-kalkulator for å regne ut tyngden (gravitasjonskraften) som virker på en gjenstand basert på masse. Enkelt og raskt!"/>
+    <title>Kvadratrotkalkulator | Presis og rask!</title>
+    <meta name="description" content="Regn ut kvadratoren med vår presise digitale kalkulator. Den er rask, enkel og gratis."/>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -13,9 +13,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../calcstyle.css">
+    <link rel="stylesheet" href="../calcstyle.css"> 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
-     crossorigin="anonymous"></script> 
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -30,30 +30,22 @@
         </ul>
     </header>
     <section class="showcase" id="calc-showcase">
-        <h1>Finn tyngden</h1>
+        <h1>Kvadratrotkalkulator</h1>
     </section>
     <main id="calculator">
         <div>
             <div class="input">
-                <p>Masse (kg)</p>
-                <input id="input1" type="number" placeholder="kg">
+                <p>Kvadratroten av</p>
+                <input id="input1" type="number">
             </div>
             <div class="input">
-                <p>Tyngdeakselerasjon (m/s²)</p>
-                <input id="input2" type="number" placeholder="m/s²" value="9,80665">
-            </div>
-            <div id="oneResult">
-                <p id="oneResultText">Tyngdekraft:</p>
-            </div>
+                <p>Er lik</p>
+                <input id="output1" type="number"disabled="">
+            </div>        
             <div id="description">
                 <p class="paragraph">
-                    Tyngden til en gjenstand er lik massen til gjenstanden multiplisert med tyngdeakselerasjonen, G = m * g. Ved bakkenivå på jorden er tyngdeakselerasjonen omtrent 9,80665 m/s². Dette tilsvarer akselerasjonen en gjenstand med masse 1 kg vil ha i fritt fall mot jorden, dersom man ser bort fra luftmotstand.
+                   Kvadratroten til et tall a er det tallet du må multiplisere med seg selv for å få tallet a. Kvadratroten av 4 er 2, fordi 2 * 2 = 4. Det er ikke mulig å finne kvadratroten av et negativt tall. 
                 </p>
-                Andre kraftkalkulatorer:
-                <ul>
-                    <li><a href="/kraft/finn-oppdrift.html">Finn oppdrift</a></li>
-                    <li><a href="/kraft/finn-glidefriksjon.html">Finn glidefriksjon</a></li>
-                </ul>
             </div>
         </div>
     </main>
@@ -67,6 +59,6 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/kraft/finn-tyngden.js"></script>
+    <script src="/matematikk/finn-kvadratroten.js"></script>
 </body>
 </html>
