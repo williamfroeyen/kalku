@@ -17,7 +17,7 @@ function updateResult() {
     let input3Value  = parseFloat(input3.value);
 
     if (!isNaN(input1Value) && !isNaN(input2Value) && !isNaN(input3Value)) {
-        outputValue = input1Value * input2Value * Math.cos(input3Value * Math.PI / 180);;
+        outputValue = input1Value * input2Value * input3Value;
         outputValue = Math.round((outputValue + Number.EPSILON)*1000)/1000;
         outputValueLength = (outputValue + '').replace('.', '').length;
 

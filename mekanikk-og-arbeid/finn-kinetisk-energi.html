@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konverter Hestekrefter til Kilowatt (hk til kW)</title>
-    <meta name="description" content="Konverter fra Hestekrefter til Kilowatt (hk til kW) med vår presise digitale kalkulator. Opplev rask, enkel og gratis energiomregning med denne online enhetskonverteren."/>
+    <title>Kalkulator for kinetisk energi</title>
+    <meta name="description" content="Regn ut den kinetiske energien (bevegelsesenergien) til en gjenstand med denne fysikk-kalkulatoren."/>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -30,29 +30,31 @@
         </ul>
     </header>
     <section class="showcase" id="calc-showcase">
-        <h1>Konverter Hestekrefter til Kilowatt</h1>
+        <h1>Finn kinetisk energi</h1>
     </section>
     <main id="calculator">
         <div>
             <div class="input">
-                <p>Hestekrefter (hk)</p>
-                <input id="input1" type="number" placeholder="hk">
+                <p>Masse (kg)</p>
+                <input id="input1" type="number" placeholder="kg">
             </div>
-            <a href="kilowatt-til-hestekrefter.html"><img src="/switch.svg" width="25px" height="25px" id="switch-icon" alt="switch icon"/></a>
             <div class="input">
-                <p>Kilowatt (kW)</p>
-                <input id="output1" type="number" placeholder="kW" disabled="">
+                <p>Fart (m/s)</p>
+                <input id="input2" type="number" placeholder="m/s">
+            </div>
+            <div id="oneResult">
+                <p id="oneResultText">Resultat:</p>
             </div>
             <div id="description">
                 <p class="paragraph">
-                    Denne kalkulatoren benytter metriske hestekrefter. Formelen for å konvertere fra metriske hestekrefter til kilowatt er: hp = kW * 0,7355.
+                    Den kinetiske energien til en gjenstand er lik halvparten av gjenstandens masse multiplisert med kvadratet av farten (fart^2). Formelen for kinetisk energi er: E = (1/2)mv^2. Enheten for kinetisk energi er joule. Hvis en gjenstand veier 100 kg, og har en fart på 10 m/s, er den kinetiske energien: 100kg * 10^2 * 0,5 = 5 000 J.  
                 </p>
                 Andre kalkulatorer for mekanikk og arbeid:
                 <ul>
                     <li><a href="/mekanikk-og-arbeid/beregn-arbeid.html">Beregn arbeid</a></li>
-                    <li><a href="/mekanikk-og-arbeid/finn-kinetisk-energi.html">Finn kinetisk energi</a></li>   
-                    <li><a href="/mekanikk-og-arbeid/finn-potensiell-energi.html">Finn potensiell energi</a></li>                 
+                    <li><a href="/mekanikk-og-arbeid/finn-potensiell-energi.html">Finn potensiell energi</a></li>
                     <li><a href="/mekanikk-og-arbeid/kilowatt-til-hestekrefter.html">Kilowatt til Hestekrefter</a></li>
+                    <li><a href="/mekanikk-og-arbeid/hestekrefter-til-kilowatt.html">Hestekrefter til Kilowatt</a></li>
                 </ul>
             </div>
         </div>
@@ -67,6 +69,6 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/mekanikk-og-arbeid/hestekrefter-til-kilowatt.js"></script>
+    <script src="/mekanikk-og-arbeid/finn-kinetisk-energi.js"></script>
 </body>
 </html>
