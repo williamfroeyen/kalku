@@ -158,6 +158,10 @@ header {
     color: #ffb1b1
 }
 
+#calculator h2 {
+    font-size: 22px;
+}
+
 .paragraph {
     padding-bottom: 15px;
 }
