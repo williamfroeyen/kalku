@@ -232,7 +232,10 @@ footer #bottom-footer #footerLastElement {
         padding: 120px 50px;
     }
     #menu {
-        padding: 20px;
+        padding: 20px 5px;
+    }
+    #menu li a {
+        font-size: 17px;
     }
 }
 
@@ -294,6 +297,9 @@ footer #bottom-footer #footerLastElement {
     }
     #calculator #description table {
         font-size: 14px;
+    }
+    #menu li {
+        margin-right: 10px;
     }
 }
 
