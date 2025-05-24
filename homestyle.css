@@ -134,12 +134,12 @@ h3 {
 
 #question-box #question a {
     text-decoration: none;
-    color: #75ffed;
+    color: #f1f1f1;
     font-size: 18px;
 }
 
 #question-box #question a:hover {
-    color: #f1f1f1;
+    color: #75ffed;
 }
 
 footer #top-footer {
