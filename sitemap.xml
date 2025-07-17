@@ -9,372 +9,412 @@
 
 <url>
   <loc>https://kalku.no/</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://kalku.no/index.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/kontakt.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/faq.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/temperatur/celsius-til-fahrenheit.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/temperatur/fahrenheit-til-celsius.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/temperatur/celsius-til-kelvin.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/temperatur/kelvin-til-celsius.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/temperatur/fahrenheit-til-kelvin.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/temperatur/kelvin-til-fahrenheit.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/lengde/meter-til-fot.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/lengde/fot-til-meter.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/lengde/cm-til-tommer.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/lengde/tommer-til-cm.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/lengde/mm-til-tommer.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/lengde/tommer-til-mm.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/lengde/kilometer-til-mil.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/lengde/mil-til-kilometer.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kalku.no/lengde/meter-til-yard.html</loc>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kalku.no/lengde/yard-til-meter.html</loc>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/vekt/kilogram-til-pund.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/vekt/pund-til-kilogram.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/vekt/gram-til-ounces.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/vekt/ounces-til-gram.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/vekt/kilogram-til-ounces.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/vekt/ounces-til-kilogram.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/vekt/kilogram-til-stones.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/vekt/stones-til-kilogram.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kalku.no/vekt/gram-til-milligram.html</loc>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kalku.no/vekt/milligram-til-gram.html</loc>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/volum/liter-til-gallon.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/volum/gallon-til-liter.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/volum/liter-til-fluidounce.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/volum/fluidounce-til-liter.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/volum/desiliter-til-fluidounce.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/volum/fluidounce-til-desiliter.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/volum/liter-til-kubikkmeter.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/volum/kubikkmeter-til-liter.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/prosent/finn-prosenten.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/prosent/finn-f%C3%B8rprisen.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/prosent/finn-prosentandelen.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/prosent/finn-prosentoppgang.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/prosent/finn-prosentnedgang.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/prosent/finn-hele-tallet-fra-prosenten.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/strom-og-energi/beregn-kwh-fra-kilowatt.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/strom-og-energi/beregn-kwh-fra-watt.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/strom-og-energi/beregn-stromkostnad.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/strom-og-energi/joule-til-wattimer.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/strom-og-energi/wattimer-til-joule.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/strom-og-energi/megajoule-til-kwh.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/strom-og-energi/kwh-til-megajoule.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kalku.no/trykk/kpa-til-bar.html</loc>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kalku.no/trykk/bar-til-kpa.html</loc>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/kraft/finn-tyngden.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/kraft/finn-oppdrift.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/kraft/finn-glidefriksjon.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/mekanikk-og-arbeid/beregn-arbeid.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/mekanikk-og-arbeid/finn-kinetisk-energi.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/mekanikk-og-arbeid/finn-potensiell-energi.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/mekanikk-og-arbeid/hestekrefter-til-kilowatt.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/mekanikk-og-arbeid/kilowatt-til-hestekrefter.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/okonomi/sparekalkulator.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/helse/bmi-kalkulator.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/helse/kcal-til-kilojoule.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/helse/kilojoule-til-kcal.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/mat/kaffekalkulator.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kalku.no/mat/mel-dl-til-gram.html</loc>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://kalku.no/mat/mel-gram-til-dl.html</loc>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/matematikk/finn-kvadratroten.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/geometri/finn-hypotenus.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/geometri/finn-katet.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/vilk%C3%A5r-for-bruk.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/personvern.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://kalku.no/faq/temperatur/hvor-mange-grader-er-100-fahrenheit-i-celsius.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kalku.no/faq/temperatur/hva-er-0-grader-celsius-i-fahrenheit.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kalku.no/faq/temperatur/hva-er-37-grader-celsius-i-fahrenheit.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kalku.no/faq/lengde/hvor-mange-centimeter-er-en-tomme.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kalku.no/faq/lengde/hvor-mange-meter-er-en-fot.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kalku.no/faq/lengde/hvor-mange-fot-er-en-meter.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kalku.no/faq/vekt/hvor-mange-kilo-er-et-pund.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kalku.no/faq/vekt/hvor-mye-veier-en-ounce-i-gram.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://kalku.no/faq/vekt/hva-er-en-stone-i-kilo.html</loc>
-  <lastmod>2025-05-24T14:26:56+00:00</lastmod>
+  <lastmod>2025-07-17T15:52:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
