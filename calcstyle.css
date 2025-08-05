@@ -173,8 +173,14 @@ footer #top-footer {
     text-align: center;
 }
 
-footer #top-footer p {
+footer #top-footer p, footer #top-footer a  {
     padding: 10px;
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+footer #top-footer a:hover {
+    color: #75ffed;
 }
 
 footer #bottom-footer {
