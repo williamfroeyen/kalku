@@ -4,7 +4,7 @@ input1.addEventListener("input", (e) => {
     let outputValue = "";
     if (inputValue.length > 0 && !isNaN(inputValue)) {
         outputValue = inputValue * 60;
-        outputValue = Math.round((outputValue + Number.EPSILON)*10000)/10000;
+        outputValue = Math.round((outputValue + Number.EPSILON)*100)/100;
     }
     document.querySelector("#output1").value = outputValue;
 });
