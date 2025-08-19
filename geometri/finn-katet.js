@@ -17,11 +17,11 @@ function updateResult() {
         if (outputValueLength > 12) {
             outputTextElement.textContent="For mange tall";
         } else if (isNaN(outputValue)) {
-            outputTextElement.textContent="Katet: ";
+            outputTextElement.textContent="Ukjent katet: ";
         } else {
-            outputTextElement.textContent=`Katet: ${outputValue}`;
+            outputTextElement.textContent=`Ukjent katet: ${outputValue}`;
         }
     } else {
-        outputTextElement.textContent="Katet: ";
+        outputTextElement.textContent="Ukjent katet: ";
     }
 };

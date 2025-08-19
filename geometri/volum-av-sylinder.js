@@ -18,9 +18,9 @@ function updateResult() {
         if (outputValueLength > 12) {
             outputTextElement.textContent="For mange tall";
         } else {
-            outputTextElement.textContent=`Resultat: ${outputValue}`;
+            outputTextElement.textContent=`Volum: ${outputValue}`;
         }
     } else {
-        outputTextElement.textContent="Resultat: ";
+        outputTextElement.textContent="Volum: ";
     }
 };
