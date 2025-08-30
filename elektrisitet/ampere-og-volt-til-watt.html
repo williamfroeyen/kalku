@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finn Ohm fra Volt og Ampere - Ohms lov kalkulator</title>
-    <meta name="description" content="Ohms lov kalkulator - konverter spenning (volt) og strøm (ampere) til resistans (ohm). Rask og enkel omregning. Prøv den nå!" />
+    <title>Ampere og volt til watt - Strøm og spenning til effekt</title>
+    <meta name="description" content="Konverter strøm (ampere) og spenning (volt) til effekt (watt). Rask og enkel omregning. Prøv den nå!"/>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -22,10 +22,10 @@
         "@graph": [
             {
             "@type": "WebPage",
-            "@id": "https://www.kalku.no/elektrisitet/volt-og-ampere-til-ohm.html#webpage",
-            "url": "https://www.kalku.no/elektrisitet/volt-og-ampere-til-ohm.html",
-            "name": "Finn Ohm fra Volt og Ampere - Ohms lov kalkulator",
-            "description": "Ohms lov kalkulator - konverter spenning (volt) og strøm (ampere) til resistans (ohm). Rask og enkel omregning. Prøv den nå!.",
+            "@id": "https://www.kalku.no/elektrisitet/ampere-og-volt-til-watt.html#webpage",
+            "url": "https://www.kalku.no/elektrisitet/ampere-og-volt-til-watt.html",
+            "name": "Ampere og volt til watt - Strøm og spenning til effekt",
+            "description": "Konverter strøm (ampere) og spenning (volt) til effekt (watt). Rask og enkel omregning. Prøv den nå!",
             "inLanguage": "nb",
             "publisher": {
             "@type": "Organization",
@@ -38,7 +38,7 @@
             },
             {
             "@type": "BreadcrumbList",
-            "@id": "https://www.kalku.no/elektrisitet/elektrisitet/volt-og-ampere-til-ohm.html#breadcrumb",
+            "@id": "https://www.kalku.no/elektrisitet/ampere-og-volt-til-watt.html#breadcrumb",
             "itemListElement": [
                 {
                 "@type": "ListItem",
@@ -55,29 +55,21 @@
                 {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Volt og Ampere til Ohm",
-                "item": "https://www.kalku.no/elektrisitet/volt-og-ampere-til-ohm.html"
+                "name": "Ampere og Volt til Watt",
+                "item": "https://www.kalku.no/elektrisitet/ampere-og-volt-til-watt.html"
                 }
             ]
             },
             {
             "@type": "FAQPage",
-            "@id": "https://www.kalku.no/elektrisitet/volt-og-ampere-til-ohm.html#faq",
+            "@id": "https://www.kalku.no/elektrisitet/ampere-og-volt-til-watt.html#faq",
             "mainEntity": [
                 {
                 "@type": "Question",
-                "name": "Hva er Ohms lov?",
+                "name": "Hvordan gjør man om ampere og volt til watt?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ohms lov sier at strømmen gjennom en leder er lik spenningen over lederen delt på motstanden. Bruk formelen: Strøm = spenning / resistans."
-                }
-                },
-                                {
-                "@type": "Question",
-                "name": "Hvordan gjør man om volt og ohm til ampere?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Formelen for å regne om spenning (i volt) og strøm (i ampere) til resistans (i ohm) er: Resistans = spenning / strøm. For eksempel: 230 volt / 10 ampere = 23 ohm."
+                    "text": " Formelen for å regne om strøm (i ampere) og spenning (i volt) til effekt (i watt) er: Effekt = strøm * spenning (P = U * I). For eksempel: 12 volt * 1 ampere = 12 watt."
                 }
                 },
                 {
@@ -92,11 +84,11 @@
             },
             {
             "@type": "SoftwareApplication",
-            "@id": "https://www.kalku.no/elektrisitet/volt-og-ampere-til-ohm.html#app",
-            "name": "Volt og Ampere til Ohm Kalkulator",
+            "@id": "https://www.kalku.no/elektrisitet/ampere-og-volt-til-watt.html#app",
+            "name": "Ampere og Volt til Watt Kalkulator",
             "applicationCategory": "Calculator",
             "operatingSystem": "Web",
-            "url": "https://www.kalku.no/elektrisitet/volt-og-ampere-til-ohm.html",
+            "url": "https://www.kalku.no/elektrisitet/ampere-og-volt-til-watt.html",
             "inLanguage": "nb",
             "offers": {
                 "@type": "Offer",
@@ -124,28 +116,28 @@
         </ul>
     </header>
     <section class="showcase" id="calc-showcase">
-        <h1>Volt og Ampere til Ohm</h1>
+        <h1>Ampere og Volt til Watt</h1>
     </section>
     <main id="calculator">
         <div>
             <div class="input">
-                <p>Spenning (Volt)</p>
-                <input id="input1" type="number" placeholder="U">
+                <p>Strøm (Ampere)</p>
+                <input id="input1" type="number" placeholder="I">
             </div>
             <div class="input">
-                <p>Strøm (Ampere)</p>
-                <input id="input2" type="number" placeholder="I">
+                <p>Spenning (Volt)</p>
+                <input id="input2" type="number" placeholder="U">
             </div>
             <div id="oneResult">
                 <p id="oneResultText">Resultat:</p>
             </div>
             <div id="description">
                 <p class="paragraph">
-                    Formelen for å regne om spenning (i volt) og strøm (i ampere) til resistans (i ohm) er: Resistans = spenning / strøm. Resistansen i en krets er høyere når spenningen er stor i forhold til strømmen.
-                Sjekk ut våre andre Ohms lov kalkulatorer:
+                    Formelen for å regne om strøm (i ampere) og spenning (i volt) til effekt (i watt) er: Effekt = strøm * spenning (P = U * I).
+                Sjekk ut våre andre elektrisitetskalkulatorer:
                 <ul>
-                    <li><a href="/elektrisitet/ampere-og-volt-til-watt.html">Ampere og volt til watt</a></li>
                     <li><a href="/elektrisitet/volt-og-ohm-til-ampere.html">Volt og ohm til ampere</a></li>
+                    <li><a href="/elektrisitet/volt-og-ampere-til-ohm.html">Volt og ampere til ohm</a></li>
                     <li><a href="/elektrisitet/ohm-og-ampere-til-volt.html">Ohm og ampere til volt</a></li>
                 </ul>
             </div>
@@ -161,6 +153,6 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/elektrisitet/volt-og-ampere-til-ohm.js"></script>
+    <script src="/elektrisitet/ampere-og-volt-til-watt.js"></script>
 </body>
 </html>
