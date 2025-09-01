@@ -34,16 +34,16 @@ function updateResult() {
             outputTextElement.textContent="For mange tall";
             resultExpTextElement.textContent="";
         } else if (aarligRente == 0) {
-            outputTextElement.textContent=`Totalt: ${utenAvkastning} kr`;
+            outputTextElement.textContent=`Verdi: ${utenAvkastning} kr`;
             resultExpTextElement.textContent=`Avkastning: 0 kr. Etter å ha spart ${maendeligBidrag} kr per måned i ${antallAar} år, med en årlig rente på ${aarligRente}% og et startbeløp på 
             ${startBeloep} kr, vil du sitte med ${utenAvkastning} kr etter ${antallAar} år.`
         } else {
-            outputTextElement.textContent=`Totalt: ${outputValue} kr`;
+            outputTextElement.textContent=`Verdi: ${outputValue} kr`;
             resultExpTextElement.textContent=`Avkastning: ${avkastning} kr. Etter å ha spart ${maendeligBidrag} kr per måned i ${antallAar} år, med en årlig rente på ${aarligRente}% og et startbeløp på 
             ${startBeloep} kr, vil du sitte med ${outputValue} kr etter ${antallAar} år.`
         }
     } else {
-        outputTextElement.textContent="Totalt: ";
+        outputTextElement.textContent="Verdi: ";
         resultExpTextElement.textContent="";
     }
 };
