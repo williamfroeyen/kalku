@@ -109,16 +109,21 @@ h3 {
 
 .category-field ul li {
     padding-bottom: 3px;
+    margin-left: 5px;
 }
 
 .category-field ul li a {
     text-decoration: None;
-    color: #f1f1f1;
+    color: #d1fff9;
     font-size: 18px;
 }
 
 .category-field ul li a:hover {
-    color: #75ffed;
+    color: #6affeb;
+}
+
+#lispacer {
+    margin-bottom: 5px;
 }
 
 .paragraph {
@@ -164,7 +169,7 @@ footer #bottom-footer a {
 }
 
 footer #bottom-footer a:hover {
-    color: #75ffed;
+    color: #00e6c7;
 }
 
 footer #bottom-footer #footerFirstElement {

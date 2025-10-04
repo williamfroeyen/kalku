@@ -103,6 +103,10 @@ header {
     height: 25px;
 }
 
+#calculator #switch-icon:hover {
+    filter: invert(20%) sepia(50%) saturate(300%) hue-rotate(120deg);
+}
+
 #calculator #description {
     padding: 30px 10px;
     font-size: 18px;
