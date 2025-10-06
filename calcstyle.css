@@ -309,6 +309,9 @@ footer #bottom-footer #footerLastElement {
     #calculator #description table {
         font-size: 14px;
     }
+    .ad-slot {
+        min-height: 400px;
+    }
     #menu li {
         margin-right: 10px;
     }
