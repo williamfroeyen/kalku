@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400, 500;
+    src: url("/InterVariable.woff2");
+    font-display: swap;
+    color: #f1f1f1;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -6,7 +15,7 @@
 
 body {
     background-color: #000;
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     color: #f1f1f1;
 }
@@ -46,7 +55,7 @@ header {
 }
 
 #calc-showcase h1 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 42px;
     padding: 100px;
