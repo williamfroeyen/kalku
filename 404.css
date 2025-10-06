@@ -2,9 +2,16 @@
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
-    src: url("/InterVariable.woff2");
+    src: url("/Inter-Regular.woff2");
     font-display: swap;
-    color: #f1f1f1;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/Inter-Medium.woff2");
+    font-display: swap;
 }
 
 * {
