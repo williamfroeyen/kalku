@@ -47,7 +47,7 @@
 
 
 ## Traffic:
-### Google Search (As of October 21):
+### Google Search (As of October 21, 2025):
 * Indexed in February 2025
 * Total Clicks: 8740 clicks
 * Top calculator performance (Foot to Meter): 3076 clicks.
@@ -56,7 +56,7 @@
 * Traffic growth trajectory: Clicks grew from an average of 2.2/day in Q1 2025 to 71/day by September 2025. The growth started in April and has been linear up until September. 
 
 
-### Adsense (As of October 21):
+### Adsense (As of October 21, 2025):
 * Approval: Kalku met Google quality standards for production sites and was approved for Adsense in July 2025. 
 * Monetization: The website has successfully turned a small profit. 
 * Total ad clicks: 530
