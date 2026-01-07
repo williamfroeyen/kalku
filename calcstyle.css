@@ -123,6 +123,11 @@ header {
     filter: invert(20%) sepia(50%) saturate(300%) hue-rotate(120deg);
 }
 
+#radioRow {
+    padding: 10px;
+    display: block;
+}
+
 #calculator #description {
     padding: 30px 10px;
     font-size: 18px;
