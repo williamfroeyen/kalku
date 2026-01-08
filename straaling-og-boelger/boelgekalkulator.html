@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bølgekalkulator - Finn bølgelengde, bølgefart og frekvens</title>
+    <meta name="description" content="Finn bølgelengde, bølgefart, frekvens og periode. Rask og presis kalkulator."/>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="../calcstyle.css"> 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img id="logo" width="175px" height="70px" alt="Kalku logo" src="/kalku-70px.png"></a>
+        <ul id="menu">
+            <li>
+                <a href="../index.html">Hjem</a>
+            </li>
+            <li>
+                <a href="../kontakt.html">Kontakt</a>
+            </li>
+            <li>
+                <a href="../faq.html">FAQ</a>
+            </li>
+        </ul>
+    </header>
+    <section class="showcase" id="calc-showcase">
+        <h1>Bølgekalkulator</h1>
+    </section>
+    <main id="calculator">
+        <div>
+            <div id="rowOne">
+                <div class="input">
+                    <p>Frekvens</p>
+                    <input id="frekvensInputElement" type="number" placeholder="Hz">
+                </div>
+                <div class="input">
+                    <p>Periode</p>
+                    <input id="periodeInputElement" type="number" placeholder="s">
+                </div>
+            </div>
+            <div id="rowTwo">
+                <div class="input">
+                    <p>Bølgelengde</p>
+                    <input id="boelgelengdeInputElement" type="number" placeholder="m">
+                </div>
+                <div class="input">
+                    <p>Bølgefart</p>
+                    <input id="boelgefartInputElement" type="number" placeholder="m/s">
+                </div>
+            </div>
+            <div id="radioRow">
+                <div class="radioDiv">
+                    <input type="radio" id="boelgetypeRadioElement1" name="boelgetypevalg" value="elektromagnetisk" checked>
+                    <label for="boelgetypevalg1">Elektromagnetisk bølge</label>
+                </div>
+                <div class="radioDiv">
+                    <input type="radio" id="boelgetypeRadioElement2" name="boelgetypevalg" value="mekanisk">
+                    <label for="boelgetypevalg2">Mekanisk bølge</label>
+                </div>
+            </div>
+            <ul id="resultsList">
+            </ul>
+            <div id="description">
+                <p class="paragraph">
+                    For elektromagnetisk stråling er bølgefarten lik lysfarten. Lysfarten i vakuum er 299 792 458 m/s. Det er mulig å bruke vitenskapelig notasjon, for eksempel 3e19 for 3 * 10^19. Kalkulatoren bruker tre formler: Bølgefart = frekvens * bølgelengde. Frekvens = 1 / periode. Fotonenergi = plancks konstant * frekvens. Plancks konstant er lik 6,626 07 015 * 10^-34 J*s.
+                </p>
+                Andre kalkulatorer for stråling og bølger:
+                <ul>
+                    <li><a href="/straaling-og-boelger/svingninger-og-tid-til-periode.html">Svingninger og tid til periode</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="bottom-footer">
+            <p>Copyright 2026 © Kalku</p>
+            <a id="footerFirstElement" href="/vilkår-for-bruk.html">Vilkår for bruk</a>
+            <a id="footerLastElement" href="/personvern.html">Personvern</a>
+        </div>
+    </footer>
+    <script src="/straaling-og-boelger/boelgekalkulator.js"></script>
+</body>
+</html>
