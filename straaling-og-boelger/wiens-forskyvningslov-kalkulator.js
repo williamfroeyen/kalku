@@ -4,19 +4,19 @@ tempinput.addEventListener("input", (e) => {
     let outputValue = "";
     let finalresult = "";
     if (!isNaN(inputValue)) {
-        outputValue = inputValue**4 * 5.670374419e-8;
+        outputValue = 2.898e-3 / inputValue;
         finalresult = outputValue.toExponential(6);
     }
-    document.querySelector("#utstroutput").value = finalresult;
+    document.querySelector("#intensoutput").value = finalresult;
 });
 
-const utstrinput = document.querySelector("#utstrinput");
-utstrinput.addEventListener("input", (e) => {
+const intensinput = document.querySelector("#intensinput");
+intensinput.addEventListener("input", (e) => {
     const inputValue = parseFloat(e.target.value);
     let outputValue = "";
     let finalresult = "";
     if (!isNaN(inputValue)) {
-        outputValue = (inputValue / 5.670374419e-8)**0.25;
+        outputValue = 2.898e-3 / inputValue;
         finalresult = outputValue.toExponential(6);
     }
     document.querySelector("#tempoutput").value = finalresult;

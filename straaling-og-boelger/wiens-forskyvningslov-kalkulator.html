@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stefan-Boltzmanns lov kalkulator | Rask og presis</title>
-    <meta name="description" content="Finn den totale utstrålingstettheten eller temperaturen til et svart legeme."/>
+    <title>Wiens forskyvningslov kalkulator | Rask og presis</title>
+    <meta name="description" content="Finn bølgelengden for maksimal strålingsintensitet, eller temperaturen, til et svart legeme."/>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -30,27 +30,27 @@
         </ul>
     </header>
     <section class="showcase" id="calc-showcase">
-        <h1>Stefan-Boltzmanns lov</h1>
+        <h1>Wiens forskyvningslov</h1>
     </section>
     <main id="calculator">
         <div>
             <div id="rowOne">
-                <h2>Temperatur til utstrålingstetthet</h2>
+                <h2>Temperatur til maksimal strålingsintensitet</h2>
                 <div class="input">
                     <p>Temperatur</p>
                     <input id="tempinput" type="number" placeholder="Kelvin">
                 </div>
                 <div class="input">
-                    <p>Utstrålingstetthet</p>
-                    <input id="utstroutput" type="text" placeholder="W/m^2" disabled="">
+                    <p>Maks intensitet</p>
+                    <input id="intensoutput" type="text" placeholder="Bølgelengde (m)" disabled="">
                 </div>
             </div>
             <div id="spacer"></div>
-            <h2>Utstrålingstetthet til temperatur</h2>
+            <h2>Maksimal strålingsintensitet til temperatur</h2>
             <div id="rowTwo">
                 <div class="input">
-                    <p>Utstrålingstetthet</p>
-                    <input id="utstrinput" type="number" placeholder="W/m^2">
+                    <p>Maks intensitet</p>
+                    <input id="intensinput" type="number" placeholder="Bølgelengde (m)">
                 </div>
                 <div class="input">
                     <p>Temperatur</p>
@@ -59,7 +59,7 @@
             </div>
             <div id="description">
                 <p class="paragraph">
-                    Denne kalkulatoren finner den totale utstrålingstettheten (W/m^2) eller temperaturen (i kelvin) til et svart legeme. Formelen er: U = &sigma;T^4. Denne loven er kalt Stefan-Boltzmanns lov. Stefan-Boltzmanns konstant (&sigma;) er lik 5,670 374 419 * 10^-8 W*m^(-2)*K^(-4). 
+                    Det er mulig å bruke vitenskapelig notasjon, for eksempel 3e19 for 3 * 10^19. Denne kalkulatoren benytter Wiens forskyvningslov. Formelen er: &lambda; * T = a. &lambda; er bølgelengden for legemets maksimale strålingsintensitet, og T er den absolutte temperaturen til legemet. Konstanten a er lik 2,898 * 10^-3 m*K. 
                 </p>
                 Andre kalkulatorer for stråling og bølger:
                 <ul>
@@ -67,7 +67,6 @@
                     <li><a href="/straaling-og-boelger/svingninger-og-tid-til-periode.html">Svingninger og tid til periode</a></li>
                     <li><a href="/straaling-og-boelger/svingninger-og-tid-til-frekvens.html">Svingninger og tid til frekvens</a></li>
                     <li><a href="/straaling-og-boelger/stefan-boltzmann-kalkulator.html">Stefan-Boltzmann kalkulator</a></li>
-                    <li><a href="/straaling-og-boelger/wiens-forskyvningslov-kalkulator.html">Wiens forskyvningslov kalkulator</a></li>
                 </ul>
             </div>
         </div>
@@ -79,6 +78,6 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/straaling-og-boelger/stefan-boltzmann-kalkulator.js"></script>
+    <script src="/straaling-og-boelger/wiens-forskyvningslov-kalkulator.js"></script>
 </body>
 </html>
