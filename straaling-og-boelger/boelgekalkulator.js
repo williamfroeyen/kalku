@@ -23,14 +23,23 @@ boelgeFartInputElement.addEventListener("input", updateResult);
 elektromagnetiskValg.addEventListener("input", updateResult);
 mekaniskValg.addEventListener("input", updateResult);
 
+
+const normalizedValue = e.target.value.replace(',', '.');
+    const inputValue = parseFloat(normalizedValue);
+
 function updateResult() {
     frekvensOutput = periodeOutput = boelgelengdeOutput = boelgefartOutput = fotonenergi = undefined;
     outputItems = [];
+    
+    const normalizedfrekvensInputElement = frekvensInputElement.value.replace(',', '.');
+    const normalizedperiodeInputElement = periodeInputElement.value.replace(',', '.');
+    const normalizedboelgeLengdeInputElement = boelgeLengdeInputElement.value.replace(',', '.');
+    const normalizedboelgeFartInputElement = boelgeFartInputElement.value.replace(',', '.');
 
-    let frekvensInput = parseFloat(frekvensInputElement.value);
-    let periodeInput = parseFloat(periodeInputElement.value);
-    let boelgelengdeInput = parseFloat(boelgeLengdeInputElement.value);
-    let boelgefartInput = parseFloat(boelgeFartInputElement.value);
+    let frekvensInput = parseFloat(normalizedfrekvensInputElement);
+    let periodeInput = parseFloat(normalizedperiodeInputElement);
+    let boelgelengdeInput = parseFloat(normalizedboelgeLengdeInputElement);
+    let boelgefartInput = parseFloat(normalizedboelgeFartInputElement);
 
     if (isConflict(frekvensInput, periodeInput, boelgelengdeInput, boelgefartInput)) {
         return;

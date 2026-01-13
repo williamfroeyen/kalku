@@ -1,6 +1,7 @@
 const tempinput = document.querySelector("#tempinput");
 tempinput.addEventListener("input", (e) => {
-    const inputValue = parseFloat(e.target.value);
+    const normalizedValue = e.target.value.replace(',', '.');
+    const inputValue = parseFloat(normalizedValue);
     let outputValue = "";
     let finalresult = "";
     if (!isNaN(inputValue)) {
@@ -12,7 +13,8 @@ tempinput.addEventListener("input", (e) => {
 
 const utstrinput = document.querySelector("#utstrinput");
 utstrinput.addEventListener("input", (e) => {
-    const inputValue = parseFloat(e.target.value);
+    const normalizedValue = e.target.value.replace(',', '.');
+    const inputValue = parseFloat(normalizedValue);
     let outputValue = "";
     let finalresult = "";
     if (!isNaN(inputValue)) {
