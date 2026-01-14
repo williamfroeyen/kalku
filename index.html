@@ -31,6 +31,17 @@
     <section class="showcase" id="home-showcase">
         <h1>Kalkulatorer av alle slag</h1>
     </section>
+    <search id="search">
+        <div id="searchinputfield">
+            <div id="searchlabel">
+                <p>Søk</p>
+            </div>
+            <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+        </div>
+        <div id="searchresultfield" class="hidden">
+            <ul id="searchresultlist"></ul>
+        </div>
+    </search>
     <main class="main-content categories">
         <div class="category-field">
             <h2>Volum</h2>
@@ -259,5 +270,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+    <script src="/search.js"></script>
 </body>
 </html>

@@ -20,7 +20,6 @@
     margin: 0;
 }
 
-
 body {
     background-color: #000;
     font-family: "Inter", sans-serif;
@@ -105,6 +104,76 @@ h3 {
     margin: 50px auto;
     background-color: #242424;
     padding: 30px;
+}
+
+#search {
+    height: 40px;
+    margin: 50px;
+    text-align: center;
+}
+
+#search #searchinputfield {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#search #searchinputfield #searchinput {
+    font-size: 16px;
+    height: 35px;
+    width: 300px;
+    border-radius: 3px;
+    border-width: 3px;
+    text-indent: 5px;
+}
+
+#search #searchinputfield #searchinput:focus {
+    border-color: #75ffed;
+    outline: none;
+}
+
+#search #searchinputfield #searchlabel {
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #f1f1f1;
+    padding: 4px;
+    font-size: 18px;
+    height: 35px;
+    width: 50px;
+}
+
+#search .hidden {
+    display: none !important;
+}
+
+#search #searchresultfield {
+    position: relative;
+    z-index: 1000;
+    text-align: left;
+    background-color: rgb(0, 75, 68);
+    width: 355px;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+#search #searchresultfield #searchresultlist {
+    list-style: none;
+    padding: 20px;
+}
+
+#search #searchresultfield #searchresultlist li {
+    padding: 3px;
+    font-size: 18px;
+}
+
+#search #searchresultfield #searchresultlist a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+#search #searchresultfield #searchresultlist a:hover {
+    color: #75ffed;
 }
 
 .categories {
@@ -287,5 +356,29 @@ footer #bottom-footer #footerLastElement {
     }
     #menu li {
         margin-right: 10px;
+    }
+
+    #search #searchinputfield #searchinput {
+        width: 250px;
+    }
+
+    #search #searchresultfield {
+        width: 305px;
+    }
+}
+
+
+@media only screen and (max-width: 420px) {
+    #search {
+        margin: 50px 0px;
+    }
+
+    #search #searchinputfield #searchinput {
+        width: 200px;
+    }
+
+    #search #searchresultfield {
+        width: 255px;
+        margin: 20px auto;
     }
 }
