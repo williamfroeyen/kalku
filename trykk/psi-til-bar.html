@@ -164,11 +164,23 @@
                 <script>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
-            </div>    
+            </div>
             <div id="description">
                 <p class="paragraph">
                     1 psi er lik 0,0689475729 bar. Formelen for å konvertere fra psi til bar er: bar = psi * 0,0689475729.
                 </p>
+                <search id="search">
+                <p>Søk etter andre kalkulatorer:</p>
+                <div id="searchinputfield">
+                    <div id="searchlabel">
+                        <p>Søk</p>
+                    </div>
+                    <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                </div>
+                <div id="searchresultfield" class="hidden">
+                    <ul id="searchresultlist"></ul>
+                </div>
+            </search>
                 Andre trykk-kalkulatorer:
                 <ul>
                     <li><a href="/trykk/kpa-til-bar.html">Kilopascal til bar</a></li>
@@ -202,5 +214,7 @@
         </div>
     </footer>
     <script src="/trykk/psi-til-bar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+    <script src="../search.js"></script>
 </body>
 </html>
