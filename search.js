@@ -1,14 +1,22 @@
+const searchresultfield = document.querySelector("#searchresultfield");
+const input = document.querySelector("#searchinput");
+const searchlabel = document.querySelector("#searchlabel");
+const searchlabeltext = document.querySelector("#searchlabeltext");
+
 fetch('/search-index.json')
   .then(res => res.json())
   .then(data => {
     const fuse = new Fuse(data, { keys: ["title", "category"], threshold: 0.3 });
 
-    const searchresultlist = document.querySelector("#searchresultlist");
-    const input = document.querySelector("#searchinput");
-    const searchresultfield = document.querySelector("#searchresultfield");
+    input.addEventListener("input", performSearch);
+    input.addEventListener("click", performSearch);
+    searchlabel.addEventListener("click", performSearch);
+    searchlabeltext.addEventListener("click", performSearch);
 
-    input.addEventListener("input", () => {
+    function performSearch() {
+        console.log("Perform search")
         const results = fuse.search(input.value);
+        const searchresultlist = document.querySelector("#searchresultlist");
 
         if (results.length > 8) { results.length = 8;};
 
@@ -35,5 +43,11 @@ fetch('/search-index.json')
         } else if (input.value == "") {
             searchresultfield.classList.add("hidden");
         }
-    });
+    }
+});
+
+document.addEventListener("click", (event) =>  {
+  if (!searchresultfield.contains(event.target) && event.target !== input && event.target !== searchlabel && event.target !== searchlabeltext) {
+    searchresultfield.classList.add("hidden");
+  };
 });

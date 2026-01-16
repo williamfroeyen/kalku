@@ -141,6 +141,11 @@ h3 {
     font-size: 18px;
     height: 35px;
     width: 50px;
+    cursor: pointer;
+}
+
+#search #searchinputfield #searchlabel #searchlabeltext {
+    cursor: pointer;
 }
 
 #search .hidden {
