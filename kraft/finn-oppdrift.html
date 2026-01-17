@@ -155,6 +155,18 @@
                 <p class="paragraph">
                     Oppdriften til en gjenstand er lik massetettheten til væsken eller gassen, multiplisert med volumet av den nedsenkede delen av gjenstanden, og multiplisert med tyngdeakselerasjonen. Ved bakkenivå på jorden er tyngdeakselerasjonen 9,80665 m/s². Ferskvann har en massetetthet på omtrent 1000 kg/m³ ved 0 °C. For å finne ut om en gjenstand vil stige, synke eller forbli i ro, må man sammenligne oppdriften med tyngden av gjenstanden. Vi har en egen kalkulatorer for å regne ut <a href="/kraft/finn-tyngden.html">tyngden av en gjenstand.</a> Både tyngde og oppdrift oppgis i Newton (N). Er tyngden større enn oppdriften, synker gjenstanden. Er tyngden lik oppdriften vil gjenstanden være i ro. Er tyngden mindre enn oppdriften vil gjenstanden stige.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre kraftkalkulatorer:
                 <ul>
                     <li><a href="/kraft/finn-tyngden.html">Finn tyngden</a></li>
@@ -184,6 +196,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/kraft/finn-oppdrift.js"></script>
 </body>
 </html>

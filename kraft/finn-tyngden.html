@@ -125,6 +125,18 @@
                 <p class="paragraph">
                     Tyngden til en gjenstand er lik massen til gjenstanden multiplisert med tyngdeakselerasjonen, G = m * g. Ved bakkenivå på jorden er tyngdeakselerasjonen omtrent 9,80665 m/s². Dette tilsvarer akselerasjonen en gjenstand med masse 1 kg vil ha i fritt fall mot jorden, dersom man ser bort fra luftmotstand.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre kraftkalkulatorer:
                 <ul>
                     <li><a href="/kraft/finn-oppdrift.html">Finn oppdrift</a></li>
@@ -140,6 +152,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/kraft/finn-tyngden.js"></script>
 </body>
 </html>

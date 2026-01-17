@@ -149,6 +149,18 @@
                 <p class="paragraph">
                     Når bevegelsen skjer i samme retning som kraften, er vinkelen mellom dem 0°. For å beregne arbeidet som utføres på en gjenstand, multipliserer man kraften som virker på den med den delen av forflytningen som skjer i kraftens retning. Formelen er: W=F*s. Her er W symbolet for arbeid, F er kraft i newton (N), og s er strekning i meter (m). Enheten for arbeid er newtonmeter (Nm), som også kalles joule (J). Dersom kraften og bevegelsen ikke har samme retning, må vi ta hensyn til vinkelen mellom dem. Da brukes formelen: W=F*s*cos(θ), der θ er vinkelen mellom kraftretningen og bevegelsesretningen.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre kalkulatorer for mekanikk og arbeid:
                 <ul>
                     <li><a href="/mekanikk-og-arbeid/finn-kinetisk-energi.html">Finn kinetisk energi</a></li>
@@ -166,6 +178,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/mekanikk-og-arbeid/beregn-arbeid.js"></script>
 </body>
 </html>

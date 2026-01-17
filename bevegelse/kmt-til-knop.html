@@ -177,6 +177,18 @@
                 <p class="paragraph">
                     1 km/t er lik omtrent 0,540 knop. For å gjøre om km/t til knop ganger man km/t med 0,5399568. Formelen er: knop = km/t * 0,5399568.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre bevegelseskalkulatorer:
                 <ul>
                     <li><a href="/bevegelse/kmt-til-mph.html">km/t til mph</a></li>
@@ -211,6 +223,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/bevegelse/kmt-til-knop.js"></script>
 </body>
 </html>

@@ -130,7 +130,19 @@
                 <p class="paragraph">
                    For å konvertere fra kilojoule til kilokalorier, ganger man antall kilojoule med 0,239. Formelen er: Kcal = kJ * 0,239. På folkemunne kalles kilokalorier bare kalorier. 
                 </p>
-                Sjekk ut våre andre helsekalkulatorer:
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
+                Andre helsekalkulatorer:
                 <ul>
                     <li><a href="/helse/bmi-kalkulator.html">BMI kalkulator</a></li>
                     <li><a href="/helse/kcal-til-kilojoule.html">Kcal til kJ</a></li>
@@ -145,6 +157,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/helse/kilojoule-til-kcal.js"></script>
 </body>
 </html>

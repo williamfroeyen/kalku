@@ -152,6 +152,18 @@
                 <p class="paragraph">
                     π er et spesielt tall som begynner med 3,14 og fortsetter i det uendelige uten et mønster. Formelen blir: Volum = (4/3) * π * radius^3. For eksempel: Har du en kule med en radius på 3 cm, blir volumet (4/3) * π * 3^3 ≈ 113 cm³.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre geometrikalkulatorer:
                 <ul>
                     <li><a href="finn-hypotenusen.html">Finn hypotenusen</a></li>
@@ -171,6 +183,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/geometri/volum-av-kule.js"></script>
 </body>
 </html>

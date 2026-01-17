@@ -161,6 +161,18 @@
                 <p class="paragraph">
                     For å konvertere fra celsius til kelvin, tar man antall grader i celsius pluss 273,15 for å få antall kelvin. Formelen er: K = °C + 273,15. 
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre temperaturkalkulatorer:
                 <ul>
                     <li><a href="/temperatur/celsius-til-fahrenheit.html">Celsius til fahrenheit</a></li>
@@ -193,6 +205,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/temperatur/celsius-til-kelvin.js"></script>
 </body>
 </html>

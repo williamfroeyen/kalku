@@ -150,6 +150,18 @@
                 <ul>
                     <li><a href="omkrets-av-sirkel.html">Finn omkretsen av en sirkel</a></li>
                 </ul>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre geometrikalkulatorer:
                 <ul>
                     <li><a href="finn-hypotenusen.html">Finn hypotenusen</a></li>
@@ -167,6 +179,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/geometri/areal-av-sirkel.js"></script>
 </body>
 </html>

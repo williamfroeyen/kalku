@@ -153,6 +153,18 @@
                 <p class="paragraph">
                     1 kubikkmeter er lik 1000 liter. For å konvertere kubikkmeter til liter, ganger man antall liter med 1000. Formelen er: Liter = kubikkmeter * 1000.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre volumkalkulatorer:
                 <ul>
                     <li><a href="/volum/liter-til-gallon.html">Liter til gallon</a></li>
@@ -187,6 +199,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/volum/kubikkmeter-til-liter.js"></script>
 </body>
 </html>

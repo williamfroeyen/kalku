@@ -131,6 +131,18 @@
                 <p class="paragraph">
                     1 short ton er lik 907,18474 kg. For å konvertere short ton til kilogram (tn til kg), ganger man antall short ton med 907,18474. Formelen er: Kilogram = short ton * 907,18474. Short ton er en amerikansk enhet, og blir også kalt amerikansk tonn eller US tonn.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre vektkalkulatorer:
                 <ul>
                     <li><a href="/vekt/kilogram-til-pund.html">Kilogram til pund</a></li>
@@ -156,6 +168,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/vekt/short-ton-til-kilogram.js"></script>
 </body>
 </html>

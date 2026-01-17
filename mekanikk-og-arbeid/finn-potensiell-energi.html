@@ -157,6 +157,18 @@
                 <p class="paragraph">
                     Tyngdeakselerasjonen ved havnivå på jordoverflaten er 9,80665 m/s². Den potensielle energien til en gjenstand er lik gjenstandens masse, multiplisert med hvor høyt gjenstanden befinner seg over et valgt nullnivå, multiplisert med tyngdeakselerasjonen. Formelen for potensiell energi er: E = mgh. Enheten for potensiell energi er joule. Hvis en gjenstand har en masse på 100 kg, tyngdeakselerasjonen er 9,80665 m/s² og gjenstanden er hevet 1 meter over bakken (med bakken som nullnivå), så er den potensielle energien: 100 kg * 9,80665 m/s² * 1 m = 980,665 J. 
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre kalkulatorer for mekanikk og arbeid:
                 <ul>
                     <li><a href="/mekanikk-og-arbeid/beregn-arbeid.html">Beregn arbeid</a></li>
@@ -174,6 +186,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/mekanikk-og-arbeid/finn-potensiell-energi.js"></script>
 </body>
 </html>

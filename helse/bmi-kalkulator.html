@@ -175,7 +175,19 @@
                 <p class="paragraph">
                     Vær obs på at BMI (KMI) kan slå ut på overvekt hvis du har mye muskelmasse eller er gravid, selv om du er normalvektig. For barn og de over 70 år vil verdien man får fra BMI endre betydning. For å regne ut BMI, deler man vekten (kg) på høyden (m) ganger høyden (m). Formelen for å regne ut BMI er: vekt / (høyde * høyde), hvor vekt er i kilogram og høyde er i meter. Si en person er 180cm høy og veier 75kg. Da blir utregningen slik: 75 / (1,80 * 1,80) = 23,15. 
                 </p>
-                Sjekk ut våre andre helsekalkulatorer:
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
+                Andre helsekalkulatorer:
                 <ul>
                     <li><a href="/helse/bmi-kalkulator.html">BMI kalkulator</a></li>
                     <li><a href="/helse/kcal-til-kilojoule.html">Kcal til kJ</a></li>
@@ -191,6 +203,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/helse/bmi-kalkulator.js"></script>
 </body>
 </html>

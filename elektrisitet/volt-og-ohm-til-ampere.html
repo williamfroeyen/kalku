@@ -139,7 +139,20 @@
             <div id="description">
                 <p class="paragraph">
                     Formelen for å regne om spenning (i volt) og resistans (i ohm) til strøm (i ampere) er: Strøm = spenning / resistans. Strømmen blir høyere når spenningen er stor i forhold til resistansen.
-                Sjekk ut våre andre Ohms lov kalkulatorer:
+                </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
+                Andre Ohms lov kalkulatorer:
                 <ul>
                     <li><a href="/elektrisitet/ampere-og-volt-til-watt.html">Ampere og volt til watt</a></li>
                     <li><a href="/elektrisitet/volt-og-ampere-til-ohm.html">Volt og ampere til ohm</a></li>
@@ -155,6 +168,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/elektrisitet/volt-og-ohm-til-ampere.js"></script>
 </body>
 </html>

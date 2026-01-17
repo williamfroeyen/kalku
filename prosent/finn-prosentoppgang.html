@@ -158,6 +158,18 @@
                 <p class="paragraph">
                     For å finne prosentoppgangen, tar man først den nye verdien minus den opprinnelige verdien. Da får man differansen. Så deler man differansen på den opprinnelige verdien, og ganger med 100. Da får man prosentøkningen. Formelen er: Prosentoppgang = ((ny verdi - opprinnelig verdi) / opprinnelig verdi) * 100. Si man har investert 500kr i aksjer, verdien har økt til 700kr, og man vil finne ut hvor mange prosent verdien har økt med. Da tar man 700-500, og får differansen 200. Så deler man 200 på 500, og får 0,4. 0,4 ganger man så med 100, og man får 40. Aksjene har økt i verdi med 40%.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre prosentkalkulatorer:
                 <ul>
                     <li><a href="/prosent/finn-prosenten.html">Finn prosenten</a></li>
@@ -176,6 +188,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/prosent/finn-prosentoppgang.js"></script>
 </body>
 </html>

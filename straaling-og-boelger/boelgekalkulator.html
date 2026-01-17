@@ -70,6 +70,18 @@
                 <p class="paragraph">
                     For elektromagnetisk stråling er bølgefarten lik lysfarten. Lysfarten i vakuum er 299 792 458 m/s. Det er mulig å bruke vitenskapelig notasjon, for eksempel 3.3e19 for 3,3 * 10^19. Kalkulatoren bruker tre formler: Bølgefart = frekvens * bølgelengde. Frekvens = 1 / periode. Fotonenergi = plancks konstant * frekvens. Plancks konstant er lik 6,626 07 015 * 10^-34 J*s.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre kalkulatorer for stråling og bølger:
                 <ul>
                     <li><a href="/straaling-og-boelger/svingninger-og-tid-til-periode.html">Svingninger og tid til periode</a></li>
@@ -87,6 +99,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/straaling-og-boelger/boelgekalkulator.js"></script>
 </body>
 </html>

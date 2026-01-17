@@ -149,6 +149,18 @@
                 <p class="paragraph">
                     Volumet av en sylinder finner man ved først å finne arealet i bunnen av sylinderen. Da multipliserer man pi med radiusen ganget med seg selv. Det gir arealet av sirkelen i bunnen. Så ganger man arealet av sirkelen med høyden av sylinderen for å få sylinderens volum. Radiusen er avstanden mellom midtpunktet av sirkelen til kanten. Radiusen er halvparten av diameteren, som er sirkelens bredde når man tegner en strek fra kant til kant gjennom sentrum. π er lik omtrent 3,14159. Formelen for å finne volumet av en sylinder er: V=πr²h, som vil si volum = π * radius^2 * høyde. For eksempel: En sylinder har radiusen 3 cm og høyden 6 cm. π * (3 cm)^2 * 6 cm ≈ 169,65 cm³.  
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre geometrikalkulatorer:
                 <ul>
                     <li><a href="finn-hypotenusen.html">Finn hypotenusen</a></li>
@@ -167,6 +179,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/geometri/volum-av-sylinder.js"></script>
 </body>
 </html>

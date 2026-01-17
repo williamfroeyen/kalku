@@ -64,6 +64,18 @@
                     Katetene er de to korteste sidelengdene i en rettvinklet trekant. Hypotenusen er den lengste siden i en rettvinklet trekant og ligger alltid motstående til den rette vinkelen. Enheten for hypotenusen er den samme som for sidene i trekanten, og lengden kan beregnes ved hjelp av Pytagoras' læresetning. Denne matematiske regelen sier at summen av kvadratene til de to kortere sidene, kalt katetene, er lik kvadratet av hypotenusen. Dette uttrykkes med formelen: c = sqrt(a^2+b^2), der a og b er katetene, og c er hypotenusen.
                 </p>
                 <img src="/geometri/pytagoras-setning.jpg" width="600px" height="400px" alt="Pytagoras' læresetning">
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre geometrikalkulatorer:
                 <ul>
                     <li><a href="finn-katet.html">Finn kateten</a></li>
@@ -96,6 +108,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/geometri/finn-hypotenusen.js"></script>
 </body>
 </html>

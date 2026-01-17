@@ -149,6 +149,18 @@
                 <p class="paragraph">
                     For å finne ut hvor mange prosent en del av tallet utgjør av det hele tallet, deler man delen av tallet på det hele tallet. Til slutt ganger man med 100. Formelen er: Prosent = (del av tallet / hele tallet) * 100. Si man har 4 dl med kaffe, hvor 1 dl er melk. Man vil finne ut av hvor mange prosent melk det er i kaffen. Da deler man 1 på 4, som blir 0,25. Så ganger man 0,25 på 100, og får 25. I kaffen er det 25% melk.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre prosentkalkulatorer:
                 <ul>
                     <li><a href="/prosent/finn-førprisen.html">Finn førprisen</a></li>
@@ -167,6 +179,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/prosent/finn-prosenten.js"></script>
 </body>
 </html>

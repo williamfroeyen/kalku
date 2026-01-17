@@ -157,6 +157,18 @@
                 <p class="paragraph">
                     For å finne førprisen til en vare med rabatt, bruker man følgende formel: Førpris = prisen nå / (1 - (rabattprosent / 100)). For eksempel: Si en genser koster 420kr og er på tilbud med 30% rabatt. Da tar man først 30 / 100, og får 0,30. Så tar man 1 - 0,30, og får 0,70. Til slutt deler man 420 på 0,70, og får 600, som var genserens pris før tilbudet.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre prosentkalkulatorer:
                 <ul>
                     <li><a href="/prosent/finn-førprisen.html">Finn førprisen</a></li>
@@ -175,6 +187,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/prosent/finn-førprisen.js"></script>
 </body>
 </html>

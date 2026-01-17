@@ -131,7 +131,20 @@
             <div id="description">
                 <p class="paragraph">
                     Formelen for å regne om strøm (i ampere) og spenning (i volt) til effekt (i watt) er: Effekt = strøm * spenning (P = U * I).
-                Sjekk ut våre andre elektrisitetskalkulatorer:
+                </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
+                Andre elektrisitetskalkulatorer:
                 <ul>
                     <li><a href="/elektrisitet/volt-og-ohm-til-ampere.html">Volt og ohm til ampere</a></li>
                     <li><a href="/elektrisitet/volt-og-ampere-til-ohm.html">Volt og ampere til ohm</a></li>
@@ -147,6 +160,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/elektrisitet/ampere-og-volt-til-watt.js"></script>
 </body>
 </html>

@@ -163,6 +163,18 @@
                 <p class="paragraph">
                     1 milliliter er lik omtrent 0,067 spiseskjeer. 15 milliliter er lik 1 spiseskje. For å konvertere fra milliliter til spiseskje, deler man antall milliliter på 15. Formelen er: Spiseskje = milliliter / 15. 
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre volumkalkulatorer:
                 <ul>
                     <li><a href="/volum/liter-til-gallon.html">Liter til gallon</a></li>
@@ -192,6 +204,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/volum/milliliter-til-spiseskje.js"></script>
 </body>
 </html>

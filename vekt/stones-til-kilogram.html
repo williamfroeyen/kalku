@@ -163,6 +163,18 @@
                 <p class="paragraph">
                     1 stone er lik 6,35029318 kilogram. For å konvertere stones til kilogram, ganger man antall stones på 6,35029318. Formelen er: Kilogram = stones * 6.35029318.  
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre vektkalkulatorer:
                 <ul>
                     <li><a href="/vekt/kilogram-til-pund.html">Kilogram til pund</a></li>
@@ -189,6 +201,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/vekt/stones-til-kilogram.js"></script>
 </body>
 </html>

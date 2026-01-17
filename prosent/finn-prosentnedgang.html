@@ -157,6 +157,18 @@
                 <p class="paragraph">
                     For å finne prosentnedgangen, tar man først den opprinnelige verdien minus den nye verdien. Da får man differansen. Så deler man differansen på opprinnelig verdi, og ganger med 100. Da får man prosentnedgangen. Formelen er: Prosentnedgang = ((opprinnelig verdi - ny verdi) / opprinnelig verdi) * 100.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre prosentkalkulatorer:
                 <ul>
                     <li><a href="/prosent/finn-prosenten.html">Finn prosenten</a></li>
@@ -175,6 +187,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/prosent/finn-prosentnedgang.js"></script>
 </body>
 </html>

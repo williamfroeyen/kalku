@@ -61,6 +61,18 @@
                 <p class="paragraph">
                     1 kvadratmeter er lik 10,7639 square feet. Formelen for å konvertere fra kvadratmeter til square feet er: Square feet = kvadratmeter * 10,7639.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre arealkalkulatorer:
                 <ul>
                     <li><a href="/areal/sqft-til-kvadratmeter.html">Square feet til kvadratmeter</a></li>
@@ -95,6 +107,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/areal/kvadratmeter-til-sqft.js"></script>
 </body>
 </html>

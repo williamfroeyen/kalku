@@ -149,6 +149,18 @@
                 <p class="paragraph">
                     Brukes for å finne ut hva 100% utgjør, når du vet hvor mye en viss prosent utgjør. For å finne det hele tallet (hva 100% utgjør) fra prosenten, deler man delen av tallet på prosentfaktoren. Prosentfaktoren er prosenten delt på 100. 60% har prosentfaktoren 0,60. Formelen er: Hele tallet = delen av tallet / (prosent / 100). Hvis du for eksempel vet at 60% av noe tilsvarer 50kr, og du vil finne ut hvor mye 100% utgjør, deler du først 60 på 100. Da får man prosentfaktoren 0,60. Man deler så 50 på 0,60, og får 83,33. 83,33 utgjør dermed 100%, når 60% tilsvarer 50kr.  
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre prosentkalkulatorer:
                 <ul>
                     <li><a href="/prosent/finn-prosenten.html">Finn prosenten</a></li>
@@ -167,6 +179,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/prosent/finn-hele-tallet-fra-prosenten.js"></script>
 </body>
 </html>

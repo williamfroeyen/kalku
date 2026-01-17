@@ -61,6 +61,18 @@
                 <p class="paragraph">
                     Det er mulig å bruke vitenskapelig notasjon, for eksempel 3.3e19 for 3,3 * 10^19. Denne kalkulatoren benytter Wiens forskyvningslov. Formelen er: &lambda; * T = a. &lambda; er bølgelengden for legemets maksimale strålingsintensitet, og T er den absolutte temperaturen til legemet. Konstanten a er lik 2,898 * 10^-3 m*K. 
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre kalkulatorer for stråling og bølger:
                 <ul>
                     <li><a href="/straaling-og-boelger/boelgekalkulator.html">Bølgekalkulator</a></li>
@@ -78,6 +90,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/straaling-og-boelger/wiens-forskyvningslov-kalkulator.js"></script>
 </body>
 </html>

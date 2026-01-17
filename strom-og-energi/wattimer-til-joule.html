@@ -147,6 +147,18 @@
                 <p class="paragraph">
                     For å konvertere wattimer til joule (Wh til J), ganger man antall wattimer med 3600. Formelen er: J = Wh * 3600. En joule tilsvarer ett wattsekund. Joule er en enhet for arbeid. Arbeidet på en gjenstand tilsvarer kraften som virker på gjenstanden i Newton ganger strekningen i meter. Formelen er: W = F*s. Dette gjelder bare om retningen av kraften og bevegelsen er like. Resultatet får man i newtonmeter, som er det samme som joule. Effekt, med enheten watt, er arbeidet delt på tid. 1 watt tilsvarer 1 joule per sekund (1 J/s). En wattime er definert som effekten 1 watt brukt i løpet av 1 time. En time består av 3600 sekunder. 1 J/s * 3600s = 3600 joule. Dermed tilsvarer 1 wattime 3600 joule. Wattimer, i likhet med joule, er en enhet for energi. 
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Kalkulator for arbeid:
                 <ul>
                     <li><a href="/mekanikk-og-arbeid/beregn-arbeid.html">Beregn arbeid</a></li>
@@ -170,6 +182,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/strom-og-energi/wattimer-til-joule.js"></script>
 </body>
 </html>

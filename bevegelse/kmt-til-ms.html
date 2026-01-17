@@ -169,6 +169,18 @@
                 <p class="paragraph">
                     1 km/t er lik omtrent 0,2778 m/s. For å gjøre om km/t til m/s, deler man km/t med 3,6. Formelen er: m/s = km/t / 3,6.
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre bevegelseskalkulatorer:
                 <ul>
                     <li><a href="/bevegelse/kmt-til-mph.html">km/t til mph</a></li>
@@ -203,6 +215,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/bevegelse/kmt-til-ms.js"></script>
 </body>
 </html>

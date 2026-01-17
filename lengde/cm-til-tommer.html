@@ -153,6 +153,18 @@
                 <p class="paragraph">
                     1 cm er lik 0,393700787 tommer. Formelen for å konvertere fra centimeter til tommer (cm til inch) er: Tommer = centimeter * 0,393700787. 
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre lengdekalkulatorer:
                 <ul>
                     <li><a href="/lengde/meter-til-fot.html">Meter til fot</a></li>
@@ -193,6 +205,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/lengde/cm-til-tommer.js"></script>
 </body>
 </html>
