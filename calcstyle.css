@@ -270,7 +270,8 @@ header {
 
 #search #searchresultfield #searchresultlist {
     list-style: none;
-    padding: 20px 0px;
+    margin: 0px;
+    padding: 20px;
 }
 
 #search #searchresultfield #searchresultlist li {
@@ -448,7 +449,7 @@ footer #bottom-footer #footerLastElement {
         width: 225px;
     }
 
-    #search #searchresultlist {
-        margin-left: 10px;
+    #search #searchresultfield #searchresultlist {
+        padding: 15px;
     }
 }
