@@ -17,6 +17,8 @@
   {"title":"Milliliter til spiseskje","url":"/volum/milliliter-til-spiseskje.html","category":"Volum"},
   {"title":"Teskje til spiseskje","url":"/volum/teskje-til-spiseskje.html","category":"Volum"},
   {"title":"Spiseskje til teskje","url":"/volum/spiseskje-til-teskje.html","category":"Volum"},
+  {"title":"US cups til desiliter","url":"/volum/uscups-til-desiliter.html","category":"Volum"},
+  {"title":"Desiliter til US cups","url":"/volum/desiliter-til-uscups.html","category":"Volum"},
   
   {"title":"Meter til fot","url":"/lengde/meter-til-fot.html","category":"Lengde"},
   {"title":"Fot til meter","url":"/lengde/fot-til-meter.html","category":"Lengde"},
@@ -87,6 +89,8 @@
   {"title":"knop til km/t","url":"/bevegelse/knop-til-kmt.html","category":"Bevegelse"},
   {"title":"m/s til knop","url":"/bevegelse/ms-til-knop.html","category":"Bevegelse"},
   {"title":"knop til m/s","url":"/bevegelse/knop-til-ms.html","category":"Bevegelse"},
+  {"title":"min/km til km/t","url":"/bevegelse/minkm-til-kmt.html","category":"Bevegelse"},
+  {"title":"km/t til min/km","url":"/bevegelse/kmt-til-minkm.html","category":"Bevegelse"},
 
   {"title":"Finn hypotenusen","url":"/geometri/finn-hypotenusen.html","category":"Geometri"},
   {"title":"Finn kateten","url":"/geometri/finn-katet.html","category":"Geometri"},
