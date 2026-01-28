@@ -97,6 +97,7 @@
   {"title":"Finn arealet av en sirkel","url":"/geometri/areal-av-sirkel.html","category":"Geometri"},
   {"title":"Finn omkretsen av en sirkel","url":"/geometri/omkrets-av-sirkel.html","category":"Geometri"},
   {"title":"Finn volumet av en sylinder","url":"/geometri/volum-av-sylinder.html","category":"Geometri"},
+  {"title":"Finn volumet av en kjegle","url":"/geometri/volum-av-kjegle.html","category":"Geometri"},
   {"title":"Finn volumet av en kule","url":"/geometri/volum-av-kule.html","category":"Geometri"},
 
   {"title":"Kaffekalkulator","url":"/mat/kaffekalkulator.html","category":"Mat"},
@@ -113,6 +114,8 @@
 
   {"title":"Kilopascal til bar","url":"/trykk/kpa-til-bar.html","category":"Trykk"},
   {"title":"Bar til kilopascal","url":"/trykk/bar-til-kpa.html","category":"Trykk"},
+  {"title":"Megapascal til bar","url":"/trykk/mpa-til-bar.html","category":"Trykk"},
+  {"title":"Bar til megapascal","url":"/trykk/bar-til-mpa.html","category":"Trykk"},
   {"title":"Kilopascal til psi","url":"/trykk/kpa-til-psi.html","category":"Trykk"},
   {"title":"psi til kilopascal","url":"/trykk/psi-til-kpa.html","category":"Trykk"},
   {"title":"Bar til psi","url":"/trykk/bar-til-psi.html","category":"Trykk"},

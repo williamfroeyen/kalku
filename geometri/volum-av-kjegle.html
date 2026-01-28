@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omkrets av sirkel - Rask og presis kalkulator</title>
-    <meta name="description" content="Finn enkelt og raskt omkretsen av en sirkel med denne kalkulatoren. Den gir et nøyaktig svar umiddelbart. Prøv den nå!"/>
+    <title>Volum av kjegle | Rask og presis kalkulator</title>
+    <meta name="description" content="Regn ut volumet av en kjegle med denne raske og enkle kalkulatoren. Få nøyaktig svar umiddelbart. Prøv den nå!">
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -19,10 +19,10 @@
         "@graph": [
             {
             "@type": "WebPage",
-            "@id": "https://www.kalku.no/geometri/omkrets-av-sirkel.html#webpage",
-            "url": "https://www.kalku.no/geometri/omkrets-av-sirkel.html",
-            "name": "Omkrets av sirkel - Rask og presis kalkulator",
-            "description": "Finn enkelt og raskt omkretsen av en sirkel med denne kalkulatoren. Den gir et nøyaktig svar umiddelbart. Prøv den nå!",
+            "@id": "https://www.kalku.no/geometri/volum-av-kjegle.html#webpage",
+            "url": "https://www.kalku.no/geometri/volum-av-kjegle.html",
+            "name": "Volum av kjegle | Rask og presis kalkulator",
+            "description": "Regn ut volumet av en kjegle med denne raske og enkle kalkulatoren. Få nøyaktig svar umiddelbart. Prøv den nå!",
             "inLanguage": "nb",
             "publisher": {
             "@type": "Organization",
@@ -35,7 +35,7 @@
             },
             {
             "@type": "BreadcrumbList",
-            "@id": "https://www.kalku.no/geometri/omkrets-av-sirkel.html#breadcrumb",
+            "@id": "https://www.kalku.no/geometri/volum-av-kjegle.html#breadcrumb",
             "itemListElement": [
                 {
                 "@type": "ListItem",
@@ -52,29 +52,29 @@
                 {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Omkrets av sirkel",
-                "item": "https://www.kalku.no/geometri/omkrets-av-sirkel.html"
+                "name": "Volum av kjegle",
+                "item": "https://www.kalku.no/geometri/volum-av-kjegle.html"
                 }
             ]
             },
             {
             "@type": "FAQPage",
-            "@id": "https://www.kalku.no/geometri/omkrets-av-sirkel.html#faq",
+            "@id": "https://www.kalku.no/geometri/volum-av-kjegle.html#faq",
             "mainEntity": [
                 {
                 "@type": "Question",
-                "name": "Hvordan finner man omkretsen av en sirkel?",
+                "name": "Hvordan finner man volumet av en kjegle?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Omkretsen av en sirkel finner du ved å multiplisere tallet 2, pi (π) og radiusen med hverandre. For eksempel: Har du en sirkel med radius 3 cm, blir omkretsen 2 * π * 3 cm ≈ 18,85 cm."
+                    "text": "Formelen for å finne volumet av en kjegle er: V=(πr²h)/3, som vil si volum = (π * radius^2 * høyde) / 3. For eksempel: En kjegle har radiusen 3 cm og høyden 6 cm. V = (π * (3 cm)^2 * 6 cm) / 3 ≈ 56,549 cm³."
                 }
                 },
                 {
                 "@type": "Question",
-                "name": "Hva er formelen for å finne omkretsen av en sirkel?",
+                "name": "Hva er formelen for å finne volumet av en kjegle?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Omkretsen av en sirkel beregnes med formelen: O = 2 * π * r."
+                    "text": "Formelen for å finne volumet av en kjegle er: V=(πr²h)/3."
                 }
                 },
                 {
@@ -97,12 +97,12 @@
             },
             {
             "@type": "SoftwareApplication",
-            "@id": "https://www.kalku.no/geometri/omkrets-av-sirkel.html#app",
-            "name": "Omkrets av sirkel Kalkulator",
+            "@id": "https://www.kalku.no/geometri/volum-av-kjegle.html#app",
+            "name": "Volum av kjegle Kalkulator",
             "applicationCategory": "Calculator",
             "applicationSubCategory": "Geometry Calculator",
             "operatingSystem": "Web",
-            "url": "https://www.kalku.no/geometri/omkrets-av-sirkel.html",
+            "url": "https://www.kalku.no/geometri/volum-av-kjegle.html",
             "inLanguage": "nb",
             "offers": {
                 "@type": "Offer",
@@ -112,7 +112,7 @@
             }
         ]
         }
-    </script>
+        </script>
 </head>
 <body>
     <header>
@@ -130,21 +130,27 @@
         </ul>
     </header>
     <section class="showcase" id="calc-showcase">
-        <h1>Omkrets av sirkel kalkulator</h1>
+        <h1>Volum av kjegle kalkulator</h1>
     </section>
     <main id="calculator">
         <div>
             <div class="input">
                 <p>Radius</p>
-                <input id="input1" type="number">
+                <input id="input1" type="number" placeholder="">
             </div>
             <div class="input">
-                <p>Omkrets</p>
-                <input id="output1" type="number" disabled="">
+                <p>Høyde</p>
+                <input id="input2" type="number" placeholder="">
+            </div>
+            <div id="oneResult">
+                <p id="oneResultText">Volum:</p>
             </div>
             <div id="description">
                 <p class="paragraph">
-                    Omkretsen av en sirkel finner du ved å multiplisere tallet 2, pi (π) og radiusen med hverandre. Radiusen er avstanden mellom midtpunktet av sirkelen til kanten. Radiusen er halvparten av diameteren, som er sirkelens bredde når man tegner en strek fra kant til kant gjennom sentrum. π er lik omtrent 3,14159. Formelen blir: Omkrets = 2 * π * radius. For eksempel: Har du en sirkel med radius 3 cm, blir omkretsen 2 * π * 3 cm ≈ 18,85 cm.
+                    Formelen for å finne volumet av en kjegle er: V=(πr²h)/3, som vil si volum = (π * radius^2 * høyde) / 3. For eksempel: En kjegle har radiusen 3 cm og høyden 6 cm. V = (π * (3 cm)^2 * 6 cm) / 3 ≈ 56,549 cm³. Pi (π) er lik omtrent 3,14159. 
+                </p>
+                <p class="paragraph">
+                    Resultatet vil ha enheten for radius og høyde opphøyd i 3. Oppgir du radius og høyde i cm, vil volumet ha enheten cm³.
                 </p>
                 <search id="search">
                     <p>Søk etter andre kalkulatorer:</p>
@@ -158,17 +164,13 @@
                         <ul id="searchresultlist"></ul>
                     </div>
                 </search>
-                Her finner du arealet av en sirkel:
-                <ul>
-                    <li><a href="areal-av-sirkel.html">Finn arealet av en sirkel</a></li>
-                </ul>
                 Andre geometrikalkulatorer:
                 <ul>
                     <li><a href="/geometri/finn-hypotenusen.html">Finn hypotenusen</a></li>
                     <li><a href="/geometri/finn-katet.html">Finn kateten</a></li>
                     <li><a href="/geometri/areal-av-sirkel.html">Finn arealet av en sirkel</a></li>
+                    <li><a href="/geometri/omkrets-av-sirkel.html">Finn omkretsen av en sirkel</a></li>
                     <li><a href="/geometri/volum-av-sylinder.html">Finn volumet av en sylinder</a></li>
-                    <li><a href="/geometri/volum-av-kjegle.html">Finn volumet av en kjegle</a></li>
                     <li><a href="/geometri/volum-av-kule.html">Finn volumet av en kule</a></li>
                 </ul>
             </div>
@@ -183,6 +185,6 @@
     </footer>
     <script src="../search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
-    <script src="/geometri/omkrets-av-sirkel.js"></script>
+    <script src="/geometri/volum-av-kjegle.js"></script>
 </body>
 </html>
