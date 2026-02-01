@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volum av kule | Rask og presis kalkulator</title>
-    <meta name="description" content="Finn enkelt og raskt volumet av en kule med denne kalkulatoren. Den gir et nøyaktig svar umiddelbart. Prøv den nå!"/>
+    <title>Areal (overflate) av sylinder kalkulator</title>
+    <meta name="description" content="Finn enkelt og raskt arealet (overflaten) av en sylinder med denne kalkulatoren. Den gir et nøyaktig svar umiddelbart. Prøv den nå!"/>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -19,10 +19,10 @@
         "@graph": [
             {
             "@type": "WebPage",
-            "@id": "https://www.kalku.no/geometri/volum-av-kule.html#webpage",
-            "url": "https://www.kalku.no/geometri/volum-av-kule.html",
-            "name": "Volum av kule - Rask og presis kalkulator",
-            "description": "Finn enkelt og raskt volumet av en kule med denne kalkulatoren. Den gir et nøyaktig svar umiddelbart. Prøv den nå!",
+            "@id": "https://www.kalku.no/geometri/areal-av-sylinder.html#webpage",
+            "url": "https://www.kalku.no/geometri/areal-av-sylinder.html",
+            "name": "Areal (overflate) av sylinder kalkulator",
+            "description": "Finn enkelt og raskt arealet (overflaten) av en sylinder med denne kalkulatoren. Den gir et nøyaktig svar umiddelbart. Prøv den nå!",
             "inLanguage": "nb",
             "publisher": {
             "@type": "Organization",
@@ -35,7 +35,7 @@
             },
             {
             "@type": "BreadcrumbList",
-            "@id": "https://www.kalku.no/geometri/volum-av-kule.html#breadcrumb",
+            "@id": "https://www.kalku.no/geometri/areal-av-sylinder.html#breadcrumb",
             "itemListElement": [
                 {
                 "@type": "ListItem",
@@ -52,37 +52,29 @@
                 {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Volum av kule",
-                "item": "https://www.kalku.no/geometri/volum-av-kule.html"
+                "name": "Areal av sylinder",
+                "item": "https://www.kalku.no/geometri/areal-av-sylinder.html"
                 }
             ]
             },
             {
             "@type": "FAQPage",
-            "@id": "https://www.kalku.no/geometri/volum-av-kule.html#faq",
+            "@id": "https://www.kalku.no/geometri/areal-av-sylinder.html#faq",
             "mainEntity": [
                 {
                 "@type": "Question",
-                "name": "Hvordan finner man volumet av en kule?",
+                "name": "Hva er formelen for å finne arealet av en sylinder?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Volumet av en kule finner du ved å multiplisere (4/3), pi (π) og radius ganget med seg selv tre ganger (radius^3). For eksempel: Har du en kule med en radius på 3 cm, blir volumet (4/3) * π * 3^3 ≈ 113 cm³."
+                    "text": "Formelen for å finne overflatearealet til en sylinder er: A = 2πr^2 + 2πrh."
                 }
                 },
                 {
                 "@type": "Question",
-                "name": "Hva er formelen for å finne volumet av en kule?",
+                "name": "Hva er radius?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Volumet av en kule = (4/3) * π * radius^3."
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "Hva er radiusen til en kule?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Radius er avstanden fra sentrum til kanten. Halvparten av diameteren."
+                    "text": "Radiusen er avstanden mellom midtpunktet av bunnflaten til kanten av bunnflaten."
                 }
                 },
                 {
@@ -90,19 +82,19 @@
                 "name": "Hva er pi?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Pi (π) er et spesielt tall som brukes mye i matematikk. Det begynner med 3,14 og fortsetter uendelig uten mønster."
+                    "text": "Pi (π) er et irrasjonelt tall og en konstant som er omtrent lik 3,14159."
                 }
                 }
             ]
             },
             {
             "@type": "SoftwareApplication",
-            "@id": "https://www.kalku.no/geometri/volum-av-kule.html#app",
-            "name": "Volum av kule Kalkulator",
+            "@id": "https://www.kalku.no/geometri/areal-av-sylinder.html#app",
+            "name": "Areal av sylinder Kalkulator",
             "applicationCategory": "Calculator",
             "applicationSubCategory": "Geometry Calculator",
             "operatingSystem": "Web",
-            "url": "https://www.kalku.no/geometri/volum-av-kule.html",
+            "url": "https://www.kalku.no/geometri/areal-av-sylinder.html",
             "inLanguage": "nb",
             "offers": {
                 "@type": "Offer",
@@ -130,27 +122,27 @@
         </ul>
     </header>
     <section class="showcase" id="calc-showcase">
-        <h1>Volum av kule kalkulator</h1>
+        <h1>Areal av sylinder kalkulator</h1>
     </section>
     <main id="calculator">
         <div>
             <div class="input">
                 <p>Radius</p>
-                <input id="input1" type="number">
+                <input id="input1" type="number" placeholder="">
             </div>
             <div class="input">
-                <p>Volum</p>
-                <input id="output1" type="number" disabled="">
+                <p>Høyde</p>
+                <input id="input2" type="number" placeholder="">
+            </div>
+            <div id="oneResult">
+                <p id="oneResultText">Areal:</p>
             </div>
             <div id="description">
                 <p class="paragraph">
-                    Volumet av en kule finner du ved å multiplisere (4/3), pi (π) og radius^3. Radius^3 betyr at du ganger radius med seg selv tre ganger. 
+                    Formelen for å finne overflatearealet til en sylinder er: A = 2πr^2 + 2πrh. r står for radius, og h for høyde. π er lik omtrent 3,14159. πr^2 er arealet til bunnflaten av sylinderen. Den multipliseres med to for toppflate og bunnflate. 2πrh er sideflaten til sylinderen, 2πr er omkretsen, som man ganger med høyden til sylinderen. Radiusen er avstanden mellom midtpunktet av bunnflaten til kanten av bunnflaten. 
                 </p>
                 <p class="paragraph">
-                    Tegner du en sirkel rundt kulen, er radiusen avstanden mellom midtpunktet av sirkelen til kanten. Radiusen er halvparten av diameteren, som er sirkelens bredde når man tegner en strek fra kant til kant gjennom sentrum. 
-                </p>
-                <p class="paragraph">
-                    π er et spesielt tall som begynner med 3,14 og fortsetter i det uendelige uten et mønster. Formelen blir: Volum = (4/3) * π * radius^3. For eksempel: Har du en kule med en radius på 3 cm, blir volumet (4/3) * π * 3^3 ≈ 113 cm³.
+                    Enheten du bruker for radius er lik enheten for arealet opphøyd i andre. Oppgir du radiusen i cm, er arealet oppgitt i cm^2. 
                 </p>
                 <search id="search">
                     <p>Søk etter andre kalkulatorer:</p>
@@ -164,9 +156,9 @@
                         <ul id="searchresultlist"></ul>
                     </div>
                 </search>
-                Her finner du overflatearealet til en kule:
+                Her finner du volumet av en sylinder:
                 <ul>
-                    <li><a href="/geometri/areal-av-kule.html">Finn arealet av en kule</a></li>
+                    <li><a href="/geometri/volum-av-sylinder.html">Finn volumet av en sylinder</a></li>
                 </ul>
                 Andre geometrikalkulatorer:
                 <ul>
@@ -174,10 +166,10 @@
                     <li><a href="/geometri/finn-katet.html">Finn kateten</a></li>
                     <li><a href="/geometri/areal-av-kule.html">Finn arealet av en kule</a></li>
                     <li><a href="/geometri/areal-av-sirkel.html">Finn arealet av en sirkel</a></li>
-                    <li><a href="/geometri/areal-av-sylinder.html">Finn arealet av en sylinder</a></li>
                     <li><a href="/geometri/omkrets-av-sirkel.html">Finn omkretsen av en sirkel</a></li>
                     <li><a href="/geometri/volum-av-sylinder.html">Finn volumet av en sylinder</a></li>
                     <li><a href="/geometri/volum-av-kjegle.html">Finn volumet av en kjegle</a></li>
+                    <li><a href="/geometri/volum-av-kule.html">Finn volumet av en kule</a></li>
                 </ul>
             </div>
         </div>
@@ -191,6 +183,6 @@
     </footer>
     <script src="../search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
-    <script src="/geometri/volum-av-kule.js"></script>
+    <script src="/geometri/areal-av-sylinder.js"></script>
 </body>
 </html>
