@@ -138,6 +138,10 @@ header {
     line-height: 35px;
 }
 
+#calculator #description h2 {
+    margin: 10px 0px;
+}
+
 #calculator #description img {
     width: 100%;
     padding: 20px 0px;
@@ -154,8 +158,12 @@ header {
     color: #8affef;
 }
 
+#calculator #description #tablecontainer {
+    overflow-x: auto;
+}
+
 #calculator #description table {
-    margin: 10px 10px 20px 10px;
+    margin: 40px 0px;
     border-collapse: collapse;
 }
 

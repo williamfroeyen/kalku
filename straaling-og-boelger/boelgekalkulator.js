@@ -23,10 +23,6 @@ boelgeFartInputElement.addEventListener("input", updateResult);
 elektromagnetiskValg.addEventListener("input", updateResult);
 mekaniskValg.addEventListener("input", updateResult);
 
-
-const normalizedValue = e.target.value.replace(',', '.');
-    const inputValue = parseFloat(normalizedValue);
-
 function updateResult() {
     frekvensOutput = periodeOutput = boelgelengdeOutput = boelgefartOutput = fotonenergi = undefined;
     outputItems = [];

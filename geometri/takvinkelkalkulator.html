@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takvinkelkalkulator | Finn takvinkel, takhelling og mer</title>
+    <meta name="description" content="Finn takvinkel, takhelling, taklengde og bredde med denne takvinkelkalkulatoren."/>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="../calcstyle.css"> 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
+     crossorigin="anonymous"></script>
+     <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+            "@type": "WebPage",
+            "@id": "https://www.kalku.no/geometri/takvinkelkalkulator.html#webpage",
+            "url": "https://www.kalku.no/geometri/takvinkelkalkulator.html",
+            "name": "Takvinkelkalkulator | Finn takvinkel, takhelling og mer",
+            "description": "Finn takvinkel, takhelling, taklengde og bredde med denne takvinkelkalkulatoren.",
+            "inLanguage": "nb",
+            "publisher": {
+            "@type": "Organization",
+            "name": "Kalku.no",
+            "url": "https://www.kalku.no/"
+            },
+            "isPartOf": {
+                "@id": "https://www.kalku.no/"
+            }
+            },
+            {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.kalku.no/geometri/takvinkelkalkulator.html#breadcrumb",
+            "itemListElement": [
+                {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Hjem",
+                "item": "https://www.kalku.no/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Geometri",
+                "item": "https://www.kalku.no/geometri/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Takvinkelkalkulator",
+                "item": "https://www.kalku.no/geometri/takvinkelkalkulator.html"
+                }
+            ]
+            },
+            {
+            "@type": "FAQPage",
+            "@id": "https://www.kalku.no/geometri/takvinkelkalkulator.html#faq",
+            "mainEntity": [
+                {
+                "@type": "Question",
+                "name": "Hvordan finner man lengden på taket?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Man kan finne lengden på et tak ved å bruke Pytagoras' læresetning. Formelen er: skrå taklengde = sqrt((vannrett avstand til midten)^2+(loddrett takhøyde)^2)."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "Hvordan finner man takvinkelen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Takvinkelen kan man finne med formelen: Takvinkel = arctan(loddrett takhøyde / vannrett avstand til midten)."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "Hvilke resultater gir denne takvinkelkalkulatoren?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Denne takvinkelkalkulatoren kan finne den ukjente lengden, takhellingen i prosent og mm per meter, og takvinkelen i grader."
+                }
+                }
+            ]
+            },
+            {
+            "@type": "SoftwareApplication",
+            "@id": "https://www.kalku.no/geometri/takvinkelkalkulator.html#app",
+            "name": "Takvinkelkalkulator",
+            "applicationCategory": "Calculator",
+            "applicationSubCategory": "CarpentryCalculator",
+            "operatingSystem": "Web",
+            "url": "https://www.kalku.no/geometri/takvinkelkalkulator.html",
+            "inLanguage": "nb",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "NOK"
+            }
+            }
+        ]
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img id="logo" width="175px" height="70px" alt="Kalku logo" src="/kalku-70px.png"></a>
+        <ul id="menu">
+            <li>
+                <a href="../index.html">Hjem</a>
+            </li>
+            <li>
+                <a href="../kontakt.html">Kontakt</a>
+            </li>
+            <li>
+                <a href="../faq.html">FAQ</a>
+            </li>
+        </ul>
+    </header>
+    <section class="showcase" id="calc-showcase">
+        <h1>Takvinkelkalkulator</h1>
+    </section>
+    <main id="calculator">
+        <div>
+            <div id="rowOne">
+                <div class="input">
+                    <p>Loddrett takhøyde</p>
+                    <input id="loddretttakhoyde" type="number" placeholder="meter">
+                </div>
+                <div class="input">
+                    <p>Skrå taklengde</p>
+                    <input id="skrataklengde" type="number" placeholder="meter">
+                </div>
+            </div>
+            <div id="rowTwo">
+                <div class="input">
+                    <p>Vannrett avstand til midten</p>
+                    <input id="vannretttaklengde" type="number" placeholder="meter">
+                </div>
+            </div>
+            <ul id="resultsList">
+            </ul>
+            <div id="description">
+                <img src="/geometri/takvinkel-illustrasjon.jpg" width="600" height="400" alt="Takvinkel illustrasjon">
+                <div class="ad-slot">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
+                    crossorigin="anonymous"></script>
+                    <!-- Kvadratisk annonse -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-9820535772137571"
+                        data-ad-slot="7612697794"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <h2>Slik bruker du takvinkelkalkulatoren</h2>
+                <p class="paragraph">
+                    Fyll ut to av feltene, så finner kalkulatoren den tredje lengden. Kalkulatoren vil også beregne takvinkelen og takhellingen i prosent og mm per meter. 
+                </p>
+                <h2>Hvordan kalkulatoren gjør beregningene</h2>
+                <p class="paragraph">
+                    Kalkulatoren benytter blant annet Pytagoras' læresetning og tangens for å beregne resultatene. Formlene kalkulatorene benytter er: Takvinkel = arctan(loddrett takhøyde / vannrett avstand til midten). Skrå taklengde = sqrt((vannrett avstand til midten)^2+(loddrett takhøyde)^2).
+                </p>
+                <h2>Guide: Vanlige takvinkler og taktekking</h2>
+                <p>Hvilket materiale du kan bruke på taket ditt avhenger i stor grad av takvinkelen. Her er en oversikt over de vanligste kravene:</p>
+                <div id="tablecontainer">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Takvinkel (grader)</th>
+                                <th scope="col">Takhelling (mm/m)</th>
+                                <th scope="col">Takhelling (%)</th>
+                                <th scope="col">Anbefalt taktekking</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>0° - 2°</strong></td>
+                                <td>0 - 34.92 mm</td>
+                                <td>0 - 3.492%</td>
+                                <td><strong>Flate tak.</strong> Krever asfalt takbelegg eller membran. Minimum 1,5° fall for avrenning.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>6°</strong></td>
+                                <td>105.1 mm</td>
+                                <td>10.51%</td>
+                                <td><strong>Lavtbyggende tak.</strong> Minimumsgrense for enkelte profilerte stålplater.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>15°</strong></td>
+                                <td>267.9 mm</td>
+                                <td>26.79%</td>
+                                <td><strong>Moderat helling.</strong> Minimum for noen typer takstein når man bruker forsterket undertak.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>22°</strong></td>
+                                <td>404.0 mm</td>
+                                <td>40.40%</td>
+                                <td><strong>Standard saltak.</strong> Svært vanlig i Norge. Minimum for de fleste typer takstein og torvtak.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>27°</strong></td>
+                                <td>509.5 mm</td>
+                                <td>50.95%</td>
+                                <td><strong>Bratt saltak.</strong> Ofte brukt for å få bedre plass på loftet eller for tradisjonell stil.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>34°</strong></td>
+                                <td>674.5 mm</td>
+                                <td>67.45%</td>
+                                <td><strong>A-tak / Loftstak.</strong> Gir god ståhøyde i andre etasje.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>45°</strong></td>
+                                <td>1000 mm</td>
+                                <td>100%</td>
+                                <td><strong>Bratt tak.</strong> Snøen slipper lett, og man får maksimal utnyttelse av loftet.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><em><strong>Merk:</strong> Kravene varierer mellom produsenter. Sjekk alltid monteringsanvisningen for det spesifikke produktet du skal bruke.</em></p>
+                <div class="ad-slot">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
+                    crossorigin="anonymous"></script>
+                    <!-- Kvadratisk annonse 2 -->
+                    <ins class="adsbygoogle"
+                        style="display:block"
+                        data-ad-client="ca-pub-9820535772137571"
+                        data-ad-slot="6520827260"
+                        data-ad-format="auto"
+                        data-full-width-responsive="true"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
+                Andre geometrikalkulatorer:
+                <ul>
+                    <li><a href="/geometri/finn-hypotenusen.html">Finn hypotenusen</a></li>
+                    <li><a href="/geometri/finn-katet.html">Finn kateten</a></li>
+                    <li><a href="/geometri/areal-av-kule.html">Finn arealet av en kule</a></li>
+                    <li><a href="/geometri/areal-av-sirkel.html">Finn arealet av en sirkel</a></li>
+                    <li><a href="/geometri/areal-av-sylinder.html">Finn arealet av en sylinder</a></li>
+                    <li><a href="/geometri/omkrets-av-sirkel.html">Finn omkretsen av en sirkel</a></li>
+                    <li><a href="/geometri/volum-av-sylinder.html">Finn volumet av en sylinder</a></li>
+                    <li><a href="/geometri/volum-av-kjegle.html">Finn volumet av en kjegle</a></li>
+                    <li><a href="/geometri/volum-av-kule.html">Finn volumet av en kule</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="bottom-footer">
+            <p>Copyright 2026 © Kalku</p>
+            <a id="footerFirstElement" href="/vilkår-for-bruk.html">Vilkår for bruk</a>
+            <a id="footerLastElement" href="/personvern.html">Personvern</a>
+        </div>
+    </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+    <script src="/geometri/takvinkelkalkulator.js"></script>
+</body>
+</html>
