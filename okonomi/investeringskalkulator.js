@@ -20,9 +20,9 @@ function updateResult() {
     let maendeligBidrag = parseFloat(input2.value);
     let antallAar = parseFloat(input3.value);
     let aarligRente = parseFloat(input4.value);
+    let aarligRentePF = aarligRente / 100;
 
     if (!isNaN(startBeloep) && !isNaN(maendeligBidrag) && !isNaN(antallAar) && !isNaN(aarligRente)) {
-        aarligRentePF = aarligRente / 100;
         outputValue = startBeloep * (1 + aarligRentePF / 12)**(12*antallAar)+maendeligBidrag*(((1 + aarligRentePF / 12)**(12*antallAar)-1) / (aarligRentePF / 12))
         utenAvkastning = startBeloep + maendeligBidrag*12*antallAar;
         avkastning = outputValue - utenAvkastning;

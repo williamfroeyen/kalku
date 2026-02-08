@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediankalkulator | Rask og presis</title>
+    <meta name="description" content="Finn medianen med denne statistikk-kalkulatoren. Rask og presis beregning. Prøv den nå!"/>
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="../calcstyle.css"> 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
+     crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+            "@type": "WebPage",
+            "@id": "https://www.kalku.no/statistikk/mediankalkulator.html#webpage",
+            "url": "https://www.kalku.no/statistikk/mediankalkulator.html",
+            "name": "Mediankalkulator | Rask og presis",
+            "description": "Finn medianen med denne statistikk-kalkulatoren. Rask og presis beregning. Prøv den nå!",
+            "inLanguage": "nb",
+            "publisher": {
+            "@type": "Organization",
+            "name": "Kalku.no",
+            "url": "https://www.kalku.no/"
+            },
+            "isPartOf": {
+                "@id": "https://www.kalku.no/"
+            }
+            },
+            {
+            "@type": "BreadcrumbList",
+            "@id": "https://www.kalku.no/statistikk/mediankalkulator.html#breadcrumb",
+            "itemListElement": [
+                {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Hjem",
+                "item": "https://www.kalku.no/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Statistikk",
+                "item": "https://www.kalku.no/statistikk/"
+                },
+                {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Mediankalkulator",
+                "item": "https://www.kalku.no/statistikk/mediankalkulator.html"
+                }
+            ]
+            },
+            {
+            "@type": "FAQPage",
+            "@id": "https://www.kalku.no/statistikk/mediankalkulator.html#faq",
+            "mainEntity": [
+                {
+                "@type": "Question",
+                "name": "Hva er en mediankalkulator?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "En mediankalkulator er en kalkulator som finner medianen av et sett med tall. Medianen er det midterste tallet i en rekke tall sortert fra minste til største verdi."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "Hva er medianen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Medianen er det midterste tallet i en rekke tall sortert fra minste til største verdi."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "Hvordan finner jeg medianen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Medianen finner man ved å sortere en liste med tall fra minste til største verdi. Det midterste tallet er medianen. Er det to tall i midten, adderer man dem sammen og deler på to for å finne medianen."
+                }
+                },
+                {
+                "@type": "Question",
+                "name": "Hva er forskjellen på gjennomsnitt og median?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Gjennomsnittet er summen av alle verdier delt på antall observasjoner. Den påvirkes sterkt av ekstreme verdier. Medianen er tallet midten av dataene når tallene er sortert fra minst til størst. Medianen kan gi et mer realistisk bilde av hva en typisk verdi er."
+                }
+                }
+            ]
+            },
+            {
+            "@type": "SoftwareApplication",
+            "@id": "https://www.kalku.no/statistikk/mediankalkulator.html#app",
+            "name": "Mediankalkulator",
+            "applicationCategory": "Calculator",
+            "applicationSubCategory": "StatisticsCalculator",
+            "operatingSystem": "Web",
+            "url": "https://www.kalku.no/statistikk/mediankalkulator.html",
+            "inLanguage": "nb",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "NOK"
+            }
+            }
+        ]
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img id="logo" width="175px" height="70px" alt="Kalku logo" src="/kalku-70px.png"></a>
+        <ul id="menu">
+            <li>
+                <a href="../index.html">Hjem</a>
+            </li>
+            <li>
+                <a href="../kontakt.html">Kontakt</a>
+            </li>
+            <li>
+                <a href="../faq.html">FAQ</a>
+            </li>
+        </ul>
+    </header>
+    <section class="showcase" id="calc-showcase">
+        <h1>Mediankalkulator</h1>
+    </section>
+    <main id="calculator">
+        <div>
+            <div id="textareastatcontainer">
+                <h2>Fyll inn tallene du skal finne medianen av i feltet under</h2>
+                <p>Separer tallene med komma, for eksempel: 94,22,13 eller 79, 81, 72. Desimaltall må skrives med punktum: 4.8, 9.1, 5.3.</p>
+                <textarea id="textareastat" placeholder="94,22,13" aria-label="Skriv inn tall her"></textarea>
+            </div>
+            <div id="oneResult">
+                <p id="oneResultText">Median:</p>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
+            </div>
+            <div id="description">
+                <h2>Hva er medianen?</h2>
+                <p class="paragraph">
+                    Medianen er det midterste tallet i en rekke tall sortert fra minste til største verdi. 
+                </p>
+                <h2>Hvordan finner man medianen?</h2>
+                <p class="paragraph">
+                    For å finne medianen må man først sortere rekken med tall fra minste til største verdi. Så finner man det midterste tallet. Har man tallene 1, 4, 3, er medianen lik 3, siden 3 er det midterste tallet i rekken 1, 3, 4. Er antallet tall et partall, med to tall i midten av rekken, adderer man de to tallene sammen og deler på to for å finne medianen. For eksempel er medianen lik 5 i rekken 1, 4, 6, 9, siden 4 + 6 = 10, og 10 / 2 = 5.
+                </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
+                <h2>Hva er forskjellen på median og gjennomsnitt?</h2>
+                <p class="paragraph">
+                    Gjennomsnittet er summen av alle tallene, delt på antall tall. Det påvirkes sterkt av ekstreme verdier. Medianen er tallet i midten når tallene er sortert fra minst til størst verdi. Medianen kan gi et mer realistisk bilde av hva en typisk verdi er. Si 60% av en befolkning tjener 500 000 kr i året, 35% tjener 700 000 kr, og 5% tjener 20 000 000 kr. Da vil medianen være 500 000 kr, mens gjennomsnittet vil være 1 545 000 kr.
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="bottom-footer">
+            <p>Copyright 2026 © Kalku</p>
+            <a id="footerFirstElement" href="/vilkår-for-bruk.html">Vilkår for bruk</a>
+            <a id="footerLastElement" href="/personvern.html">Personvern</a>
+        </div>
+    </footer>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+    <script src="/statistikk/mediankalkulator.js"></script>
+</body>
+</html>
