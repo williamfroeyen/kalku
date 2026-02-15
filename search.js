@@ -14,7 +14,6 @@ fetch('/search-index.json')
     searchlabeltext.addEventListener("click", performSearch);
 
     function performSearch() {
-        console.log("Perform search")
         const results = fuse.search(input.value);
         const searchresultlist = document.querySelector("#searchresultlist");
 

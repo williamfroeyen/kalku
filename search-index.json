@@ -151,6 +151,9 @@
   {"title":"Finn tredjeroten","url":"/matematikk/finn-tredjeroten.html","category":"Matematikk"},
 
   {"title":"Mediankalkulator","url":"/statistikk/mediankalkulator.html","category":"Statistikk"},
+  {"title":"Gjennomsnittskalkulator","url":"/statistikk/gjennomsnittskalkulator.html","category":"Statistikk"},
+  {"title":"Standardavvikkalkulator","url":"/statistikk/standardavvikkalkulator.html","category":"Statistikk"},
+  
 
   {"title":"Hundeårkalkulator","url":"/diverse/hundear.html","category":"Diverse"}
 ]
