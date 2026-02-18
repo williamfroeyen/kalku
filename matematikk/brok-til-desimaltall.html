@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kvadratrotkalkulator | Rask og presis</title>
-    <meta name="description" content="Regn ut kvadratroten med vår enkle og raske kalkulator. Få nøyaktig svar umiddelbart!"/>
+    <title>Brøk til desimaltall kalkulator | Rask og presis</title>
+    <meta name="description" content="Regn om brøk til desimaltall med vår enkle og raske kalkulator. Få nøyaktig svar umiddelbart!"/>
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -19,10 +19,10 @@
         "@graph": [
             {
             "@type": "WebPage",
-            "@id": "https://www.kalku.no/matematikk/finn-kvadratroten.html#webpage",
-            "url": "https://www.kalku.no/matematikk/finn-kvadratroten.html",
-            "name": "Kvadratrotkalkulator | Rask og presis",
-            "description": "Regn ut kvadratroten med vår enkle og raske kalkulator. Få nøyaktig svar umiddelbart!",
+            "@id": "https://www.kalku.no/matematikk/brok-til-desimaltall.html#webpage",
+            "url": "https://www.kalku.no/matematikk/brok-til-desimaltall.html",
+            "name": "Brøk til desimaltall kalkulator | Rask og presis",
+            "description": "Regn om brøk til desimaltall med vår enkle og raske kalkulator. Få nøyaktig svar umiddelbart!",
             "inLanguage": "nb",
             "publisher": {
             "@type": "Organization",
@@ -35,7 +35,7 @@
             },
             {
             "@type": "BreadcrumbList",
-            "@id": "https://www.kalku.no/matematikk/finn-kvadratroten.html#breadcrumb",
+            "@id": "https://www.kalku.no/matematikk/brok-til-desimaltall.html#breadcrumb",
             "itemListElement": [
                 {
                 "@type": "ListItem",
@@ -52,64 +52,48 @@
                 {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Kvadratrot kalkulator",
-                "item": "https://www.kalku.no/matematikk/finn-kvadratroten.html"
+                "name": "Brøk til desimaltall kalkulator",
+                "item": "https://www.kalku.no/matematikk/brok-til-desimaltall.html"
                 }
             ]
             },
             {
             "@type": "FAQPage",
-            "@id": "https://www.kalku.no/matematikk/finn-kvadratroten.html#faq",
+            "@id": "https://www.kalku.no/matematikk/brok-til-desimaltall.html#faq",
             "mainEntity": [
                 {
                 "@type": "Question",
-                "name": "Hvordan finner man kvadratroten av et tall?",
+                "name": "Hvordan gjør man om brøk til desimaltall?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": " Kvadratroten til et tall a er det tallet du må multiplisere med seg selv for å få tallet a. Kvadratroten av 4 er 2, fordi 2 * 2 = 4."
+                    "text": "For å regne om brøk til desimaltall må man dele telleren (tallet over brøkstreken) på nevneren (tallet under brøkstreken)."
                 }
                 },
                 {
                 "@type": "Question",
-                "name": "Hva er kvadratroten av 2?",
+                "name": "Hva er en teller?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Kvadratroten av 2 er 1,41421356237."
+                    "text": "Telleren er tallet over brøkstreken."
                 }
                 },
                 {
                 "@type": "Question",
-                "name": "Hva er kvadratroten av 3?",
+                "name": "Hva er en nevner?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Kvadratroten av 3 er 1,73205080757."
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "Hva er kvadratroten av 9?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Kvadratroten av 9 er 3. Dette er fordi 3 * 3 = 9."
-                }
-                },
-                {
-                "@type": "Question",
-                "name": "Hva er kvadratroten av 64?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Kvadratroten av 64 er 8. Dette er fordi 8 * 8 = 64."
+                    "text": "Nevneren er tallet under brøkstreken."
                 }
                 }
             ]
             },
             {
             "@type": "SoftwareApplication",
-            "@id": "https://www.kalku.no/matematikk/finn-kvadratroten.html#app",
-            "name": "Kvadratrot Kalkulator",
+            "@id": "https://www.kalku.no/matematikk/brok-til-desimaltall.html#app",
+            "name": "Brøk til desimaltall kalkulator",
             "applicationCategory": "MathCalculator",
             "operatingSystem": "Web",
-            "url": "https://www.kalku.no/matematikk/finn-kvadratroten.html",
+            "url": "https://www.kalku.no/matematikk/brok-til-desimaltall.html",
             "inLanguage": "nb",
             "offers": {
                 "@type": "Offer",
@@ -137,26 +121,29 @@
         </ul>
     </header>
     <section class="showcase" id="calc-showcase">
-        <h1>Kvadratrotkalkulator</h1>
+        <h1>Brøk til desimaltall</h1>
     </section>
     <main id="calculator">
         <div>
             <div class="input">
-                <p>Kvadratroten av</p>
-                <input id="input1" type="number">
+                <p>Brøk</p>
+                <input id="input1" type="text" placeholder="3/5">
             </div>
             <div class="input">
-                <p>Er lik</p>
-                <input id="output1" type="number"disabled="">
-            </div>        
+                <p>Desimaltall</p>
+                <input id="output1" type="text" disabled="">
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
+            </div>      
             <div id="description">
                 <p class="paragraph">
-                   Kvadratroten til et tall a er det tallet du må multiplisere med seg selv for å få tallet a. Kvadratroten av 4 er 2, fordi 2 * 2 = 4. Det er ikke mulig å finne kvadratroten av et negativt tall. 
+                   Skriv brøken slik: x/x. For å regne om brøk til desimaltall må man dele telleren (tallet over brøkstreken) på nevneren (tallet under brøkstreken).
                 </p>
                 Andre matematikk-kalkulatorer:
                 <ul>
+                    <li><a href="/matematikk/finn-kvadratroten.html">Finn kvadratroten</a></li>
                     <li><a href="/matematikk/finn-tredjeroten.html">Finn tredjeroten</a></li>
-                    <li><a href="/matematikk/brok-til-desimaltall.html">Brøk til desimaltall</a></li>
                 </ul>
             </div>
         </div>
@@ -168,6 +155,6 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/matematikk/finn-kvadratroten.js"></script>
+    <script src="/matematikk/brok-til-desimaltall.js"></script>
 </body>
 </html>
