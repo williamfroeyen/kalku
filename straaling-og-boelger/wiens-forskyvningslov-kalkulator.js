@@ -6,8 +6,8 @@ tempinput.addEventListener("input", (e) => {
     let finalresult = "";
     if (!isNaN(inputValue)) {
         outputValue = 2.898e-3 / inputValue;
-        finalresult = outputValue.toExponential(6);
-    }
+        finalresult = String(outputValue.toExponential(6)).replace(".", ",");
+    };
     document.querySelector("#intensoutput").value = finalresult;
 });
 
@@ -19,7 +19,7 @@ intensinput.addEventListener("input", (e) => {
     let finalresult = "";
     if (!isNaN(inputValue)) {
         outputValue = 2.898e-3 / inputValue;
-        finalresult = outputValue.toExponential(6);
-    }
+        finalresult = String(outputValue.toExponential(6)).replace(".", ",");
+    };
     document.querySelector("#tempoutput").value = finalresult;
 });

@@ -19,14 +19,14 @@ function updateResult() {
     if (!isNaN(input1Value) && !isNaN(input2Value) && !isNaN(input3Value)) {
         outputValue = input1Value * input2Value * Math.cos(input3Value * Math.PI / 180);;
         outputValue = Math.round((outputValue + Number.EPSILON)*1000)/1000;
-        outputValueLength = (outputValue + '').replace('.', '').length;
+        outputValue = String(outputValue).replace(".", ",");
 
-        if (outputValueLength > 10) {
+        if (outputValue.length > 10) {
             outputTextElement.textContent="For mange tall";
         } else {
             outputTextElement.textContent=`Resultat: ${outputValue} J`;
-        }
+        };
     } else {
         outputTextElement.textContent="Resultat: ";
-    }
+    };
 };

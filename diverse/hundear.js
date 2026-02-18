@@ -4,7 +4,7 @@ input1.addEventListener("input", (e) => {
     let outputValue = "";
     if (inputValue.length > 0 && !isNaN(inputValue)) {
         outputValue = 16 * Math.log(inputValue) + 31;
-        outputValue = Math.round((outputValue + Number.EPSILON));
+        outputValue = Math.round(outputValue);
     }
     document.querySelector("#output1").value = outputValue;
 });

@@ -88,7 +88,7 @@ function renderList(outputItems) {
     resultsList.innerHTML = "";
     outputItems.forEach(item => {
         const li = document.createElement("li");
-        li.textContent = item;
+        li.textContent = String(item).replace(".", ",");
         resultsList.appendChild(li);
     });
 };

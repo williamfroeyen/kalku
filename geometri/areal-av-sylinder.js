@@ -1,6 +1,6 @@
 const input1 = document.querySelector("#input1");
 const input2 = document.querySelector("#input2");
-const outputTextElement = document.querySelector("#oneResultText")
+const outputTextElement = document.querySelector("#oneResultText");
 
 input1.addEventListener("input", updateResult);
 input2.addEventListener("input", updateResult);
@@ -13,14 +13,14 @@ function updateResult() {
     if (!isNaN(input1Value) && !isNaN(input2Value)) {
         outputValue = 2*Math.PI*input1Value**2 + 2*Math.PI*input1Value*input2Value;
         outputValue = Math.round((outputValue + Number.EPSILON)*10000)/10000;
-        outputValueLength = (outputValue + '').replace('.', '').length;
+        outputValue = String(outputValue).replace(".", ",");
 
-        if (outputValueLength > 12) {
+        if (outputValue.length > 12) {
             outputTextElement.textContent="For mange tall";
         } else {
             outputTextElement.textContent=`Areal: ${outputValue}`;
-        }
+        };
     } else {
         outputTextElement.textContent="Areal: ";
-    }
+    };
 };
