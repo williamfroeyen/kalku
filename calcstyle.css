@@ -107,6 +107,14 @@ header {
 
 #calculator #oneResult {
     background-color: rgb(0, 75, 68);
+}
+
+#calculator #errorMessageContainer {
+    background-color: rgb(150, 57, 57);
+}
+
+#calculator #errorMessageContainer,
+#calculator #oneResult {
     width: 250px;
     height: auto;
     font-size: 18px;
@@ -176,16 +184,6 @@ header {
     text-align: left;
     padding: 3px 10px;
     border: 2px solid #00e6c7;
-}
-
-#calculator #errorMessageContainer {
-    background-color: rgb(150, 57, 57);
-    width: 250px;
-    height: auto;
-    font-size: 18px;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
 }
 
 #calculator #errorMessageText {
