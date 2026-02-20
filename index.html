@@ -28,7 +28,7 @@
             </li>
         </ul>
     </header>
-    <section class="showcase" id="home-showcase">
+    <section id="showcase">
         <h1>Kalkulatorer av alle slag</h1>
     </section>
     <search id="search">
@@ -42,9 +42,76 @@
             <ul id="searchresultlist"></ul>
         </div>
     </search>
-    <main class="main-content categories">
-        <div class="category-field">
-            <h2>Volum</h2>
+    <section id="selectcategory">
+        <h2>Velg kategori</h2>
+        <div id="categoryselectionfield">
+            <div class="categoryselection catalle categoryselected">
+                <p>Alle kategorier</p>
+            </div>
+            <div class="categoryselection catvolum">
+                <p>Volum</p>
+            </div>
+            <div class="categoryselection catlengde">
+                <p>Lengde</p>
+            </div>
+            <div class="categoryselection catvekt">
+                <p>Vekt</p>
+            </div>
+            <div class="categoryselection catbevegelse">
+                <p>Bevegelse</p>
+            </div>
+            <div class="categoryselection catgeometri">
+                <p>Geometri</p>
+            </div>
+            <div class="categoryselection catareal">
+                <p>Areal</p>
+            </div>
+            <div class="categoryselection cattrykk">
+                <p>Trykk</p>
+            </div>
+            <div class="categoryselection catstromogenergi">
+                <p>Strøm og energi</p>
+            </div>
+            <div class="categoryselection catmat">
+                <p>Mat</p>
+            </div>
+            <div class="categoryselection catprosent">
+                <p>Prosentregning</p>
+            </div>
+            <div class="categoryselection cattemperatur">
+                <p>Temperatur</p>
+            </div>
+            <div class="categoryselection catmekanikkogarbeid">
+                <p>Mekanikk og arbeid</p>
+            </div>
+            <div class="categoryselection catstraalingogboelger">
+                <p>Stråling og bølger</p>
+            </div>
+            <div class="categoryselection cathelse">
+                <p>Helse</p>
+            </div>
+            <div class="categoryselection catkraft">
+                <p>Kraft</p>
+            </div>
+            <div class="categoryselection catmatematikk">
+                <p>Matematikk</p>
+            </div>
+            <div class="categoryselection catstatistikk">
+                <p>Statistikk</p>
+            </div>
+            <div class="categoryselection catokonomi">
+                <p>Økonomi</p>
+            </div>
+            <div class="categoryselection catdiverse">
+                <p>Diverse</p>
+            </div>
+        </div>
+        <div id="line"></div>
+    </section>
+    <main id="main-content">
+        <div id="categories">
+            <div class="category-field catvolum">
+            <h3>Volum</h3>
             <ul>
                 <li><a href="/volum/liter-til-gallon.html">Liter til gallon</a></li>
                 <li id="lispacer"><a href="/volum/gallon-til-liter.html">Gallon til liter</a></li>
@@ -68,8 +135,8 @@
                 <li><a href="/volum/spiseskje-til-teskje.html">Spiseskje til teskje</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Lengde</h2>
+        <div class="category-field catlengde">
+            <h3>Lengde</h3>
             <ul>
                 <li><a href="/lengde/meter-til-fot.html">Meter til fot</a></li>
                 <li id="lispacer"><a href="/lengde/fot-til-meter.html">Fot til meter</a></li>
@@ -87,8 +154,8 @@
                 <li><a href="/lengde/yard-til-meter.html">Yard til meter</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Vekt</h2>
+        <div class="category-field catvekt">
+            <h3>Vekt</h3>
             <ul>
                 <li><a href="/vekt/kilogram-til-pund.html">Kilogram til pund</a></li>
                 <li id="lispacer"><a href="/vekt/pund-til-kilogram.html">Pund til kilogram</a></li>
@@ -106,8 +173,8 @@
                 <li><a href="/vekt/troy-ounce-til-gram.html">Troy ounce til gram</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Bevegelse</h2>
+        <div class="category-field catbevegelse">
+            <h3>Bevegelse</h3>
             <ul>
                 <li><a href="/bevegelse/kmt-til-mph.html">km/t til mph</a></li>
                 <li id="lispacer"><a href="/bevegelse/mph-til-kmt.html">mph til km/t</a></li>
@@ -121,8 +188,8 @@
                 <li><a href="/bevegelse/minkm-til-kmt.html">min/km til km/t</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Geometri</h2>
+        <div class="category-field catgeometri">
+            <h3>Geometri</h3>
             <ul>
                 <li><a href="/geometri/finn-hypotenusen.html">Finn hypotenusen</a></li>
                 <li id="lispacer"><a href="/geometri/finn-katet.html">Finn kateten</a></li>
@@ -136,8 +203,8 @@
                 <li><a href="/geometri/takvinkelkalkulator.html">Takvinkelkalkulator</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Areal</h2>
+        <div class="category-field catareal">
+            <h3>Areal</h3>
             <ul>
                 <li><a href="/areal/kvadratmeter-til-sqft.html">Kvadratmeter til square feet</a></li>
                 <li id="lispacer"><a href="/areal/sqft-til-kvadratmeter.html">Square feet til kvadratmeter</a></li>
@@ -149,8 +216,8 @@
                 <li><a href="/areal/dekar-til-hektar.html">Dekar til hektar</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Trykk</h2>
+        <div class="category-field cattrykk">
+            <h3>Trykk</h3>
             <ul>
                 <li><a href="/trykk/kpa-til-bar.html">Kilopascal til bar</a></li>
                 <li id="lispacer"><a href="/trykk/bar-til-kpa.html">Bar til kilopascal</a></li>
@@ -162,8 +229,8 @@
                 <li><a href="/trykk/psi-til-bar.html">psi til bar</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Strøm og energi</h2>
+        <div class="category-field catstromogenergi">
+            <h3>Strøm og energi</h3>
             <ul>
                 <li><a href="/strom-og-energi/beregn-kwh-fra-kilowatt.html">Beregn kWh fra Kilowatt</a></li>
                 <li><a href="/strom-og-energi/beregn-kwh-fra-watt.html">Beregn kWh fra Watt</a></li>
@@ -174,8 +241,8 @@
                 <li><a href="/strom-og-energi/kwh-til-megajoule.html">kWh til megajoule</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Mat</h2>
+        <div class="category-field catmat">
+            <h3>Mat</h3>
             <ul>
                 <li id="lispacer"><a href="/mat/kaffekalkulator.html">Kaffekalkulator</a></li>
                 <li><a href="/mat/mel-dl-til-gram.html">Mel dl til gram</a></li>
@@ -186,8 +253,8 @@
                 <li><a href="/mat/smør-gram-til-dl.html">Smør gram til dl</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Prosentregning</h2>
+        <div class="category-field catprosent">
+            <h3>Prosentregning</h3>
             <ul>
                 <li><a href="/prosent/finn-prosenten.html">Finn prosenten</a></li>
                 <li><a href="/prosent/finn-førprisen.html">Finn førprisen</a></li>
@@ -197,8 +264,8 @@
                 <li><a href="/prosent/finn-hele-tallet-fra-prosenten.html">Finn hele tallet fra prosenten</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Temperatur</h2>
+        <div class="category-field cattemperatur">
+            <h3>Temperatur</h3>
             <ul>
                 <li><a href="/temperatur/celsius-til-fahrenheit.html">Celsius til fahrenheit</a></li>
                 <li id="lispacer"><a href="/temperatur/fahrenheit-til-celsius.html">Fahrenheit til celsius</a></li>
@@ -208,8 +275,8 @@
                 <li><a href="/temperatur/kelvin-til-fahrenheit.html">Kelvin til fahrenheit</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Mekanikk og arbeid</h2>
+        <div class="category-field catmekanikkogarbeid">
+            <h3>Mekanikk og arbeid</h3>
             <ul>
                 <li><a href="/mekanikk-og-arbeid/beregn-arbeid.html">Beregn arbeid</a></li>
                 <li><a href="/mekanikk-og-arbeid/finn-kinetisk-energi.html">Finn kinetisk energi</a></li>
@@ -218,8 +285,8 @@
                 <li><a href="/mekanikk-og-arbeid/kilowatt-til-hestekrefter.html">Kilowatt til hestekrefter</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Stråling og bølger</h2>
+        <div class="category-field catstraalingogboelger">
+            <h3>Stråling og bølger</h3>
             <ul>
                 <li id="lispacer"><a href="/straaling-og-boelger/boelgekalkulator.html">Bølgekalkulator</a></li>
                 <li><a href="/straaling-og-boelger/svingninger-og-tid-til-periode.html">Svingninger og tid til periode</a></li>
@@ -228,8 +295,8 @@
                 <li><a href="/straaling-og-boelger/wiens-forskyvningslov-kalkulator.html">Wiens forskyvningslov kalkulator</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Elektrisitet</h2>
+        <div class="category-field catelektrisistet">
+            <h3>Elektrisitet</h3>
             <ul>
                 <li><a href="/elektrisitet/ampere-og-volt-til-watt.html">Ampere og volt til watt</a></li>
                 <li><a href="/elektrisitet/volt-og-ampere-til-ohm.html">Volt og ampere til ohm</a></li>
@@ -237,49 +304,50 @@
                 <li><a href="/elektrisitet/ohm-og-ampere-til-volt.html">Ohm og ampere til volt</a></li>
             </ul>
         </div>
-         <div class="category-field">
-            <h2>Helse</h2>
+         <div class="category-field cathelse">
+            <h3>Helse</h3>
             <ul>
                 <li><a href="/helse/bmi-kalkulator.html">BMI kalkulator</a></li>
                 <li><a href="/helse/kcal-til-kilojoule.html">Kcal til kJ</a></li>
                 <li><a href="/helse/kilojoule-til-kcal.html">kJ til kcal</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Kraft</h2>
+        <div class="category-field catkraft">
+            <h3>Kraft</h3>
             <ul>
                 <li><a href="/kraft/finn-tyngden.html">Finn tyngden</a></li>
                 <li><a href="/kraft/finn-oppdrift.html">Finn oppdrift</a></li>
                 <li><a href="/kraft/finn-glidefriksjon.html">Finn glidefriksjon</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Matematikk</h2>
+        <div class="category-field catmatematikk">
+            <h3>Matematikk</h3>
             <ul>
                 <li><a href="/matematikk/finn-kvadratroten.html">Finn kvadratroten</a></li>
                 <li><a href="/matematikk/finn-tredjeroten.html">Finn tredjeroten</a></li>
                 <li><a href="/matematikk/brok-til-desimaltall.html">Brøk til desimaltall</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Statistikk</h2>
+        <div class="category-field catstatistikk">
+            <h3>Statistikk</h3>
             <ul>
                 <li><a href="/statistikk/mediankalkulator.html">Mediankalkulator</a></li>
                 <li><a href="/statistikk/gjennomsnittskalkulator.html">Gjennomsnittskalkulator</a></li>
                 <li><a href="/statistikk/standardavvikkalkulator.html">Standardavvikkalkulator</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Økonomi</h2>
+        <div class="category-field catokonomi">
+            <h3>Økonomi</h3>
             <ul>
                 <li><a href="/okonomi/investeringskalkulator.html">Investeringskalkulator</a></li>
             </ul>
         </div>
-        <div class="category-field">
-            <h2>Diverse</h2>
+        <div class="category-field catdiverse">
+            <h3>Diverse</h3>
             <ul>
                 <li><a href="/diverse/hundear.html">Hundeårkalkulator</a></li>
             </ul>
+        </div>
         </div>
     </main>
     <footer>
@@ -291,5 +359,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="/search.js"></script>
+    <script src="/indexscript.js"></script>
 </body>
 </html>

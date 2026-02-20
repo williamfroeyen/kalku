@@ -27,6 +27,10 @@ body {
     color: #f1f1f1;
 }
 
+.hidden {
+    display: none !important;
+}
+
 header {
     background-color: #000;
     display: flex;
@@ -84,7 +88,7 @@ h3 {
     color: #75ffed;
 }
 
-#home-showcase {
+#showcase {
     height: 300px;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,111,1) 61%);
@@ -92,19 +96,13 @@ h3 {
     color: #f1f1f1;
 }
 
-#home-showcase h1 {
+#showcase h1 {
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 42px;
     padding: 120px;
 }
 
-.main-content {
-    width: 80vw;
-    margin: 50px auto;
-    background-color: #242424;
-    padding: 30px;
-}
 
 #search {
     height: 40px;
@@ -181,7 +179,57 @@ h3 {
     color: #75ffed;
 }
 
-.categories {
+#selectcategory,
+#main-content {
+    width: 80vw;
+    margin: 0px auto;
+    background-color: #242424;
+}
+
+#main-content {
+    padding: 20px 30px 40px 30px;
+}
+
+#selectcategory {
+    padding: 30px 30px 0px 30px;
+}
+
+#selectcategory #categoryselectionfield {
+    padding: 10px 10px 30px 10px;
+}
+
+#selectcategory #categoryselectionfield .categoryselection {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: rgb(0, 75, 68);
+    cursor: pointer;
+}
+
+#selectcategory #categoryselectionfield .categoryselected {
+    background-color: rgb(0, 128, 115);
+}
+
+#line {
+    background-color: #f1f1f1;
+    height: 1px;
+    width: auto;
+    margin: 0px 10px;
+}
+
+#selectcategory h2,
+#main-content h2 {
+    font-size: 26px;
+    padding: 10px;
+}
+
+#main-content h3 {
+    font-size: 22px;
+    padding: 10px 0px;
+}
+
+#categories {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -251,6 +299,7 @@ footer #bottom-footer {
     font-size: 18px;
     text-align: center;
     padding: 20px;
+    margin-top: 50px;
 }
 
 footer #bottom-footer a {
@@ -274,7 +323,7 @@ footer #bottom-footer #footerLastElement {
 }
 
 @media only screen and (max-width: 1000px) {
-    .categories {
+    #categories {
         grid-template-columns: 1fr 1fr;
     }
     header {
@@ -290,7 +339,7 @@ footer #bottom-footer #footerLastElement {
         height: 60px;
         width: 150px;
     }
-    #home-showcase h1 {
+    #showcase h1 {
         font-size: 38px;
     }
     #menu {
@@ -302,11 +351,11 @@ footer #bottom-footer #footerLastElement {
 }
 
 @media only screen and (max-width: 730px) {
-    #home-showcase h1 {
+    #showcase h1 {
         font-size: 34px;
         padding: 125px 30px;
     }
-    .categories {
+    #categories {
         grid-template-columns: 1fr;
     }
     header {
@@ -336,9 +385,18 @@ footer #bottom-footer #footerLastElement {
 }
 
 @media only screen and (max-width: 550px) {
-    .main-content {
-        padding: 30px 20px;
+    #main-content {
+        padding: 20px 10px 40px 10px;
     }
+
+    #selectcategory {
+        padding: 30px 10px 0px 10px;
+    }
+
+    #selectcategory #categoryselectionfield {
+        padding: 10px 0px 30px 0px;
+    }
+
     header {
         padding: 0px;
     }
@@ -355,7 +413,7 @@ footer #bottom-footer #footerLastElement {
 }
 
 @media only screen and (max-width: 500px) {
-    #home-showcase h1 {
+    #showcase h1 {
         font-size: 28px;
         padding: 120px 20px;
     }
