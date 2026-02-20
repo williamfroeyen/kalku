@@ -20,6 +20,12 @@
     margin: 0;
 }
 
+*:disabled {
+  background-color: #f1f1f1;
+  color: #000;
+  opacity: 1;
+}
+
 body {
     background-color: #000;
     font-family: "Inter", sans-serif;
