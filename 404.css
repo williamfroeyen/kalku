@@ -104,6 +104,20 @@ footer {
     right: 0;
 }
 
+footer #top-footer {
+    height: 50px;
+    background-color: rgb(0, 92, 84);
+    font-size: 18px;
+    margin-top: 50px;
+    text-align: center;
+    padding: 15px;
+}
+
+footer #top-footer a {
+    color: #c0fff7;
+    text-decoration: none;
+}
+
 footer #bottom-footer {
     position: relative;
     height: 60px;

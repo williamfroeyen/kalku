@@ -327,6 +327,24 @@ header {
     color: #75ffed;
 }
 
+footer #top-footer {
+    height: 50px;
+    background-color: rgb(0, 92, 84);
+    font-size: 18px;
+    margin-top: 50px;
+    text-align: center;
+    padding: 15px;
+}
+
+footer #top-footer a {
+    color: #d1fff9;
+    text-decoration: none;
+}
+
+footer #top-footer a:hover {
+    color: #8affef;
+}
+
 footer #bottom-footer {
     position: relative;
     height: 60px;
