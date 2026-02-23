@@ -8,8 +8,10 @@ categoriesSelect.forEach(item => {
         categoriesSelect.forEach(element => {
             if (element.classList[1] != item.classList[1] ) {
                 element.classList.remove("categoryselected");
+                element.setAttribute("aria-pressed", "false");
             } else {
                 element.classList.add("categoryselected");
+                element.setAttribute("aria-pressed", "true");
             }
         });
 

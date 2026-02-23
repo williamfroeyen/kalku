@@ -15,97 +15,98 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Hopp til innhold</a>
     <header>
         <a href="index.html"><img id="logo" width="175px" height="70px" alt="Kalku logo" src="/kalku-70px.png"></a>
-        <ul id="menu">
-            <li>
-                <a href="index.html">Hjem</a>
-            </li>
-            <li>
-                <a href="kontakt.html">Kontakt</a>
-            </li>
-            <li>
-                <a href="faq.html">FAQ</a>
-            </li>
-        </ul>
+        <nav aria-label="Hovedmeny">
+            <ul id="menu">
+                <li>
+                    <a href="index.html">Hjem</a>
+                </li>
+                <li>
+                    <a href="kontakt.html">Kontakt</a>
+                </li>
+                <li>
+                    <a href="faq.html">FAQ</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <section id="showcase">
         <h1>Kalkulatorer av alle slag</h1>
     </section>
-    <search id="search">
+    <search id="search" role="search">
         <div id="searchinputfield">
-            <div id="searchlabel">
-                <p id="searchlabeltext">Søk</p>
-            </div>
+            <label for="searchinput" id="searchlabel">Søk</label>
             <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
         </div>
         <div id="searchresultfield" class="hidden">
-            <ul id="searchresultlist"></ul>
+            <ul id="searchresultlist" aria-live="polite"></ul>
         </div>
     </search>
     <section id="selectcategory">
         <h2>Velg kategori</h2>
         <div id="categoryselectionfield">
-            <div class="categoryselection catalle categoryselected">
-                <p>Alle kategorier</p>
-            </div>
-            <div class="categoryselection catvolum">
-                <p>Volum</p>
-            </div>
-            <div class="categoryselection catlengde">
-                <p>Lengde</p>
-            </div>
-            <div class="categoryselection catvekt">
-                <p>Vekt</p>
-            </div>
-            <div class="categoryselection catbevegelse">
-                <p>Bevegelse</p>
-            </div>
-            <div class="categoryselection catgeometri">
-                <p>Geometri</p>
-            </div>
-            <div class="categoryselection catareal">
-                <p>Areal</p>
-            </div>
-            <div class="categoryselection cattrykk">
-                <p>Trykk</p>
-            </div>
-            <div class="categoryselection catstromogenergi">
-                <p>Strøm og energi</p>
-            </div>
-            <div class="categoryselection catmat">
-                <p>Mat</p>
-            </div>
-            <div class="categoryselection catprosent">
-                <p>Prosentregning</p>
-            </div>
-            <div class="categoryselection cattemperatur">
-                <p>Temperatur</p>
-            </div>
-            <div class="categoryselection catmekanikkogarbeid">
-                <p>Mekanikk og arbeid</p>
-            </div>
-            <div class="categoryselection catstraalingogboelger">
-                <p>Stråling og bølger</p>
-            </div>
-            <div class="categoryselection cathelse">
-                <p>Helse</p>
-            </div>
-            <div class="categoryselection catkraft">
-                <p>Kraft</p>
-            </div>
-            <div class="categoryselection catmatematikk">
-                <p>Matematikk</p>
-            </div>
-            <div class="categoryselection catstatistikk">
-                <p>Statistikk</p>
-            </div>
-            <div class="categoryselection catokonomi">
-                <p>Økonomi</p>
-            </div>
-            <div class="categoryselection catdiverse">
-                <p>Diverse</p>
-            </div>
+            <button class="categoryselection catalle categoryselected" aria-pressed="true">
+                Alle kategorier
+            </button>
+            <button class="categoryselection catvolum" aria-pressed="false">
+                Volum
+            </button>
+            <button class="categoryselection catlengde" aria-pressed="false">
+                Lengde
+            </button>
+            <button class="categoryselection catvekt" aria-pressed="false">
+                Vekt
+            </button>
+            <button class="categoryselection catbevegelse" aria-pressed="false">
+                Bevegelse
+            </button>
+            <button class="categoryselection catgeometri" aria-pressed="false">
+                Geometri
+            </button>
+            <button class="categoryselection catareal" aria-pressed="false">
+                Areal
+            </button>
+            <button class="categoryselection cattrykk" aria-pressed="false">
+                Trykk
+            </button>
+            <button class="categoryselection catstromogenergi" aria-pressed="false">
+                Strøm og energi
+            </button>
+            <button class="categoryselection catmat" aria-pressed="false">
+                Mat
+            </button>
+            <button class="categoryselection catprosent" aria-pressed="false">
+                Prosentregning
+            </button>
+            <button class="categoryselection cattemperatur" aria-pressed="false">
+                Temperatur
+            </button>
+            <button class="categoryselection catmekanikkogarbeid" aria-pressed="false">
+                Mekanikk og arbeid
+            </button>
+            <button class="categoryselection catstraalingogboelger" aria-pressed="false">
+                Stråling og bølger
+            </button>
+            <button class="categoryselection cathelse" aria-pressed="false">
+                Helse
+            </button>
+            <button class="categoryselection catkraft" aria-pressed="false">
+                Kraft
+            </button>
+            <button class="categoryselection catmatematikk" aria-pressed="false">
+                Matematikk
+            </button>
+            <button class="categoryselection catstatistikk" aria-pressed="false">
+                Statistikk
+            </button>
+            <button class="categoryselection catokonomi" aria-pressed="false">
+                Økonomi
+            </button>
+            <button class="categoryselection catdiverse" aria-pressed="false">
+                Diverse
+            </button>
         </div>
         <div id="line"></div>
     </section>
