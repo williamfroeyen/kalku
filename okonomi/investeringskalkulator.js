@@ -16,10 +16,10 @@ input3.addEventListener("input", updateResult);
 input4.addEventListener("input", updateResult);
 
 function updateResult() {
-    let startBeloep = parseFloat(input1.value);
-    let maendeligBidrag = parseFloat(input2.value);
-    let antallAar = parseFloat(input3.value);
-    let aarligRente = parseFloat(input4.value);
+    let startBeloep = parseFloat(input1.value.replace(",", "."));
+    let maendeligBidrag = parseFloat(input2.value.replace(",", "."));
+    let antallAar = parseFloat(input3.value.replace(",", "."));
+    let aarligRente = parseFloat(input4.value.replace(",", "."));
     let aarligRentePF = aarligRente / 100;
 
     if (!isNaN(startBeloep) && !isNaN(maendeligBidrag) && !isNaN(antallAar) && !isNaN(aarligRente)) {

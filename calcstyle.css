@@ -85,14 +85,16 @@ header {
     padding: 30px;
 }
 
-#calculator .input {
+#calculator .input,
+#calculator .output {
     padding: 10px;
     width: auto;
     display: inline-block;
     font-size: 20px;
 }
 
-#calculator .input input {
+#calculator .input input,
+#calculator .output input {
     height: 30px;
     width: 140px;
     font-size: 16px;
@@ -105,6 +107,10 @@ header {
     outline: 0;
     border-width: 3px;
     border-color: #75ffed;
+}
+
+#calculator .output input:focus {
+    outline: none;
 }
 
 #calculator #spacer {

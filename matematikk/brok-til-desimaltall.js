@@ -1,6 +1,3 @@
-// REDUSER REPETISJONER, LEGG SAMMEN LINJER ARRAY, LAG FLERE FUNKSJONER OG LAG KORTERE NAVN
-
-
 const input1 = document.querySelector("#input1");
 const errorMessageContainer = document.querySelector("#errorMessageContainer");
 const errorMessageText = document.querySelector("#errorMessageText");

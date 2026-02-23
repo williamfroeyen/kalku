@@ -6,8 +6,8 @@ input1.addEventListener("input", updateResult);
 input2.addEventListener("input", updateResult);
 
 function updateResult() {
-    let input1Value = parseFloat(input1.value)/100;
-    let input2Value = parseFloat(input2.value);
+    let input1Value = parseFloat(input1.value.replace(",", "."))/100;
+    let input2Value = parseFloat(input2.value.replace(",", "."));
     let outputValue = "";
 
     if (!isNaN(input1Value) && !isNaN(input2Value)) {

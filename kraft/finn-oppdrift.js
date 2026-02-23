@@ -12,9 +12,9 @@ input2.addEventListener("input", updateResult);
 input3.addEventListener("input", updateResult);
 
 function updateResult() {
-    let input1Value = parseFloat(input1.value);
-    let input2Value  = parseFloat(input2.value);
-    let input3Value  = parseFloat(input3.value);
+    let input1Value = parseFloat(input1.value.replace(",", "."));
+    let input2Value  = parseFloat(input2.value.replace(",", "."));
+    let input3Value  = parseFloat(input3.value.replace(",", "."));
 
     if (!isNaN(input1Value) && !isNaN(input2Value) && !isNaN(input3Value)) {
         outputValue = input1Value * input2Value * input3Value;
