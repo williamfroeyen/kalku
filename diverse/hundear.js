@@ -1,10 +1,18 @@
-const input1 = document.querySelector("#input1");
-input1.addEventListener("input", (e) => {
-    const inputValue = e.target.value;
-    let outputValue = "";
-    if (inputValue.length > 0 && !isNaN(inputValue)) {
-        outputValue = 16 * Math.log(inputValue) + 31;
-        outputValue = Math.round(outputValue);
-    }
-    document.querySelector("#output1").value = outputValue;
+const inputElement = document.querySelector("#input1");
+const outputElement = document.querySelector("#output1");
+
+inputElement.addEventListener("input", (e) => {
+    const inputString = e.target.value.trim();
+    const validFormat = /^[0-9]*([.,][0-9]*)?$/.test(inputString);
+    let outputString = "";
+
+    if (validFormat && inputString.length > 0) {
+        const inputNum = parseFloat(inputString.replace(",", "."));
+
+        let calculated = 16 * Math.log(inputNum) + 31;
+        calculated = Math.round(calculated);
+        outputString = String(calculated).replace(".", ",");
+    };
+
+    outputElement.value = outputString;
 });

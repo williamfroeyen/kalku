@@ -1,10 +1,18 @@
-const input1 = document.querySelector("#input1");
-input1.addEventListener("input", (e) => {
-    const inputValue = e.target.value;
-    let outputValue = "";
-    if (inputValue.length > 0 && !isNaN(inputValue)) {
-        outputValue = 60 / inputValue;
-        outputValue = Math.round((outputValue + Number.EPSILON)*10000)/10000;
-    }
-    document.querySelector("#output1").value = outputValue;
+const inputElement = document.querySelector("#input1");
+const outputElement = document.querySelector("#output1");
+
+inputElement.addEventListener("input", (e) => {
+    const inputString = e.target.value.trim();
+    const validFormat = /^[0-9]*([.,][0-9]*)?$/.test(inputString);
+    let outputString = "";
+
+    if (validFormat && inputString.length > 0) {
+        const inputNum = parseFloat(inputString.replace(",", "."));
+
+        let calculated = 60 / inputNum;
+        calculated = Math.round((calculated + Number.EPSILON)*10000)/10000;
+        outputString = String(calculated).replace(".", ",");
+    };
+
+    outputElement.value = outputString;
 });

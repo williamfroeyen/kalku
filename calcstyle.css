@@ -98,9 +98,16 @@ header {
     height: 30px;
     width: 140px;
     font-size: 16px;
-    background-color: #f1f1f1;
     border-radius: 5px;
     color: #000;
+}
+
+#calculator .input input {
+    background-color: #f1f1f1;
+}
+
+#calculator .output input {
+    background-color: #e0e0e0;
 }
 
 #calculator .input input:focus {
@@ -110,7 +117,7 @@ header {
 }
 
 #calculator .output input:focus {
-    outline: none;
+    outline: 2px solid rgb(0, 75, 68);
 }
 
 #calculator #spacer {
@@ -223,7 +230,7 @@ header {
 
 #calculator ul {
     margin-left: 30px;
-    list-style:square;
+    list-style: square;
     margin-bottom: 20px;
 }
 
