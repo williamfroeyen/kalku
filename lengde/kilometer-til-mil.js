@@ -9,9 +9,12 @@ inputElement.addEventListener("input", (e) => {
     if (validFormat && inputString.length > 0) {
         const inputNum = parseFloat(inputString.replace(",", "."));
 
+        if (!isNaN(inputNum)) {
         let calculated = inputNum * 0.621371;
         calculated = Math.round((calculated + Number.EPSILON)*10000)/10000;
         outputString = String(calculated).replace(".", ",");
+        };
+
     };
 
     outputElement.value = outputString;

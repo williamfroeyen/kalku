@@ -9,9 +9,11 @@ inputElement.addEventListener("input", (e) => {
     if (validFormat && inputString.length > 0) {
         const inputNum = parseFloat(inputString.replace(",", "."));
 
-        let calculated = 4 * Math.PI * inputNum**2;
-        calculated = Math.round((calculated + Number.EPSILON)*10000)/10000;
-        outputString = String(calculated).replace(".", ",");
+        if (!isNaN(inputNum)) {
+            let calculated = 4 * Math.PI * inputNum**2;
+            calculated = Math.round((calculated + Number.EPSILON)*10000)/10000;
+            outputString = String(calculated).replace(".", ",");
+        };
     };
 
     outputElement.value = outputString;
