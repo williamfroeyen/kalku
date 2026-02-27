@@ -1,28 +1,20 @@
-const categoriesLinks = document.querySelector("#categories");
-const categoriesSelect = document.querySelectorAll(".categoryselection");
+const categoryLists = document.querySelectorAll(".category-field");
+const categoriesSelectBtns = document.querySelectorAll(".categoryselection");
 
-categoriesSelect.forEach(item => {
+categoriesSelectBtns.forEach(button => {
 
-    item.addEventListener("click", () => {
+    button.addEventListener("click", () => {
+        const selected = button.dataset.category;
 
-        categoriesSelect.forEach(element => {
-            if (element.classList[1] != item.classList[1] ) {
-                element.classList.remove("categoryselected");
-                element.setAttribute("aria-pressed", "false");
-            } else {
-                element.classList.add("categoryselected");
-                element.setAttribute("aria-pressed", "true");
-            }
+        categoriesSelectBtns.forEach(btn => {
+            const isSelected = btn.dataset.category === selected;
+            btn.classList.toggle("categoryselected", isSelected);
+            btn.setAttribute("aria-pressed", isSelected);
         });
 
-        for (const child of categoriesLinks.children) {
-            if (item.classList[1] == "catalle") {
-                child.classList.remove("hidden");
-            } else if (child.classList.contains(item.classList[1])) {
-                child.classList.remove("hidden");
-            } else {
-                child.classList.add("hidden");
-            };
-        };
+        categoryLists.forEach(list => {
+            const isMatch = list.dataset.category === selected || selected === "alle";
+            list.classList.toggle("hidden", !isMatch);
+        });
     });
 });
