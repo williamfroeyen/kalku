@@ -155,6 +155,10 @@
   {"title":"Gjennomsnittskalkulator","url":"/statistikk/gjennomsnittskalkulator.html","category":"Statistikk"},
   {"title":"Standardavvikkalkulator","url":"/statistikk/standardavvikkalkulator.html","category":"Statistikk"},
   
+  {"title":"Timer til minutter","url":"/tid/timer-til-minutter.html","category":"Tid"},
+  {"title":"Minutter til timer","url":"/tid/minutter-til-timer.html","category":"Tid"},
+  {"title":"Sekunder til minutter","url":"/tid/sekunder-til-minutter.html","category":"Tid"},
+  {"title":"Minutter til sekunder","url":"/tid/minutter-til-sekunder.html","category":"Tid"},
 
   {"title":"Hundeårkalkulator","url":"/diverse/hundear.html","category":"Diverse"}
 ]
