@@ -159,6 +159,10 @@
   {"title":"Minutter til timer","url":"/tid/minutter-til-timer.html","category":"Tid"},
   {"title":"Sekunder til minutter","url":"/tid/sekunder-til-minutter.html","category":"Tid"},
   {"title":"Minutter til sekunder","url":"/tid/minutter-til-sekunder.html","category":"Tid"},
+  {"title":"Dager til timer","url":"/tid/dager-til-timer.html","category":"Tid"},
+  {"title":"Timer til dager","url":"/tid/timer-til-dager.html","category":"Tid"},
+  {"title":"Timer til sekunder","url":"/tid/timer-til-sekunder.html","category":"Tid"},
+  {"title":"Sekunder til timer","url":"/tid/sekunder-til-timer.html","category":"Tid"},
 
   {"title":"Hundeårkalkulator","url":"/diverse/hundear.html","category":"Diverse"}
 ]
