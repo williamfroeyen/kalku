@@ -47,12 +47,12 @@ function calculateResult(inputValueString) {
         errorMessageText.textContent = "Nevner kan ikke være 0";
         return;
     };
-
+    
     if (arrayNumbers.length === 2) {
-        let result = arrayNumbers[0] / arrayNumbers[1];
+        let result = (arrayNumbers[0] / arrayNumbers[1]) * 100;
         result = Number(result.toPrecision(7));
-
         result = String(result).replace(".", ",");
+        result = result + "%";
         outputElement.value = result;
     };
 };

@@ -141,15 +141,16 @@
 
   {"title":"Investeringskalkulator","url":"/okonomi/investeringskalkulator.html","category":"Økonomi"},
 
-  {"title":"Bølgekalkulator","url":"/straaling-og-boelger/boelgekalkulator.html","category":"Stråling og bølger"},
-  {"title":"Svingninger og tid til periode","url":"/straaling-og-boelger/svingninger-og-tid-til-periode.html","category":"Stråling og bølger"},
-  {"title":"Svingninger og tid til frekvens","url":"/straaling-og-boelger/svingninger-og-tid-til-frekvens.html","category":"Stråling og bølger"},
-  {"title":"Stefan-Boltzmann kalkulator","url":"/straaling-og-boelger/stefan-boltzmann-kalkulator.html","category":"Stråling og bølger"},
-  {"title":"Wiens forskyvningslov kalkulator","url":"/straaling-og-boelger/wiens-forskyvningslov-kalkulator.html","category":"Stråling og bølger"},
+  {"title":"Bølgekalkulator","url":"/elektromagnetisme/boelgekalkulator.html","category":"Elektromagnetisme"},
+  {"title":"Svingninger og tid til periode","url":"/elektromagnetisme/svingninger-og-tid-til-periode.html","category":"Elektromagnetisme"},
+  {"title":"Svingninger og tid til frekvens","url":"/elektromagnetisme/svingninger-og-tid-til-frekvens.html","category":"Elektromagnetisme"},
+  {"title":"Stefan-Boltzmann kalkulator","url":"/elektromagnetisme/stefan-boltzmann-kalkulator.html","category":"Elektromagnetisme"},
+  {"title":"Wiens forskyvningslov kalkulator","url":"/elektromagnetisme/wiens-forskyvningslov-kalkulator.html","category":"Elektromagnetisme"},
 
   {"title":"Finn kvadratroten","url":"/matematikk/finn-kvadratroten.html","category":"Matematikk"},
   {"title":"Finn tredjeroten","url":"/matematikk/finn-tredjeroten.html","category":"Matematikk"},
   {"title":"Brøk til desimaltall","url":"/matematikk/brok-til-desimaltall.html","category":"Matematikk"},
+  {"title":"Brøk til prosent","url":"/matematikk/brok-til-prosent.html","category":"Matematikk"},
 
   {"title":"Mediankalkulator","url":"/statistikk/mediankalkulator.html","category":"Statistikk"},
   {"title":"Gjennomsnittskalkulator","url":"/statistikk/gjennomsnittskalkulator.html","category":"Statistikk"},
