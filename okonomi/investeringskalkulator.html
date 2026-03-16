@@ -149,25 +149,28 @@
             <div id="rowOne">
                 <div class="input">
                     <p>Startbeløp</p>
-                    <input id="input1" type="number" placeholder="kr">
+                    <input id="input1" type="text" inputmode="decimal" placeholder="kr">
                 </div>
                 <div class="input">
                     <p>Månedlig investering</p>
-                    <input id="input2" class="long-input" type="number" placeholder="kr">
+                    <input id="input2" class="long-input" type="text" inputmode="decimal" placeholder="kr">
                 </div>
             </div>
             <div id="rowTwo">
                 <div class="input">
                     <p>Antall år</p>
-                    <input id="input3" type="number" placeholder="år">
+                    <input id="input3" type="text" inputmode="decimal" placeholder="år">
                 </div>
                 <div class="input">
                     <p>Årlig avkastning (%)</p>
-                    <input id="input4" type="number" placeholder="%">
+                    <input id="input4" type="text" inputmode="decimal" placeholder="%">
                 </div>
             </div>
             <div id="oneResult">
                 <p id="oneResultText">Verdi:</p>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div id="description">
                 <div id="resultsExp" class="paragraph">
@@ -202,6 +205,6 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/okonomi/investeringskalkulator.js"></script>
+    <script src="/okonomi/investeringskalkulator.js" type="module"></script>
 </body>
 </html>

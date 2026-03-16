@@ -1,49 +1,82 @@
-let outputValue = "";
-let avkastning = 0;
-let utenAvkastning = 0;
+import { prepOut, prepInput } from '../calcfunctions.js';
 
-const input1 = document.querySelector("#input1");
-const input2 = document.querySelector("#input2");
-const input3 = document.querySelector("#input3");
-const input4 = document.querySelector("#input4");
+const startAmountInput = document.querySelector("#input1");
+const monthlyInvestmentInput = document.querySelector("#input2");
+const yearsInput = document.querySelector("#input3");
+const annualReturnInput = document.querySelector("#input4");
 
 const outputTextElement = document.querySelector("#oneResultText");
 const resultExpTextElement = document.querySelector("#resultsExpText");
+const errorMessageContainer = document.querySelector("#errorMessageContainer");
+const errorMessageText = document.querySelector("#errorMessageText");
 
-input1.addEventListener("input", updateResult);
-input2.addEventListener("input", updateResult);
-input3.addEventListener("input", updateResult);
-input4.addEventListener("input", updateResult);
+startAmountInput.addEventListener("input", inputEvent);
+monthlyInvestmentInput.addEventListener("input", inputEvent);
+yearsInput.addEventListener("input", inputEvent);
+annualReturnInput.addEventListener("input", inputEvent);
 
-function updateResult() {
-    let startBeloep = parseFloat(input1.value.replace(",", "."));
-    let maendeligBidrag = parseFloat(input2.value.replace(",", "."));
-    let antallAar = parseFloat(input3.value.replace(",", "."));
-    let aarligRente = parseFloat(input4.value.replace(",", "."));
-    let aarligRentePF = aarligRente / 100;
+function inputEvent() {
+    outputTextElement.textContent=`Verdi:`;
+    resultExpTextElement.textContent=``;
+    errorMessageContainer.classList.add("hidden");
 
-    if (!isNaN(startBeloep) && !isNaN(maendeligBidrag) && !isNaN(antallAar) && !isNaN(aarligRente)) {
-        outputValue = startBeloep * (1 + aarligRentePF / 12)**(12*antallAar)+maendeligBidrag*(((1 + aarligRentePF / 12)**(12*antallAar)-1) / (aarligRentePF / 12))
-        utenAvkastning = startBeloep + maendeligBidrag*12*antallAar;
-        avkastning = outputValue - utenAvkastning;
-        avkastning = Math.round((avkastning + Number.EPSILON)*1)/1;
-        outputValue = Math.round((outputValue + Number.EPSILON)*1)/1;
-        outputValueLength = (outputValue + '').replace('.', '').length;
+    const inputArray = [startAmountInput, monthlyInvestmentInput, yearsInput, annualReturnInput];
 
-        if (outputValueLength > 12) {
-            outputTextElement.textContent="For mange tall";
-            resultExpTextElement.textContent="";
-        } else if (aarligRente == 0) {
-            outputTextElement.textContent=`Verdi: ${utenAvkastning} kr`;
-            resultExpTextElement.textContent=`Avkastning: 0 kr. Etter å ha spart ${maendeligBidrag} kr per måned i ${antallAar} år, med en årlig rente på ${aarligRente}% og et startbeløp på 
-            ${startBeloep} kr, vil du sitte med ${utenAvkastning} kr etter ${antallAar} år.`
-        } else {
-            outputTextElement.textContent=`Verdi: ${outputValue} kr`;
-            resultExpTextElement.textContent=`Avkastning: ${avkastning} kr. Etter å ha spart ${maendeligBidrag} kr per måned i ${antallAar} år, med en årlig rente på ${aarligRente}% og et startbeløp på 
-            ${startBeloep} kr, vil du sitte med ${outputValue} kr etter ${antallAar} år.`
-        }
+    const numberArray = prepInput(inputArray);
+
+    if (numberArray === "invalidInput") {
+        errorMessageContainer.classList.remove("hidden");
+        errorMessageText.textContent="Bare tall, komma og punktum er tillatt.";
+        console.log("invalidInput")
+
+    } else if (numberArray === "tooManyPeriods") {
+        errorMessageContainer.classList.remove("hidden");
+        errorMessageText.textContent="Kun ett komma eller punktum er tillatt.";
+
+    } else if (numberArray) {
+        calculate(numberArray);
+    };
+};
+
+function calculate(numberArray) {
+    const [startAmount, monthlyInvestment, years, annualReturn] = numberArray;
+
+    let noReturns = startAmount + monthlyInvestment * 12 * years;
+
+    if (annualReturn === 0) {
+        if (!rightSize(noReturns)) {
+            return;
+        };
+        outputText(noReturns, 0, startAmount, monthlyInvestment, years, annualReturn);
+        
     } else {
-        outputTextElement.textContent="Verdi: ";
-        resultExpTextElement.textContent="";
-    }
+        const r = annualReturn / 100 / 12;
+        const n = 12 * years;
+        const growth = (1 + r) ** n;
+
+        let finalValue = startAmount * growth + monthlyInvestment * ((growth - 1) / r);
+        let returns = finalValue - noReturns;
+
+        if (!rightSize(finalValue)) {
+            return;
+        };
+        outputText(finalValue, returns, startAmount, monthlyInvestment, years, annualReturn);
+    };
+};
+
+
+function rightSize(value) {
+    if (value < 1_000_000_000_000_000) {
+        return true;
+    };
+
+    errorMessageContainer.classList.remove("hidden");
+    errorMessageText.textContent="Feilmelding: Velg lavere verdier for startbeløp, månedlig investering, år eller avkastning.";
+    return false;
+};
+
+function outputText(value, returns, startAmount, monthlyInvestment, years, annualReturn) {
+    outputTextElement.textContent=`Verdi: ${prepOut(value)} kr`;
+    resultExpTextElement.textContent=`Avkastning: ${prepOut(returns)} kr. Etter å ha spart ${prepOut(monthlyInvestment)} kr per måned i ${prepOut(years)} år, med en årlig rente på ${prepOut(annualReturn)}% og et startbeløp på 
+    ${prepOut(startAmount)} kr, vil du sitte med ${prepOut(value)} kr etter ${prepOut(years)} år.`
 };
