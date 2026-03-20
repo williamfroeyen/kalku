@@ -103,6 +103,10 @@
   {"title":"Finn volumet av en kule","url":"/geometri/volum-av-kule.html","category":"Geometri"},
   {"title":"Takvinkelkalkulator","url":"/geometri/takvinkelkalkulator.html","category":"Geometri"},
 
+  {"title":"BMI kalkulator","url":"/helse/bmi-kalkulator.html","category":"Helse"},
+  {"title":"Kcal til kJ","url":"/helse/kcal-til-kilojoule.html","category":"Helse"},
+  {"title":"kJ til kcal","url":"/helse/kilojoule-til-kcal.html","category":"Helse"},
+
   {"title":"Kaffekalkulator","url":"/mat/kaffekalkulator.html","category":"Mat"},
   {"title":"Mel dl til gram","url":"/mat/mel-dl-til-gram.html","category":"Mat"},
   {"title":"Mel gram til dl","url":"/mat/mel-gram-til-dl.html","category":"Mat"},
@@ -112,10 +116,6 @@
   {"title":"Smør gram til dl","url":"/mat/smør-gram-til-dl.html","category":"Mat"},
   {"title":"Stekeovn til airfryer temperatur","url":"/mat/stekeovn-til-airfryer-temp.html","category":"Mat"},
   {"title":"Stekeovn til airfryer tid","url":"/mat/stekeovn-til-airfryer-tid.html","category":"Mat"},
-
-  {"title":"BMI kalkulator","url":"/helse/bmi-kalkulator.html","category":"Helse"},
-  {"title":"Kcal til kJ","url":"/helse/kcal-til-kilojoule.html","category":"Helse"},
-  {"title":"kJ til kcal","url":"/helse/kilojoule-til-kcal.html","category":"Helse"},
 
   {"title":"Kilopascal til bar","url":"/trykk/kpa-til-bar.html","category":"Trykk"},
   {"title":"Bar til kilopascal","url":"/trykk/bar-til-kpa.html","category":"Trykk"},

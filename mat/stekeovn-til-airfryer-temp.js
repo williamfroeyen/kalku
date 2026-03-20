@@ -17,4 +17,4 @@ inputElement.addEventListener("input", (e) => {
     };
 
     outputElement.value = outputString;
-});
+}); 
