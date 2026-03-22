@@ -153,7 +153,7 @@
         <div>
             <div class="input">
                 <p>Milliliter (ml)</p>
-                <input id="input1" type="text" inputmode="decimal" placeholder="ml">
+                <input id="input1" type="text" inputmode="decimal" placeholder="ml" data-formula="x * 0.01" data-decimals="3">
             </div>
             <a href="desiliter-til-milliliter.html" id="switch-link"><img src="/switch.svg" width="25px" height="25px" id="switch-icon" alt="switch icon"/></a>
             <div class="output">
@@ -244,6 +244,6 @@
     </footer>
     <script src="../search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
-    <script src="/volum/milliliter-til-desiliter.js" type="module"></script>
+    <script src="../js/oneinputcalc.js" type="module"></script>
 </body>
 </html>
