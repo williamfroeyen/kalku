@@ -31,7 +31,14 @@ export function prepInput(inputArray) {
 };
 
 function cleanString(input) {
-    let noSpaces = input.replace(/\s+/g, "");
-    let toPeriod = noSpaces.replace(/,/g, '.');
+    const noSpaces = input.replace(/\s+/g, "");
+    const toPeriod = noSpaces.replace(/,/g, '.');
     return toPeriod;
+};
+
+export function rounding(value, decimals) {
+    const factor = 10**decimals;
+    const roundedValue = Math.round((value + Number.EPSILON)*factor)/factor;
+    const finalString = String(roundedValue).replace(".", ",");
+    return finalString;
 };

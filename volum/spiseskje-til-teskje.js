@@ -1,20 +1,34 @@
+import { prepInput, rounding } from '../calcfunctions.js';
+
 const inputElement = document.querySelector("#input1");
 const outputElement = document.querySelector("#output1");
+const errorMessageContainer = document.querySelector("#errorMessageContainer");
+const errorMessageText = document.querySelector("#errorMessageText");
+const outputDecimals = 3;
 
 inputElement.addEventListener("input", (e) => {
-    const inputString = e.target.value.trim();
-    const validFormat = /^[0-9]*([.,][0-9]*)?$/.test(inputString);
-    let outputString = "";
+    outputElement.value = "";
+    errorMessageContainer.classList.add("hidden");
+    errorMessageText.textContent="";
 
-    if (validFormat && inputString.length > 0) {
-        const inputNum = parseFloat(inputString.replace(",", "."));
+    const inputArray = [e.target];
+    const preppedArray = prepInput(inputArray);
 
-        if (!isNaN(inputNum)) {
-            let calculated = inputNum * 3;
-            calculated = Math.round((calculated + Number.EPSILON)*10000)/10000;
-            outputString = String(calculated).replace(".", ",");
-        };
+    if (preppedArray === "invalidInput") {
+        errorMessageContainer.classList.remove("hidden");
+        errorMessageText.textContent="Bare tall, komma og punktum er tillatt.";
+
+    } else if (preppedArray === "tooManyPeriods") {
+        errorMessageContainer.classList.remove("hidden");
+        errorMessageText.textContent="Kun ett komma eller punktum er tillatt.";
+
+    } else if (preppedArray) {
+        calculate(preppedArray[0]);
     };
-
-    outputElement.value = outputString;
 });
+
+function calculate(preppedNum) {
+    const calculated = preppedNum * 3;
+    const finalString = rounding(calculated, outputDecimals);
+    outputElement.value = finalString;
+};
