@@ -145,12 +145,15 @@
         <div>
             <div class="input">
                 <p>psi</p>
-                <input id="input1" type="text" inputmode="decimal" placeholder="psi">
+                <input id="input1" type="text" inputmode="decimal" placeholder="psi" data-formula="x * 0.0689475729" data-decimals="3">
             </div>
             <a href="bar-til-psi.html" id="switch-link"><img src="/switch.svg" width="25px" height="25px" id="switch-icon" alt="switch icon"/></a>
             <div class="output">
                 <p>Bar</p>
                 <input id="output1" type="text" placeholder="bar" readonly>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div class="ad-slot ad-slot-1">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
@@ -219,8 +222,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/trykk/psi-til-bar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
     <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+    <script src="../js/oneinputcalc.js" type="module"></script>
 </body>
 </html>

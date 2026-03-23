@@ -144,11 +144,14 @@
         <div>
             <div class="input">
                 <p>Kvadratroten av</p>
-                <input id="input1" type="text" inputmode="decimal">
+                <input id="input1" type="text" inputmode="decimal" data-formula="Math.sqrt(x)" data-decimals="3">
             </div>
             <div class="output">
                 <p>Er lik</p>
                 <input id="output1" type="text" readonly>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div class="ad-slot ad-slot-1">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
@@ -168,6 +171,18 @@
                 <p class="paragraph">
                    Kvadratroten til et tall a er det tallet du må multiplisere med seg selv for å få tallet a. Kvadratroten av 4 er 2, fordi 2 * 2 = 4. Det er ikke mulig å finne kvadratroten av et negativt tall. 
                 </p>
+                <search id="search">
+                    <p>Søk etter andre kalkulatorer:</p>
+                    <div id="searchinputfield">
+                        <div id="searchlabel">
+                            <p id="searchlabeltext">Søk</p>
+                        </div>
+                        <input type="text" id="searchinput" placeholder="Søk kalkulatorer…">
+                    </div>
+                    <div id="searchresultfield" class="hidden">
+                        <ul id="searchresultlist"></ul>
+                    </div>
+                </search>
                 Andre matematikk-kalkulatorer:
                 <ul>
                     <li><a href="/matematikk/finn-tredjeroten.html">Finn tredjeroten</a></li>
@@ -187,6 +202,8 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/matematikk/finn-kvadratroten.js"></script>
+    <script src="../search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+    <script src="../js/oneinputcalc.js" type="module"></script>
 </body>
 </html>

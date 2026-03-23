@@ -153,12 +153,15 @@
         <div>
             <div class="input">
                 <p>Kilogram (kg)</p>
-                <input id="input1" type="text" inputmode="decimal" placeholder="kg">
+                <input id="input1" type="text" inputmode="decimal" placeholder="kg" data-formula="x * 2.20462262" data-decimals="3">
             </div>
             <a href="pund-til-kilogram.html" id="switch-link"><img src="/switch.svg" width="25px" height="25px" id="switch-icon" alt="switch icon"/></a>
             <div class="output">
                 <p>Pund (lb)</p>
                 <input id="output1" type="text" placeholder="lb" readonly>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div class="ad-slot ad-slot-1">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
@@ -235,6 +238,6 @@
     </footer>
     <script src="../search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
-    <script src="/vekt/kilogram-til-pund.js"></script>
+    <script src="../js/oneinputcalc.js" type="module"></script>
 </body>
 </html>
