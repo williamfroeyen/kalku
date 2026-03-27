@@ -5,19 +5,24 @@ const inputElement2 = document.querySelector("#input2");
 const outputTextElement = document.querySelector("#oneResultText");
 const errorDiv = document.querySelector("#errorMessageContainer");
 const errorTxt = document.querySelector("#errorMessageText");
-const outputDecimals = 3;
+const formula = outputTextElement.dataset.formula;
+const outputDecimals = outputTextElement.dataset.decimals;
+const outputTextPrefix = outputTextElement.dataset.text;
+const noZero = outputTextElement.dataset.nozero;
 
-inputElement1.addEventListener("input", inputAction);
-inputElement2.addEventListener("input", inputAction);
+const outputUnit = outputTextElement.dataset.unit;
 
-function inputAction() {
-    outputTextElement.textContent = "Oppgang:";
+inputElement1.addEventListener("input", errorCheck);
+inputElement2.addEventListener("input", errorCheck);
+
+function errorCheck() {
+    outputTextElement.textContent = outputTextPrefix;
     errorDiv.classList.add("hidden");
     errorTxt.textContent="";
 
     const inputArray = [inputElement1, inputElement2]
     const numberArray = prepInput(inputArray);
-
+    
     if (numberArray === "invalidInput") {
         errorDiv.classList.remove("hidden");
         errorTxt.textContent="Kun tall, komma og punktum er tillatt.";
@@ -27,25 +32,21 @@ function inputAction() {
         errorTxt.textContent="Kun ett komma eller punktum er tillatt.";
 
     } else if (numberArray) {
-        errorCheck(numberArray);
+        const [input1, input2] = numberArray;
+
+        if (noZero === "true" && (input1 === 0 || input2 === 0)) {
+            errorDiv.classList.remove("hidden");
+            errorTxt.textContent="Ingen av verdiene kan være lik 0.";
+            
+        } else {
+            calculate(numberArray);
+        };
     };
 };
 
-function errorCheck(numberArray) {
+function calculate(numberArray) {
     const [input1, input2] = numberArray;
-    if (input1 > input2) {
-        return;
-    };
-    if (input1 === 0 || input2 === 0) {
-        errorDiv.classList.remove("hidden");
-        errorTxt.textContent="Ingen av verdiene kan være lik 0.";
-        return;
-    };
-    calculate(input1, input2);
-};
-
-function calculate(input1, input2) {
-    const calculated = ((input2 - input1) / input1) * 100;
-    const finalString = `Oppgang: ${rounding(calculated, outputDecimals)} %`
+    const calculated = Function("input1", "input2", `return ${formula};`)(input1, input2);
+    const finalString = `${outputTextPrefix} ${rounding(calculated, outputDecimals)} ${outputUnit}`
     outputTextElement.textContent = finalString;
 };

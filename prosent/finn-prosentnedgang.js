@@ -1,26 +1,51 @@
-const input1 = document.querySelector("#input1");
-const input2 = document.querySelector("#input2");
+import { prepInput, rounding } from '../js/calcfunctions.js';
+
+const inputElement1 = document.querySelector("#input1");
+const inputElement2 = document.querySelector("#input2");
 const outputTextElement = document.querySelector("#oneResultText");
+const errorDiv = document.querySelector("#errorMessageContainer");
+const errorTxt = document.querySelector("#errorMessageText");
+const outputDecimals = 3;
 
-input1.addEventListener("input", updateResult);
-input2.addEventListener("input", updateResult);
+inputElement1.addEventListener("input", inputAction);
+inputElement2.addEventListener("input", inputAction);
 
-function updateResult() {
-    let input1Value = parseFloat(input1.value.replace(",", "."));
-    let input2Value = parseFloat(input2.value.replace(",", "."));
-    let outputValue = "";
+function inputAction() {
+    outputTextElement.textContent = "Nedgang:";
+    errorDiv.classList.add("hidden");
+    errorTxt.textContent="";
 
-    if (!isNaN(input1Value) && !isNaN(input2Value)) {
-        outputValue = ((input1Value-input2Value)/input1Value)*100;
-        outputValue = Math.round((outputValue + Number.EPSILON)*1000)/1000;
-        outputValue = String(outputValue).replace(".", ",");
+    const inputArray = [inputElement1, inputElement2]
+    const numberArray = prepInput(inputArray);
 
-        if (outputValue.length > 10) {
-            outputTextElement.textContent="For mange tall";
-        } else {
-            outputTextElement.textContent=`Nedgang: ${outputValue}%`;
-        };
-    } else {
-        outputTextElement.textContent="Nedgang: ";
+    if (numberArray === "invalidInput") {
+        errorDiv.classList.remove("hidden");
+        errorTxt.textContent="Kun tall, komma og punktum er tillatt.";
+
+    } else if (numberArray === "tooManyPeriods") {
+        errorDiv.classList.remove("hidden");
+        errorTxt.textContent="Kun ett komma eller punktum er tillatt.";
+
+    } else if (numberArray) {
+        errorCheck(numberArray);
     };
+};
+
+function errorCheck(numberArray) {
+    const [input1, input2] = numberArray;
+    if (input1 < input2) {
+        return;
+    };
+    if (input1 === 0 || input2 === 0) {
+        errorDiv.classList.remove("hidden");
+        errorTxt.textContent="Ingen av verdiene kan være lik 0.";
+        return;
+    };
+    calculate(input1, input2);
+};
+
+function calculate(input1, input2) {
+    const calculated = ((input1 - input2) / input1) * 100;
+    const finalString = `Nedgang: ${rounding(calculated, outputDecimals)} %`
+    outputTextElement.textContent = finalString;
 };

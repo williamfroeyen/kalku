@@ -137,14 +137,17 @@
         <div>
             <div class="input">
                 <p>Del av tallet</p>
-                <input id="input1" type="number" placeholder="">
+                <input id="input1" type="text" placeholder="">
             </div>
             <div class="input">
                 <p>Hele tallet</p>
-                <input id="input2" type="number" placeholder="">
+                <input id="input2" type="text" placeholder="">
             </div>
             <div id="oneResult">
-                <p id="oneResultText">Resultat:</p>
+                <p id="oneResultText" data-formula="(input1 / input2)*100" data-decimals="3" data-text="Prosenten:" data-unit="%" data-nozero="true">Prosenten:</p>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div class="ad-slot ad-slot-1">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
@@ -197,7 +200,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/prosent/finn-prosenten.js"></script>
+    <script src="../js/twoinputcalc.js" type="module"></script>
     <script src="../js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 </body>
