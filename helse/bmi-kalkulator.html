@@ -152,14 +152,17 @@
         <div>
             <div class="input">
                 <p>Høyde (cm)</p>
-                <input id="input1" type="number" placeholder="cm">
+                <input id="input1" type="text" placeholder="cm">
             </div>
             <div class="input">
                 <p>Vekt (kg)</p>
-                <input id="input2" type="number" placeholder="kg">
+                <input id="input2" type="text" placeholder="kg">
             </div>
             <div id="oneResult">
-                <p id="oneResultText">BMI:</p>
+                <p id="oneResultText" data-formula="input2 / ((input1 / 100)**2)" data-decimals="1" data-text="BMI:" data-unit="" data-nozero="true">BMI:</p>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div id="description">
                 Gjelder bare for voksne mellom 18 og 70 år:
@@ -207,7 +210,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/helse/bmi-kalkulator.js"></script>
+    <script src="../js/twoinputcalc.js" type="module"></script>
     <script src="../js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 </body>

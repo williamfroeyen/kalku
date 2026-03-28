@@ -37,14 +37,17 @@
         <div>
             <div class="input">
                 <p>Svingninger</p>
-                <input id="input1" type="number" placeholder="antall">
+                <input id="input1" type="text" placeholder="antall">
             </div>
             <div class="input">
                 <p>Total tid</p>
-                <input id="input2" type="number" placeholder="s">
+                <input id="input2" type="text" placeholder="s">
             </div>
             <div id="oneResult">
-                <p id="oneResultText">Frekvens:</p>
+                <p id="oneResultText" data-formula="input1 / input2" data-decimals="3" data-text="Frekvens:" data-unit="Hz" data-nozero="true">Frekvens:</p>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div id="description">
                 <p class="paragraph">
@@ -83,7 +86,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/elektromagnetisme/svingninger-og-tid-til-frekvens.js"></script>
+    <script src="../js/twoinputcalc.js" type="module"></script>
     <script src="../js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 </body>

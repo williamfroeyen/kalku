@@ -37,14 +37,17 @@
         <div>
             <div class="input">
                 <p>Svingninger</p>
-                <input id="input1" type="number" placeholder="antall">
+                <input id="input1" type="text" placeholder="antall">
             </div>
             <div class="input">
                 <p>Total tid</p>
-                <input id="input2" type="number" placeholder="s">
+                <input id="input2" type="text" placeholder="s">
             </div>
             <div id="oneResult">
-                <p id="oneResultText">Periode:</p>
+                <p id="oneResultText" data-formula="input2 / input1" data-decimals="3" data-text="Periode:" data-unit="s" data-nozero="true">Periode:</p>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div id="description">
                 <p class="paragraph">
@@ -83,7 +86,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/elektromagnetisme/svingninger-og-tid-til-periode.js"></script>
+    <script src="../js/twoinputcalc.js" type="module"></script>
     <script src="../js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 </body>

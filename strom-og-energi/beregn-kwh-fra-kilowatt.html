@@ -121,14 +121,17 @@
         <div>
             <div class="input">
                 <p>Kilowatt</p>
-                <input id="input1" type="number" placeholder="kW">
+                <input id="input1" type="text" placeholder="kW">
             </div>
             <div class="input">
                 <p>Timer</p>
-                <input id="input2" type="number" placeholder="t">
+                <input id="input2" type="text" placeholder="t">
             </div>
             <div id="oneResult">
-                <p id="oneResultText">Resultat:</p>
+                <p id="oneResultText" data-formula="input1 * input2" data-decimals="3" data-text="Resultat:" data-unit="kWh" data-nozero="false">Resultat:</p>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div class="ad-slot ad-slot-1">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
@@ -182,7 +185,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/strom-og-energi/beregn-kwh-fra-kilowatt.js"></script>
+    <script src="../js/twoinputcalc.js" type="module"></script>
     <script src="../js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 </body>
