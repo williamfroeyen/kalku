@@ -10,7 +10,6 @@ const formula = outputTextElement.dataset.formula;
 const outputDecimals = outputTextElement.dataset.decimals;
 const outputTextPrefix = outputTextElement.dataset.text;
 const noZero = outputTextElement.dataset.nozero;
-
 const outputUnit = outputTextElement.dataset.unit;
 
 inputElement1.addEventListener("input", errorCheck);

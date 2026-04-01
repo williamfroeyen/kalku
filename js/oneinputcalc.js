@@ -6,6 +6,7 @@ const errorDiv = document.querySelector("#errorMessageContainer");
 const errorTxt = document.querySelector("#errorMessageText");
 const formula = inputElement.dataset.formula;
 const outputDecimals = inputElement.dataset.decimals;
+const noZero = inputElement.dataset.nozero;
 const negAllowed = inputElement.dataset.neg;
 
 inputElement.addEventListener("input", (e) => {
@@ -25,7 +26,13 @@ inputElement.addEventListener("input", (e) => {
         errorTxt.textContent="Kun ett komma eller punktum er tillatt.";
 
     } else if (preppedArray) {
-        calculate(preppedArray[0]);
+        if (noZero === "true" && preppedArray[0] === 0) {
+            errorDiv.classList.remove("hidden");
+            errorTxt.textContent="Verdien kan ikke være lik 0.";
+            
+        } else {
+            calculate(preppedArray[0]);
+        };
     };
 });
 
