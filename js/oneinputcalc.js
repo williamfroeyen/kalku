@@ -6,6 +6,7 @@ const errorDiv = document.querySelector("#errorMessageContainer");
 const errorTxt = document.querySelector("#errorMessageText");
 const formula = inputElement.dataset.formula;
 const outputDecimals = inputElement.dataset.decimals;
+const negAllowed = inputElement.dataset.neg;
 
 inputElement.addEventListener("input", (e) => {
     outputElement.value = "";
@@ -13,7 +14,7 @@ inputElement.addEventListener("input", (e) => {
     errorTxt.textContent="";
 
     const inputArray = [e.target];
-    const preppedArray = prepInput(inputArray);
+    const preppedArray = prepInput(inputArray, negAllowed);
 
     if (preppedArray === "invalidInput") {
         errorDiv.classList.remove("hidden");
