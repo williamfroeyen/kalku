@@ -122,21 +122,24 @@
             <div id="rowOne">
                 <div class="input">
                     <p>Volum nedsenket (L)</p>
-                    <input id="input1" type="number" placeholder="L">
+                    <input id="input1" type="text" inputmode="decimal" placeholder="L">
                 </div>
                 <div class="input">
                     <p>Tyngdeakselerasjon (m/s²)</p>
-                    <input id="input2" class="long-input" type="number" placeholder="m/s²" value="9,80665">
+                    <input id="input2" class="long-input" type="text" inputmode="decimal" placeholder="m/s²" value="9,80665">
                 </div>
             </div>
             <div id="rowTwo">
                 <div class="input">
                     <p>Massetetthet væske/gass (kg/m³)</p>
-                    <input id="input3" type="number" placeholder="kg/m³">
+                    <input id="input3" type="text" inputmode="decimal" placeholder="kg/m³">
                 </div>
             </div>
             <div id="oneResult">
-                <p id="oneResultText">Oppdrift:</p>
+                <p id="oneResultText" data-formula="input1 * input2 * input3" data-decimals="3" data-text="Oppdrift:" data-unit="N" data-nozero="false">Oppdrift:</p>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div class="ad-slot ad-slot-1">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
@@ -200,7 +203,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/kraft/finn-oppdrift.js"></script>
+    <script src="../js/threeinputcalc.js" type="module"></script>
     <script src="../js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 </body>
