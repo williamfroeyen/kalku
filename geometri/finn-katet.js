@@ -1,28 +1,48 @@
-const input1 = document.querySelector("#input1");
-const input2 = document.querySelector("#input2");
-const outputTextElement = document.querySelector("#oneResultText")
+import { prepInput, rounding } from '../js/calcfunctions.js';
 
-input1.addEventListener("input", updateResult);
-input2.addEventListener("input", updateResult);
+const inputElement1 = document.querySelector("#input1");
+const inputElement2 = document.querySelector("#input2");
+const outputTextElement = document.querySelector("#oneResultText");
+const errorDiv = document.querySelector("#errorMessageContainer");
+const errorTxt = document.querySelector("#errorMessageText");
+const outputDecimals = 3;
 
-function updateResult() {
-    let input1Value = parseFloat(input1.value.replace(",", "."));
-    let input2Value = parseFloat(input2.value.replace(",", "."));
-    let outputValue = "";
+inputElement1.addEventListener("input", inputAction);
+inputElement2.addEventListener("input", inputAction);
 
-    if (!isNaN(input1Value) && !isNaN(input2Value)) {
-        outputValue = Math.sqrt(input2Value**2-input1Value**2);
-        outputValue = Math.round((outputValue + Number.EPSILON)*10000)/10000;
-        outputValue = String(outputValue).replace(".", ",");
+function inputAction() {
+    outputTextElement.textContent = "Ukjent katet:";
+    errorDiv.classList.add("hidden");
+    errorTxt.textContent="";
 
-        if (outputValue.length > 11) {
-            outputTextElement.textContent="For mange tall";
-        } if (input1Value > input2Value) {
-            outputTextElement.textContent="Kjent katet må være mindre enn hypotenusen";
-        } else {
-            outputTextElement.textContent=`Ukjent katet: ${outputValue}`;
-        }
-    } else {
-        outputTextElement.textContent="Ukjent katet: ";
-    }
+    const inputArray = [inputElement1, inputElement2]
+    const numberArray = prepInput(inputArray);
+
+    if (numberArray === "invalidInput") {
+        errorDiv.classList.remove("hidden");
+        errorTxt.textContent="Kun tall, komma og punktum er tillatt.";
+
+    } else if (numberArray === "tooManyPeriods") {
+        errorDiv.classList.remove("hidden");
+        errorTxt.textContent="Kun ett komma eller punktum er tillatt.";
+
+    } else if (numberArray) {
+        errorCheck(numberArray);
+    };
+};
+
+function errorCheck(numberArray) {
+    const [input1, input2] = numberArray;
+    if (input1 > input2) {
+        errorDiv.classList.remove("hidden");
+        errorTxt.textContent="Hypotenusen må være lengre enn kateten.";
+        return;
+    };
+    calculate(input1, input2);
+};
+
+function calculate(input1, input2) {
+    const calculated = Math.sqrt(input2**2 - input1**2);
+    const finalString = `Ukjent katet: ${rounding(calculated, outputDecimals)}`
+    outputTextElement.textContent = finalString;
 };

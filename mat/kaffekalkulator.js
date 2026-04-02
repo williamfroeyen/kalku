@@ -1,14 +1,37 @@
-const input1 = document.querySelector("#input1");
-input1.addEventListener("input", (e) => {
-    const inputValue = e.target.value;
-    let outputValue = "";
-    let outputValue2 = "";
-    if (inputValue.length > 0 && !isNaN(inputValue)) {
-        outputValue = inputValue * 6;
-        outputValue2 = outputValue / 10; 
-        outputValue = Math.round((outputValue + Number.EPSILON)*10000)/10000;
-        outputValue2 = Math.round((outputValue2 + Number.EPSILON)*10)/10;
-    }
-    document.querySelector("#output1").value = outputValue;
-    document.querySelector("#output2").value = outputValue2;
+import { prepInput, rounding } from '../js/calcfunctions.js';
+
+const inputElement = document.querySelector("#input1");
+const outputElement1 = document.querySelector("#output1");
+const outputElement2 = document.querySelector("#output2");
+const errorDiv = document.querySelector("#errorMessageContainer");
+const errorTxt = document.querySelector("#errorMessageText");
+const outputDecimals = inputElement.dataset.decimals;
+
+inputElement.addEventListener("input", (e) => {
+    outputElement1.value = outputElement2.value = "";
+    errorDiv.classList.add("hidden");
+    errorTxt.textContent="";
+
+    const inputArray = [e.target];
+    const preppedArray = prepInput(inputArray);
+
+    if (preppedArray === "invalidInput") {
+        errorDiv.classList.remove("hidden");
+        errorTxt.textContent="Kun tall, komma og punktum er tillatt.";
+
+    } else if (preppedArray === "tooManyPeriods") {
+        errorDiv.classList.remove("hidden");
+        errorTxt.textContent="Kun ett komma eller punktum er tillatt.";
+
+    } else if (preppedArray) {
+        calculate(preppedArray[0]);
+    };
 });
+
+function calculate(preppedNum) {
+    const calculated = preppedNum * 6;
+    const outputValue1 = rounding(calculated, outputDecimals);
+    const outputValue2 = rounding(calculated / 10, outputDecimals);
+    outputElement1.value = outputValue1;
+    outputElement2.value = outputValue2;
+};

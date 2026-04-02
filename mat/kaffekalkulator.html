@@ -145,15 +145,18 @@
         <div>
             <div class="input">
                 <p>Vann (dl)</p>
-                <input id="input1" type="number" inputmode="decimal"placeholder="dl">
+                <input id="input1" type="text" inputmode="decimal" placeholder="dl" data-decimals="1">
             </div>
             <div class="input">
                 <p>Kaffepulver (g)</p>
-                <input id="output1" type="number" inputmode="decimal" placeholder="g" readonly>
+                <input id="output1" type="text" inputmode="decimal" placeholder="g" readonly>
             </div>
             <div class="input">
                 <p>Måleskjeer</p>
-                <input id="output2" type="number" inputmode="decimal" placeholder="" readonly>
+                <input id="output2" type="text" inputmode="decimal" placeholder="" readonly>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div class="ad-slot ad-slot-1">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
@@ -223,7 +226,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/mat/kaffekalkulator.js"></script>
+    <script src="/mat/kaffekalkulator.js" type="module"></script>
     <script src="../js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 </body>

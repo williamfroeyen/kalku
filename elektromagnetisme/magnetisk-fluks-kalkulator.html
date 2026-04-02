@@ -130,21 +130,24 @@
             <div id="rowOne">
                 <div class="input">
                     <p>Flukstetthet (T)</p>
-                    <input id="input1" type="number" inputmode="decimal" placeholder="T">
+                    <input id="input1" type="text" inputmode="decimal" placeholder="T">
                 </div>
                 <div class="input">
                     <p>Areal (m<sup>2</sup>)</p>
-                    <input id="input2" class="long-input" type="number" inputmode="decimal" placeholder="m^2">
+                    <input id="input2" class="long-input" type="text" inputmode="decimal" placeholder="m^2">
                 </div>
             </div>
             <div id="rowTwo">
                 <div class="input">
                     <p>Vinkel (°)</p>
-                    <input id="input3" type="number" placeholder="°" inputmode="decimal" value="0">
+                    <input id="input3" type="text" placeholder="°" inputmode="decimal" value="0">
                 </div>
             </div>
             <div id="oneResult">
-                <p id="oneResultText">Fluks:</p>
+                <p id="oneResultText" data-formula="input1 * input2 * Math.cos(input3 * Math.PI / 180)" data-decimals="3" data-text="Fluks:" data-unit="Wb">Fluks:</p>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div class="ad-slot ad-slot-1">
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9820535772137571"
@@ -200,7 +203,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="/elektromagnetisme/magnetisk-fluks-kalkulator.js"></script>
+    <script src="../js/threeinputcalc.js" type="module"></script>
     <script src="../js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 </body>
