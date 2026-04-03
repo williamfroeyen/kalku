@@ -1,4 +1,4 @@
-import { prepOut, prepInput } from '../js/calcfunctions.js';
+import { prepOut, prepInput } from '../core/calcfunctions.js';
 
 const startAmountInput = document.querySelector("#input1");
 const monthlyInvestmentInput = document.querySelector("#input2");

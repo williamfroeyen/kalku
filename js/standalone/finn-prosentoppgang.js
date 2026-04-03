@@ -1,4 +1,4 @@
-import { prepInput, rounding } from '../js/calcfunctions.js';
+import { prepInput, rounding } from '../core/calcfunctions.js';
 
 const inputElement1 = document.querySelector("#input1");
 const inputElement2 = document.querySelector("#input2");
@@ -11,7 +11,7 @@ inputElement1.addEventListener("input", inputAction);
 inputElement2.addEventListener("input", inputAction);
 
 function inputAction() {
-    outputTextElement.textContent = "Nedgang:";
+    outputTextElement.textContent = "Oppgang:";
     errorDiv.classList.add("hidden");
     errorTxt.textContent="";
 
@@ -33,7 +33,7 @@ function inputAction() {
 
 function errorCheck(numberArray) {
     const [input1, input2] = numberArray;
-    if (input1 < input2) {
+    if (input1 > input2) {
         return;
     };
     if (input1 === 0 || input2 === 0) {
@@ -45,7 +45,7 @@ function errorCheck(numberArray) {
 };
 
 function calculate(input1, input2) {
-    const calculated = ((input1 - input2) / input1) * 100;
-    const finalString = `Nedgang: ${rounding(calculated, outputDecimals)} %`
+    const calculated = ((input2 - input1) / input1) * 100;
+    const finalString = `Oppgang: ${rounding(calculated, outputDecimals)} %`
     outputTextElement.textContent = finalString;
 };

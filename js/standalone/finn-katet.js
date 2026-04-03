@@ -1,4 +1,4 @@
-import { prepInput, rounding } from '../js/calcfunctions.js';
+import { prepInput, rounding } from '../core/calcfunctions.js';
 
 const inputElement1 = document.querySelector("#input1");
 const inputElement2 = document.querySelector("#input2");
@@ -11,7 +11,7 @@ inputElement1.addEventListener("input", inputAction);
 inputElement2.addEventListener("input", inputAction);
 
 function inputAction() {
-    outputTextElement.textContent = "Oppgang:";
+    outputTextElement.textContent = "Ukjent katet:";
     errorDiv.classList.add("hidden");
     errorTxt.textContent="";
 
@@ -34,18 +34,15 @@ function inputAction() {
 function errorCheck(numberArray) {
     const [input1, input2] = numberArray;
     if (input1 > input2) {
-        return;
-    };
-    if (input1 === 0 || input2 === 0) {
         errorDiv.classList.remove("hidden");
-        errorTxt.textContent="Ingen av verdiene kan være lik 0.";
+        errorTxt.textContent="Hypotenusen må være lengre enn kateten.";
         return;
     };
     calculate(input1, input2);
 };
 
 function calculate(input1, input2) {
-    const calculated = ((input2 - input1) / input1) * 100;
-    const finalString = `Oppgang: ${rounding(calculated, outputDecimals)} %`
+    const calculated = Math.sqrt(input2**2 - input1**2);
+    const finalString = `Ukjent katet: ${rounding(calculated, outputDecimals)}`
     outputTextElement.textContent = finalString;
 };

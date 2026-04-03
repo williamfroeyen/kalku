@@ -1,4 +1,4 @@
-import { prepInput, rounding } from '../js/calcfunctions.js';
+import { prepInput, rounding } from '../core/calcfunctions.js';
 
 const inputElement = document.querySelector("#input1");
 const outputElement = document.querySelector("#output1");

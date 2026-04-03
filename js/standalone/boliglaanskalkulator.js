@@ -1,4 +1,4 @@
-import { prepOut, prepInput } from '../js/calcfunctions.js';
+import { prepOut, prepInput } from '../core/calcfunctions.js';
 
 let borrowedInput = document.querySelector("#input1");
 let interestInput = document.querySelector("#input2");
