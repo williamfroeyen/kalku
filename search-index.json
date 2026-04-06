@@ -67,7 +67,7 @@
   {"title":"Dekar til hektar","url":"/areal/dekar-til-hektar.html","category":"Areal"},
 
   {"title":"Finn prosenten","url":"/prosent/finn-prosenten.html","category":"Prosentregning"},
-  {"title":"Finn førprisen","url":"/prosent/finn-førprisen.html","category":"Prosentregning"},
+  {"title":"Finn førprisen","url":"/prosent/finn-forprisen.html","category":"Prosentregning"},
   {"title":"Finn prosentandelen","url":"/prosent/finn-prosentandelen.html","category":"Prosentregning"},
   {"title":"Finn prosentoppgang","url":"/prosent/finn-prosentoppgang.html","category":"Prosentregning"},
   {"title":"Finn prosentnedgang","url":"/prosent/finn-prosentnedgang.html","category":"Prosentregning"},
@@ -112,8 +112,8 @@
   {"title":"Mel gram til dl","url":"/mat/mel-gram-til-dl.html","category":"Mat"},
   {"title":"Sukker dl til gram","url":"/mat/sukker-dl-til-gram.html","category":"Mat"},
   {"title":"Sukker gram til dl","url":"/mat/sukker-gram-til-dl.html","category":"Mat"},
-  {"title":"Smør dl til gram","url":"/mat/smør-dl-til-gram.html","category":"Mat"},
-  {"title":"Smør gram til dl","url":"/mat/smør-gram-til-dl.html","category":"Mat"},
+  {"title":"Smør dl til gram","url":"/mat/smor-dl-til-gram.html","category":"Mat"},
+  {"title":"Smør gram til dl","url":"/mat/smor-gram-til-dl.html","category":"Mat"},
   {"title":"Stekeovn til airfryer temperatur","url":"/mat/stekeovn-til-airfryer-temp.html","category":"Mat"},
   {"title":"Stekeovn til airfryer tid","url":"/mat/stekeovn-til-airfryer-tid.html","category":"Mat"},
 
@@ -142,9 +142,9 @@
   {"title":"Finn glidefriksjon","url":"/kraft/finn-glidefriksjon.html","category":"Kraft"},
 
   {"title":"Investeringskalkulator","url":"/okonomi/investeringskalkulator.html","category":"Økonomi"},
-  {"title":"Boliglånskalkulator","url":"/okonomi/boliglaanskalkulator.html","category":"Økonomi"},
+  {"title":"Boliglånskalkulator","url":"/okonomi/boliglanskalkulator.html","category":"Økonomi"},
 
-  {"title":"Bølgekalkulator","url":"/elektromagnetisme/boelgekalkulator.html","category":"Elektromagnetisme"},
+  {"title":"Bølgekalkulator","url":"/elektromagnetisme/bolgekalkulator.html","category":"Elektromagnetisme"},
   {"title":"Svingninger og tid til periode","url":"/elektromagnetisme/svingninger-og-tid-til-periode.html","category":"Elektromagnetisme"},
   {"title":"Svingninger og tid til frekvens","url":"/elektromagnetisme/svingninger-og-tid-til-frekvens.html","category":"Elektromagnetisme"},
   {"title":"Stefan-Boltzmann kalkulator","url":"/elektromagnetisme/stefan-boltzmann-kalkulator.html","category":"Elektromagnetisme"},
