@@ -41,7 +41,7 @@
                 <h2>Temperatur til utstrålingstetthet</h2>
                 <div class="input">
                     <p>Temperatur</p>
-                    <input id="tempinput" type="number" inputmode="decimal" placeholder="Kelvin">
+                    <input id="tempinput" type="text" inputmode="decimal" placeholder="Kelvin">
                 </div>
                 <div class="input">
                     <p>Utstrålingstetthet</p>
@@ -53,12 +53,15 @@
             <div id="rowTwo">
                 <div class="input">
                     <p>Utstrålingstetthet</p>
-                    <input id="utstrinput" type="number" inputmode="decimal"placeholder="W/m^2">
+                    <input id="utstrinput" type="text" inputmode="decimal"placeholder="W/m^2">
                 </div>
                 <div class="input">
                     <p>Temperatur</p>
                     <input id="tempoutput" type="text" inputmode="decimal" placeholder="Kelvin" disabled="">
                 </div>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <div id="description">
                 <p class="paragraph">
@@ -97,7 +100,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="../js/standalone/stefan-boltzmann-kalkulator.js"></script>
+    <script src="../js/standalone/stefan-boltzmann-kalkulator.js" type="module"></script>
     <script src="../js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 </body>
