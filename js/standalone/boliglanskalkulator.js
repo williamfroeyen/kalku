@@ -23,12 +23,10 @@ function inputEvent() {
     const numberArray = prepInput(inputArray);
     
     if (numberArray === "invalidInput") {
-        errorMessageContainer.classList.remove("hidden");
-        errorMessageText.textContent="Bare tall, komma og punktum er tillatt.";
+        displayError("Bare tall, komma og punktum er tillatt.");
 
     } else if (numberArray === "tooManyPeriods") {
-        errorMessageContainer.classList.remove("hidden");
-        errorMessageText.textContent="Kun ett komma eller punktum er tillatt.";
+        displayError("Kun ett komma eller punktum er tillatt.");
 
     } else if (numberArray) {
         calculate(numberArray);
@@ -67,12 +65,16 @@ function rightSize(borrowed, interest, years) {
         return true;
     };
 
-    errorMessageContainer.classList.remove("hidden");
-    errorMessageText.textContent="Tillatte verdier: 0-1 milliard i lånebeløp, 0-100% rente, 1-100 år nedbetalingstid.";
+    displayError("Tillatte verdier: 0-1 milliard i lånebeløp, 0-100% rente, 1-100 år nedbetalingstid.");
     return false;
 };
 
 function outputText(monthPrincipal, totMortgage, totInterest, borrowed) {
     outputTextElement.textContent=`Lånekostnad: ${prepOut(monthPrincipal)} kr pr. md.`;
     resultExpTextElement.textContent=`Total kostnad på lånet: ${prepOut(totMortgage)} kr. Totalt betalt i avdrag: ${prepOut(borrowed)} kr. Totalt betalt i renter: ${prepOut(totInterest)} kr. `
+};
+
+function displayError(message) {
+    errorMessageContainer.classList.remove("hidden");
+    errorMessageText.textContent = message;
 };
