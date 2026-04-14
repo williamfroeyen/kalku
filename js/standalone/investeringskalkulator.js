@@ -27,7 +27,6 @@ function inputEvent() {
     if (numberArray === "invalidInput") {
         errorMessageContainer.classList.remove("hidden");
         errorMessageText.textContent="Bare tall, komma og punktum er tillatt.";
-        console.log("invalidInput")
 
     } else if (numberArray === "tooManyPeriods") {
         errorMessageContainer.classList.remove("hidden");
