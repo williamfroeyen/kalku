@@ -132,18 +132,21 @@
             <div id="rowOne">
                 <div class="input">
                     <p>Loddrett takhøyde</p>
-                    <input id="loddretttakhoyde" type="number" placeholder="meter">
+                    <input id="loddretttakhoyde" type="text" inputmode="decimal" placeholder="meter">
                 </div>
                 <div class="input">
                     <p>Skrå taklengde</p>
-                    <input id="skrataklengde" type="number" placeholder="meter">
+                    <input id="skrataklengde" type="text" inputmode="decimal" placeholder="meter">
                 </div>
             </div>
             <div id="rowTwo">
                 <div class="input">
                     <p>Vannrett avstand til midten</p>
-                    <input id="vannretttaklengde" type="number" placeholder="meter">
+                    <input id="vannretttaklengde" type="text" inputmode="decimal" placeholder="meter">
                 </div>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <ul id="resultsList">
             </ul>
@@ -281,7 +284,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="../js/standalone/takvinkelkalkulator.js"></script>
+    <script src="../js/standalone/takvinkelkalkulator.js" type="module"></script>
     <script src="../js/features/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 </body>
