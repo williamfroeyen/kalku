@@ -40,32 +40,35 @@
             <div id="rowOne">
                 <div class="input">
                     <p>Frekvens</p>
-                    <input id="frekvensInputElement" type="number" inputmode="decimal" placeholder="Hz">
+                    <input id="frekvensInputElement" type="text" inputmode="decimal" placeholder="Hz">
                 </div>
                 <div class="input">
                     <p>Periode</p>
-                    <input id="periodeInputElement" type="number" inputmode="decimal" placeholder="s">
+                    <input id="periodeInputElement" type="text" inputmode="decimal" placeholder="s">
                 </div>
             </div>
             <div id="rowTwo">
                 <div class="input">
                     <p>Bølgelengde</p>
-                    <input id="boelgelengdeInputElement" type="number" inputmode="decimal" placeholder="m">
+                    <input id="bolgelengdeInputElement" type="text" inputmode="decimal" placeholder="m">
                 </div>
                 <div class="input">
                     <p>Bølgefart</p>
-                    <input id="boelgefartInputElement" type="number" inputmode="decimal" placeholder="m/s">
+                    <input id="bolgefartInputElement" type="text" inputmode="decimal" placeholder="m/s">
                 </div>
             </div>
             <div id="radioRow">
                 <div class="radioDiv">
-                    <input type="radio" id="boelgetypeRadioElement1" name="boelgetypevalg" value="elektromagnetisk" checked>
-                    <label for="boelgetypevalg1">Elektromagnetisk bølge</label>
+                    <input type="radio" id="bolgetypeRadioElement1" name="bolgetypevalg" value="elektromagnetisk" checked>
+                    <label for="bolgetypevalg1">Elektromagnetisk bølge</label>
                 </div>
                 <div class="radioDiv">
-                    <input type="radio" id="boelgetypeRadioElement2" name="boelgetypevalg" value="mekanisk">
-                    <label for="boelgetypevalg2">Mekanisk bølge</label>
+                    <input type="radio" id="bolgetypeRadioElement2" name="bolgetypevalg" value="mekanisk">
+                    <label for="bolgetypevalg2">Mekanisk bølge</label>
                 </div>
+            </div>
+            <div id="errorMessageContainer" class="hidden">
+                <p id="errorMessageText"></p>
             </div>
             <ul id="resultsList">
             </ul>
@@ -106,7 +109,7 @@
             <a id="footerLastElement" href="/personvern.html">Personvern</a>
         </div>
     </footer>
-    <script src="../js/standalone/bolgekalkulator.js"></script>
+    <script src="../js/standalone/bolgekalkulator.js" type="module"></script>
     <script src="../js/features/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 </body>

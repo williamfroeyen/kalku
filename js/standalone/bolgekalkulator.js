@@ -1,157 +1,181 @@
-let outputItems = [];
-let boelgefartOutput;
-let frekvensOutput;
-let boelgelengdeOutput;
-let periodeOutput;
-let fotonenergi;
-let straalingstype;
-let planckskonstant = 6.62607e-34;
+import { prepInput, prepExpOutput } from '../core/calcfunctions.js';
 
-const frekvensInputElement = document.querySelector("#frekvensInputElement");
-const periodeInputElement = document.querySelector("#periodeInputElement");
-const boelgeLengdeInputElement = document.querySelector("#boelgelengdeInputElement");
-const boelgeFartInputElement = document.querySelector("#boelgefartInputElement");
-const elektromagnetiskValg = document.querySelector("#boelgetypeRadioElement1");
-const mekaniskValg = document.querySelector("#boelgetypeRadioElement2");
-
+const frequency = document.querySelector("#frekvensInputElement");
+const period = document.querySelector("#periodeInputElement");
+const wavelength = document.querySelector("#bolgelengdeInputElement");
+const wavespeed = document.querySelector("#bolgefartInputElement");
+const emOption = document.querySelector("#bolgetypeRadioElement1");
+const mechOption = document.querySelector("#bolgetypeRadioElement2");
 const resultsList = document.querySelector("#resultsList");
 
-frekvensInputElement.addEventListener("input", updateResult);
-periodeInputElement.addEventListener("input", updateResult);
-boelgeLengdeInputElement.addEventListener("input", updateResult);
-boelgeFartInputElement.addEventListener("input", updateResult);
-elektromagnetiskValg.addEventListener("input", updateResult);
-mekaniskValg.addEventListener("input", updateResult);
+const plancksconstant = 6.62607e-34;
+const outputDecimals = 5;
 
-function updateResult() {
-    frekvensOutput = periodeOutput = boelgelengdeOutput = boelgefartOutput = fotonenergi = undefined;
-    outputItems = [];
+frequency.addEventListener("input", handleInput);
+period.addEventListener("input", handleInput);
+wavelength.addEventListener("input", handleInput);
+wavespeed.addEventListener("input", handleInput);
+emOption.addEventListener("input", handleInput);
+mechOption.addEventListener("input", handleInput);
+
+function handleInput() {
+    errorMessageContainer.classList.add("hidden");
+    resultsList.innerHTML = "";
+
+    const elementArray = [frequency, period, wavelength, wavespeed];
+    const filteredArray = elementArray.filter(element => isFilled(element));
+    const numberArray = prepInput(filteredArray);
+
+    errorCheck(numberArray);
+};
+
+function errorCheck(numberArray) {
+    const f = isFilled(frequency);
+    const p = isFilled(period);
+    const ws = isFilled(wavespeed);
+    const wl = isFilled(wavelength);
     
-    const normalizedfrekvensInputElement = frekvensInputElement.value.replace(',', '.');
-    const normalizedperiodeInputElement = periodeInputElement.value.replace(',', '.');
-    const normalizedboelgeLengdeInputElement = boelgeLengdeInputElement.value.replace(',', '.');
-    const normalizedboelgeFartInputElement = boelgeFartInputElement.value.replace(',', '.');
+    if (numberArray === "invalidInput") {
+        displayError("Bare tall, komma og punktum er tillatt.");
+        return false;
 
-    let frekvensInput = parseFloat(normalizedfrekvensInputElement);
-    let periodeInput = parseFloat(normalizedperiodeInputElement);
-    let boelgelengdeInput = parseFloat(normalizedboelgeLengdeInputElement);
-    let boelgefartInput = parseFloat(normalizedboelgeFartInputElement);
-
-    if (isConflict(frekvensInput, periodeInput, boelgelengdeInput, boelgefartInput)) {
+    } else if (numberArray === "tooManyPeriods") {
+        displayError("Kun ett komma eller punktum er tillatt.");
+        return false;
+    };
+    
+    if (frequency.value === "0" || period.value === "0" || wavelength.value === "0" || wavespeed.value === "0") {
+        displayError("Verdiene kan ikke være lik 0.");
         return;
     };
 
-    // PERIODE OG FREKVENS
-    if (!isNaN(frekvensInput) && isNaN(periodeInput) && isNaN(boelgelengdeInput) && isNaN(boelgefartInput)) {
-            periodeOutput = 1 / frekvensInput;
-            frekvensOutput = frekvensInput;
-            prepareResult("ingenfeil", "barefrekvensperiode");
-    } else if (isNaN(frekvensInput) && !isNaN(periodeInput)) {
-        if (isNaN(boelgelengdeInput) && isNaN(boelgefartInput)) {
-            frekvensOutput = 1 / periodeInput;
-            periodeOutput = periodeInput;
-            prepareResult("ingenfeil", "barefrekvensperiode");
-        } else { // GJØR OM PERIODE TIL FREKVENS
-            frekvensOutput = 1 / periodeInput;
-            frekvensInput = frekvensOutput;
-        } 
+    if (f && p) {
+        displayError("Fyll enten frekvens, eller periode.");
+        return;
     };
 
-    // BØLGEFART, FREKVENS OG BØLGELENGDE
-    if ((!isNaN(frekvensInput) || !isNaN(periodeInput)) && !isNaN(boelgelengdeInput)) {
-        boelgefartOutput = frekvensInput * boelgelengdeInput;
-        frekvensOutput = frekvensInput;
-        boelgelengdeOutput = boelgelengdeInput;
-        periodeOutput = 1 / frekvensOutput;
-            prepareResult("ingenfeil", "toinputs");
-    } else if (!isNaN(boelgefartInput) && !isNaN(boelgelengdeInput)) {
-        frekvensOutput = boelgefartInput / boelgelengdeInput;
-        boelgefartOutput = boelgefartInput;
-        boelgelengdeOutput = boelgelengdeInput;
-        periodeOutput = 1 / frekvensOutput;
-            prepareResult("ingenfeil", "toinputs");
-    } else if (!isNaN(boelgefartInput) && (!isNaN(frekvensInput) || !isNaN(periodeInput))) {
-        boelgelengdeOutput = boelgefartInput / frekvensInput;
-        boelgefartOutput = boelgefartInput;
-        frekvensOutput = frekvensInput;
-        periodeOutput = 1 / frekvensOutput;
-            prepareResult("ingenfeil", "toinputs");
+    if (wl && ws && (f || p)) {
+        displayError("Fyll maksimalt to felt.");
+        return;
     };
 
-    if (isNaN(frekvensInput) && isNaN(periodeInput) && isNaN(boelgelengdeInput) && isNaN(boelgefartInput)) {
-        resultsList.innerHTML = "";
-    } else if (isNaN(frekvensInput) && isNaN(periodeInput) && !isNaN(boelgelengdeInput) && isNaN(boelgefartInput)) {
-        resultsList.innerHTML = "";
-    } else if (isNaN(frekvensInput) && isNaN(periodeInput) && isNaN(boelgelengdeInput) && !isNaN(boelgefartInput)) {
-        resultsList.innerHTML = "";
+    if (!f && !p && !(ws && wl)) {
+        return;
     };
+
+    const calcType = findCalcType(f, p, ws, wl);
+    calculate(calcType, numberArray);
 };
 
-function isConflict(frekvensInput, periodeInput, boelgelengdeInput, boelgefartInput) {
-    if (!isNaN(frekvensInput) && !isNaN(periodeInput)) {
-        prepareResult("frekvensperiodekonflikt");
-        return true;
-    } else if ((!isNaN(frekvensInput) || !isNaN(periodeInput))&& !isNaN(boelgelengdeInput) && !isNaN(boelgefartInput)) {
-        prepareResult("treinputskonflikt");
-        return true;
-    } else {
-        return false;
-    }
-}
+function findCalcType(f, p, ws, wl) {
+    if (f && !ws && !wl) { return "p-from-f" };
+    if (p && !wl && !ws) { return "f-from-p" };
 
-function prepareResult(feil, inputtype) {
-    if (elektromagnetiskValg.checked) {
-        fotonenergi = planckskonstant * frekvensOutput;
-            if (frekvensOutput >= 3e19) {
-                straalingstype = "Gammastråling";
-            } else if (frekvensOutput >= 3e16) {
-                straalingstype = "Røntgenstråling";
-            } else if (frekvensOutput >= 7.5e14) {
-                straalingstype = "Ultrafiolett stråling";
-            } else if (frekvensOutput >= 4e14) {
-                straalingstype = "Synlig lys";
-            } else if (frekvensOutput >= 3e11) {
-                straalingstype = "Infrarød";
-            } else if (frekvensOutput >= 3e8) {
-                straalingstype = "Mikrobølger";
-            } else {
-                straalingstype = "Radiobølger";
-        }
-    };
+    if (f && ws && !wl) { return "wl-from-f-and-ws" };
+    if (f && wl && !ws) { return "ws-from-f-and-wl" };
 
-    // SJEKK FOR FEIL
-    if (feil === "frekvensperiodekonflikt") {
-        outputItems = ["Feil:", "Fyll enten periode, eller frekvens"];
-    } else if (feil === "treinputskonflikt") {
-        outputItems = ["Feil:", "Fyll maksimalt to felt"];
-    } else if (feil === "ingenfeil") {
-        // SJEKK OM TO INPUTS ELLER BARE FREKVENS OG PERIODE
-        if (inputtype === "toinputs") {
-            // SJEKK OK ELEKTROMAGNETISK STRÅLING ELLER IKKE
-            if (elektromagnetiskValg.checked) {
-                outputItems = [`Frekvens: ${frekvensOutput} Hz`, `Periode: ${periodeOutput} s`, `Bølgelengde: ${boelgelengdeOutput} m`, `Bølgefart: ${boelgefartOutput} m/s`,
-                    `Fotonenergi: ${fotonenergi} J` , `Strålingstype: ${straalingstype}`
-                ];
-            } else if (mekaniskValg.checked) {
-                outputItems = [`Frekvens: ${frekvensOutput} Hz`, `Periode: ${periodeOutput} s`, `Bølgelengde: ${boelgelengdeOutput} m`, `Bølgefart: ${boelgefartOutput} m/s`];
-            }
-        } else if (inputtype === "barefrekvensperiode") {
-            // SJEKK OK ELEKTROMAGNETISK STRÅLING ELLER IKKE
-            if (elektromagnetiskValg.checked) {
-                outputItems = [`Frekvens: ${frekvensOutput} Hz`, `Periode: ${periodeOutput} s`, `Fotonenergi: ${fotonenergi} J`, `Strålingstype: ${straalingstype}`];
-            } else if (mekaniskValg.checked) {
-                outputItems = [`Frekvens: ${frekvensOutput} Hz`, `Periode: ${periodeOutput} s`];
-            }
-        }
-    }
-    renderList(outputItems);
+    if (p && ws && !wl) { return "wl-from-p-and-ws" };
+    if (p && wl && !ws) { return "ws-from-p-and-wl" };
+
+    if (ws && wl) { return "f-and-p-from-wl-and-ws" };
+
 };
 
-function renderList(outputItems) {
+function isFilled(element) {
+    return element.value !== "";
+};
+
+function calculate(calcType, numberArray) {
+    let f, p, wl, ws = undefined;
+
+    switch (calcType) {
+        case "p-from-f":
+            [f] = numberArray;
+            p = 1 / f;
+            break;
+        case "f-from-p":
+            [p] = numberArray;
+            f = 1 / p;
+            break;
+        case "wl-from-f-and-ws":
+            [f, ws] = numberArray;
+            p = 1 / f;
+            wl = ws / f;
+            break;
+        case "ws-from-f-and-wl":
+            [f, wl] = numberArray;
+            p = 1 / f;
+            ws = f * wl;
+            break;
+        case "wl-from-p-and-ws":
+            [p, ws] = numberArray;
+            f = 1 / p;
+            wl = ws / f;
+            break;
+        case "ws-from-p-and-wl":
+            [p, wl] = numberArray;
+            f = 1 / p;
+            ws = f * wl;
+            break;
+        case "f-and-p-from-wl-and-ws":
+            [wl, ws] = numberArray;
+            f = ws / wl;
+            p = 1 / f;
+            break;
+    };
+    
+    prepareOutput(f, p, wl, ws);
+};
+
+function prepareOutput(f, p, wl, ws) {
+    let outputItems = [];
+
+    outputItems.push(`Frekvens: ${prepExpOutput(f, outputDecimals)} Hz`);
+    outputItems.push(`Periode: ${prepExpOutput(p, outputDecimals)} s`);
+
+    if (wl !== undefined && ws !== undefined) {
+        outputItems.push(`Bølgelengde: ${prepExpOutput(wl, outputDecimals)} m`);
+        outputItems.push(`Bølgefart: ${prepExpOutput(ws, outputDecimals)} m/s`);
+    };
+
+    if (emOption.checked) {
+        let radiationtype;
+        const photonenergy = plancksconstant * f;
+
+        if (f >= 3e19) {
+            radiationtype = "Gammastråling";
+        } else if (f >= 3e16) {
+            radiationtype = "Røntgenstråling";
+        } else if (f >= 7.5e14) {
+            radiationtype = "Ultrafiolett stråling";
+        } else if (f >= 4e14) {
+            radiationtype = "Synlig lys";
+        } else if (f >= 3e11) {
+            radiationtype = "Infrarød stråling";
+        } else if (f >= 3e8) {
+            radiationtype = "Mikrobølger";
+        } else {
+            radiationtype = "Radiobølger";
+        };
+
+        outputItems.push(`Fotonenergi: ${prepExpOutput(photonenergy, outputDecimals)} J`);
+        outputItems.push(`Strålingstype: ${radiationtype}`);
+    };
+
+    renderOutput(outputItems);
+};
+
+
+function renderOutput(outputItems) {
     resultsList.innerHTML = "";
     outputItems.forEach(item => {
         const li = document.createElement("li");
-        li.textContent = String(item).replace(".", ",");
+        li.textContent = item;
         resultsList.appendChild(li);
     });
+};
+
+function displayError(message) {
+    errorMessageContainer.classList.remove("hidden");
+    errorMessageText.textContent = message;
 };
