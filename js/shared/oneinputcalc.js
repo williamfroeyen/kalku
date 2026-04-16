@@ -1,4 +1,4 @@
-import { prepInput, rounding } from '../core/calcfunctions.js';
+import { prepInput, round } from '../core/calcfunctions.js';
 
 const inputElement = document.querySelector("#input1");
 const outputElement = document.querySelector("#output1");
@@ -38,6 +38,6 @@ inputElement.addEventListener("input", (e) => {
 
 function calculate(preppedNum) {
     const calculated = Function("x", `return ${formula}`)(preppedNum);
-    const finalString = rounding(calculated, outputDecimals);
+    const finalString = round(calculated, outputDecimals);
     outputElement.value = finalString;
 };

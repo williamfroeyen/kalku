@@ -68,13 +68,6 @@ function cleanString(input) {
     return toPeriod;
 };
 
-export function rounding(value, decimals) {
-    const factor = 10**decimals;
-    const roundedValue = Math.round((value + Number.EPSILON)*factor)/factor;
-    const finalString = String(roundedValue).replace(".", ",");
-    return finalString;
-};
-
 export function validateExponential(inputString) {
     const preppedString = inputString.replace(",", ".");
     const regexAllowedFormat = /^[0-9]+(\.[0-9]+)?([eE][-+]?[0-9]+)?$/;
@@ -91,6 +84,16 @@ export function validateExponential(inputString) {
     };
 };
 
+export function round(value, decimals) {
+    if (value === 0) {
+        return 0;
+    } else if (value > 10**15 || value < 10**(-decimals)) {
+        return String(value.toExponential(6)).replace(".", ",");
+    } else {
+        return rounding(value, decimals);
+    };
+};
+
 export function prepExpOutput(value, decimals, expDecimals) {
     if (value === 0) {
         return 0;
@@ -101,3 +104,9 @@ export function prepExpOutput(value, decimals, expDecimals) {
     };
 };
 
+function rounding(value, decimals) {
+    const factor = 10**decimals;
+    const roundedValue = Math.round((value + Number.EPSILON)*factor)/factor;
+    const finalString = String(roundedValue).replace(".", ",");
+    return finalString;
+};

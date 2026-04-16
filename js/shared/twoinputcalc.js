@@ -1,4 +1,4 @@
-import { prepInput, rounding } from '../core/calcfunctions.js';
+import { prepInput, round } from '../core/calcfunctions.js';
 
 const inputElement1 = document.querySelector("#input1");
 const inputElement2 = document.querySelector("#input2");
@@ -47,6 +47,6 @@ function errorCheck() {
 function calculate(numberArray) {
     const [input1, input2] = numberArray;
     const calculated = Function("input1", "input2", `return ${formula};`)(input1, input2);
-    const finalString = `${outputTextPrefix} ${rounding(calculated, outputDecimals)} ${outputUnit}`
+    const finalString = `${outputTextPrefix} ${round(calculated, outputDecimals)} ${outputUnit}`
     outputTextElement.textContent = finalString;
 };

@@ -1,4 +1,4 @@
-import { prepInput, rounding } from '../core/calcfunctions.js';
+import { prepInput, round } from '../core/calcfunctions.js';
 
 const inputElement = document.querySelector("#input1");
 const outputElement1 = document.querySelector("#output1");
@@ -30,8 +30,8 @@ inputElement.addEventListener("input", (e) => {
 
 function calculate(preppedNum) {
     const calculated = preppedNum * 6;
-    const outputValue1 = rounding(calculated, outputDecimals);
-    const outputValue2 = rounding(calculated / 10, outputDecimals);
+    const outputValue1 = round(calculated, outputDecimals);
+    const outputValue2 = round(calculated / 10, outputDecimals);
     outputElement1.value = outputValue1;
     outputElement2.value = outputValue2;
 };

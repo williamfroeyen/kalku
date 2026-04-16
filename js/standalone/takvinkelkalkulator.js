@@ -1,4 +1,4 @@
-import { rounding, prepInput } from '../core/calcfunctions.js';
+import { round, prepInput } from '../core/calcfunctions.js';
 
 const verticalHeight = document.querySelector("#loddretttakhoyde");
 const horizontalLength = document.querySelector("#vannretttaklengde");
@@ -90,7 +90,7 @@ function calcSlopeAngle(verticalNum, horizontalNum, slopedNum) {
 };
 
 function prepareOutput(resultArray) {
-    const roundedArray = resultArray.map(result => rounding(result, outputDecimals));
+    const roundedArray = resultArray.map(result => round(result, outputDecimals));
     const [verticalString, horizontalString, slopedString, slopeAngleDeg, mmpermeter, slopePercent] = roundedArray;
 
     let outputItems = [];

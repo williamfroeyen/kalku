@@ -1,4 +1,4 @@
-import { prepInput, rounding } from '../core/calcfunctions.js';
+import { prepInput, round } from '../core/calcfunctions.js';
 
 const inputElement1 = document.querySelector("#input1");
 const inputElement2 = document.querySelector("#input2");
@@ -43,6 +43,6 @@ function errorCheck(numberArray) {
 
 function calculate(input1, input2) {
     const calculated = Math.sqrt(input2**2 - input1**2);
-    const finalString = `Ukjent katet: ${rounding(calculated, outputDecimals)}`
+    const finalString = `Ukjent katet: ${round(calculated, outputDecimals)}`
     outputTextElement.textContent = finalString;
 };
