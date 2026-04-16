@@ -1,7 +1,12 @@
+import { prepExpOutput } from '../core/calcfunctions.js';
+
 const input1 = document.querySelector("#input1");
 const errorMessageContainer = document.querySelector("#errorMessageContainer");
 const errorMessageText = document.querySelector("#errorMessageText");
 const outputElement = document.querySelector("#output1");
+
+const outputDecimals = 5;
+const expDecimals = 6;
 
 input1.addEventListener("input", charCheck);
 
@@ -50,9 +55,7 @@ function calculateResult(inputValueString) {
     
     if (arrayNumbers.length === 2) {
         let result = (arrayNumbers[0] / arrayNumbers[1]) * 100;
-        result = Number(result.toPrecision(7));
-        result = String(result).replace(".", ",");
-        result = result + "%";
+        result = prepExpOutput(result, outputDecimals, expDecimals) + "%";
         outputElement.value = result;
     };
 };

@@ -36,6 +36,32 @@ export function prepInput(inputArray, negAllowed) {
     return numberArray;
 };
 
+export function prepDatasetInput(dataset) {
+    const datasetNoSpace = dataset.replace(/\s+/g, "");
+    const allowedChars = /^[0-9.,]+$/;
+    const isCharsAllowed = allowedChars.test(datasetNoSpace);
+
+    if (dataset === "") {
+        return false;
+    } else if (isCharsAllowed === false) {
+        return "invalidInput";
+    };
+
+    const datasetArray = datasetNoSpace.split(",");
+    const datasetNoEmptyStrings = datasetArray.filter(Boolean);
+    const datasetNumbers = datasetNoEmptyStrings.map(Number);
+
+    if (datasetNumbers.length === 0) {
+        return "noNumbers";
+    };
+
+    if (datasetNumbers.some(n => Number.isNaN(n))) {
+        return "invalidFormat"
+    };
+
+    return datasetNumbers;
+};
+
 function cleanString(input) {
     const noSpaces = input.replace(/\s+/g, "");
     const toPeriod = noSpaces.replace(/,/g, '.');
@@ -65,9 +91,11 @@ export function validateExponential(inputString) {
     };
 };
 
-export function prepExpOutput(value, decimals) {
-    if (value > 1_000_000 || value < 0.001) {
-        return String(value.toExponential(6)).replace(".", ",");
+export function prepExpOutput(value, decimals, expDecimals) {
+    if (value === 0) {
+        return 0;
+    } else if (value > 1_000_000 || value < 0.001) {
+        return String(value.toExponential(expDecimals)).replace(".", ",");
     } else {
         return rounding(value, decimals);
     };

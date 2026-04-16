@@ -10,6 +10,7 @@ const errorTxt = document.querySelector("#errorMessageText");
 
 const STEFAN = 5.670374419e-8;
 const outputDecimals = 5;
+const expDecimals = 6;
 
 tempinput.addEventListener("input", (e) => handleInput(e, "tempinput"));
 utstrinput.addEventListener("input", (e) => handleInput(e, "utstrinput"));
@@ -32,7 +33,7 @@ function handleInput(e, inputType) {
     
     if (preppedResult === "invalidFormat") {
         errorDiv.classList.remove("hidden");
-        errorTxt.textContent="Bare tall eller vitenskapelig e-notasjon er tillatt.";
+        errorTxt.textContent="Bare tall eller vitenskapelig e-notasjon er tillatt";
         return;
     };
 
@@ -52,7 +53,7 @@ function calculate(preppedNum, inputType) {
 };
 
 function output(calculated, inputType) {
-    const finalresult = prepExpOutput(calculated, outputDecimals);
+    const finalresult = prepExpOutput(calculated, outputDecimals, expDecimals);
 
     if (inputType === "tempinput") {
         utstroutput.value = finalresult;

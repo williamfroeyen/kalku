@@ -1,67 +1,62 @@
+import { prepDatasetInput, prepExpOutput } from '../core/calcfunctions.js';
+
 const userInput = document.querySelector("#textareastat");
 const outputTextElement = document.querySelector("#oneResultText");
 const errorMessageContainer = document.querySelector("#errorMessageContainer");
 const errorMessageText = document.querySelector("#errorMessageText");
 
-userInput.addEventListener("input", charCheck);
+const outputDecimals = 3;
+const expDecimals = 4;
 
-function charCheck() {
-    let inputValueString = String(userInput.value);
-    inputValueString = inputValueString.replace(/\s+/g, "");
-    const allowedChars = /^[0-9.,]+$/;
+userInput.addEventListener("input", handleInput);
 
-    const isCharsAllowed = allowedChars.test(inputValueString);
-    
-    if (isCharsAllowed === false && !!inputValueString) {
-        errorMessageContainer.classList.remove("hidden");
-        errorMessageText.textContent="Bare tall, komma og punktum er tillatt";
-    } else if (isCharsAllowed === true && !!inputValueString) {
-        errorMessageContainer.classList.add("hidden");
-        calculateResult(inputValueString);
-    } else {
-        errorMessageContainer.classList.add("hidden");
-        outputTextElement.textContent=`Median:`;
+function handleInput() {
+    errorMessageContainer.classList.add("hidden");
+    outputTextElement.textContent = "Median:";
+
+    const dataset = prepDatasetInput(userInput.value);
+
+    if (dataset === "invalidInput") {
+        displayError("Bare tall, komma og punktum er tillatt");
+        return;
+
+    } else if (dataset === "invalidFormat") {
+        displayError("Ugyldig tallformat (sjekk bruk av punktum/komma)");
+        return;
+
+    } else if (dataset === "noNumbers") {
+        displayError("Fyll feltet med tall");
+        return;
+
+    } else if (dataset) {
+        calculateResult(dataset);
     };
 };
 
-function calculateResult(inputValueString) {
-    const inputValueArray = inputValueString.split(",");
-    const arrayRemovedEmptyStrings = inputValueArray.filter(Boolean);
-    const arrayNumbers = arrayRemovedEmptyStrings.map(Number);
-    const arraySorted = arrayNumbers.sort((a, b) => a - b);
-    let medianValue = 0;
+function calculateResult(dataset) {
+    let sum = 0;
+    let medianValue;
 
-    if (arrayNumbers.length === 0) {
-        errorMessageContainer.classList.remove("hidden");
-        errorMessageText.textContent = "Fyll feltet med tall";
-        outputTextElement.textContent = "Median:";
-        return;
-    };
-    
-    if (arrayNumbers.some(n => Number.isNaN(n))) {
-        errorMessageContainer.classList.remove("hidden");
-        errorMessageText.textContent = "Ugyldig tallformat (sjekk bruk av punktum/komma)";
-        outputTextElement.textContent = "Median:";
-        return;
-    };
+    const datasetSorted = dataset.sort((a, b) => a - b);
 
-    if (arraySorted.length % 2 === 0) {
-        const middleArrayLongLength = Math.floor(arraySorted.length / 2);
+    if (dataset.length % 2 === 0) {
+        const middleArrayLongLength = Math.floor(dataset.length / 2);
         const middleArrayShortLength = middleArrayLongLength - 1;
-        const lowMidNum = Number(arraySorted[middleArrayShortLength]);
-        const highMidNum = Number(arraySorted[middleArrayLongLength]);
+        const lowMidNum = datasetSorted[middleArrayShortLength];
+        const highMidNum = datasetSorted[middleArrayLongLength];
         medianValue = (lowMidNum + highMidNum) / 2;
 
     } else {
-        const middleOfArray = Math.floor(arraySorted.length / 2);
-        medianValue = Number(arraySorted[middleOfArray]);
+        const middleOfArray = Math.floor(dataset.length / 2);
+        medianValue = datasetSorted[middleOfArray];
     };
 
-    if (medianValue > 100000000000) {
-        medianValue = medianValue.toExponential(4);
-    } else {
-        medianValue = Math.round((medianValue + Number.EPSILON)*10000)/10000;
-    };
-    outputTextElement.textContent = `Median: ${medianValue}`;
+    const result = prepExpOutput(medianValue, outputDecimals, expDecimals);
+    outputTextElement.textContent = `Median: ${result}`;
 };
 
+function displayError(errormsg) {
+    errorMessageContainer.classList.remove("hidden");
+    errorMessageText.textContent = errormsg;
+    outputTextElement.textContent = "Median:";
+};

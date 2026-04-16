@@ -10,6 +10,7 @@ const resultsList = document.querySelector("#resultsList");
 
 const plancksconstant = 6.62607e-34;
 const outputDecimals = 5;
+const expDecimals = 6;
 
 frequency.addEventListener("input", handleInput);
 period.addEventListener("input", handleInput);
@@ -36,26 +37,26 @@ function errorCheck(numberArray) {
     const wl = isFilled(wavelength);
     
     if (numberArray === "invalidInput") {
-        displayError("Bare tall, komma og punktum er tillatt.");
+        displayError("Bare tall, komma og punktum er tillatt");
         return false;
 
     } else if (numberArray === "tooManyPeriods") {
-        displayError("Kun ett komma eller punktum er tillatt.");
+        displayError("Kun ett komma eller punktum er tillatt");
         return false;
     };
     
     if (frequency.value === "0" || period.value === "0" || wavelength.value === "0" || wavespeed.value === "0") {
-        displayError("Verdiene kan ikke være lik 0.");
+        displayError("Verdiene kan ikke være lik 0");
         return;
     };
 
     if (f && p) {
-        displayError("Fyll enten frekvens, eller periode.");
+        displayError("Fyll enten frekvens, eller periode");
         return;
     };
 
     if (wl && ws && (f || p)) {
-        displayError("Fyll maksimalt to felt.");
+        displayError("Fyll maksimalt to felt");
         return;
     };
 
@@ -130,12 +131,12 @@ function calculate(calcType, numberArray) {
 function prepareOutput(f, p, wl, ws) {
     let outputItems = [];
 
-    outputItems.push(`Frekvens: ${prepExpOutput(f, outputDecimals)} Hz`);
-    outputItems.push(`Periode: ${prepExpOutput(p, outputDecimals)} s`);
+    outputItems.push(`Frekvens: ${prepExpOutput(f, outputDecimals, expDecimals)} Hz`);
+    outputItems.push(`Periode: ${prepExpOutput(p, outputDecimals, expDecimals)} s`);
 
     if (wl !== undefined && ws !== undefined) {
-        outputItems.push(`Bølgelengde: ${prepExpOutput(wl, outputDecimals)} m`);
-        outputItems.push(`Bølgefart: ${prepExpOutput(ws, outputDecimals)} m/s`);
+        outputItems.push(`Bølgelengde: ${prepExpOutput(wl, outputDecimals, expDecimals)} m`);
+        outputItems.push(`Bølgefart: ${prepExpOutput(ws, outputDecimals, expDecimals)} m/s`);
     };
 
     if (emOption.checked) {
@@ -158,7 +159,7 @@ function prepareOutput(f, p, wl, ws) {
             radiationtype = "Radiobølger";
         };
 
-        outputItems.push(`Fotonenergi: ${prepExpOutput(photonenergy, outputDecimals)} J`);
+        outputItems.push(`Fotonenergi: ${prepExpOutput(photonenergy, outputDecimals, expDecimals)} J`);
         outputItems.push(`Strålingstype: ${radiationtype}`);
     };
 

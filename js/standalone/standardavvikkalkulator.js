@@ -1,82 +1,70 @@
+import { prepDatasetInput, prepExpOutput } from '../core/calcfunctions.js';
+
 const userInput = document.querySelector("#textareastat");
-const stdavvikPopulasjonValg = document.querySelector("#stdavvikRadioElementPop");
-const stdavvikStikkproeveValg = document.querySelector("#stdavvikRadioElementStikk");
+const stdPopulationChoice = document.querySelector("#stdavvikRadioElementPop");
+const stdSampleChoice = document.querySelector("#stdavvikRadioElementStikk");
 const outputTextElement = document.querySelector("#oneResultText");
 const errorMessageContainer = document.querySelector("#errorMessageContainer");
 const errorMessageText = document.querySelector("#errorMessageText");
 
+const outputDecimals = 3;
+const expDecimals = 4;
 
-stdavvikStikkproeveValg.addEventListener("input", charCheck);
-stdavvikPopulasjonValg.addEventListener("input", charCheck);
-userInput.addEventListener("input", charCheck);
+stdPopulationChoice .addEventListener("input", handleInput);
+stdSampleChoice.addEventListener("input", handleInput);
+userInput.addEventListener("input", handleInput);
 
-function charCheck() {
-    let inputValueString = String(userInput.value);
-    inputValueString = inputValueString.replace(/\s+/g, "");
-    const allowedChars = /^[0-9.,]+$/;
+function handleInput() {
+    errorMessageContainer.classList.add("hidden");
+    outputTextElement.textContent = "Standardavvik:";
 
-    const isCharsAllowed = allowedChars.test(inputValueString);
-    
-    if (isCharsAllowed === false && !!inputValueString) {
-        errorMessageContainer.classList.remove("hidden");
-        errorMessageText.textContent="Bare tall, komma og punktum er tillatt";
-    } else if (isCharsAllowed === true && !!inputValueString) {
-        errorMessageContainer.classList.add("hidden");
-        calculateResult(inputValueString);
-    } else {
-        errorMessageContainer.classList.add("hidden");
-        outputTextElement.textContent=`Standardavvik:`;
+    const dataset = prepDatasetInput(userInput.value);
+
+    if (dataset === "invalidInput") {
+        displayError("Bare tall, komma og punktum er tillatt");
+        return;
+
+    } else if (dataset === "invalidFormat") {
+        displayError("Ugyldig tallformat (sjekk bruk av punktum/komma)");
+        return;
+
+    } else if (dataset === "noNumbers") {
+        displayError("Fyll feltet med tall");
+        return;
+
+    } else if (dataset && dataset.length > 1) {
+        calculateResult(dataset);
     };
 };
 
-function calculateResult(inputValueString) {
-    const inputValueArray = inputValueString.split(",");
-    const arrayRemovedEmptyStrings = inputValueArray.filter(Boolean);
-    const arrayNumbers = arrayRemovedEmptyStrings.map(Number);
-
+function calculateResult(dataset) {
     let sum = 0;
     let squareSum = 0;
     let standarddeviation = 0;
-
-    if (arrayNumbers.length === 0) {
-        errorMessageContainer.classList.remove("hidden");
-        errorMessageText.textContent = "Fyll feltet med tall";
-        outputTextElement.textContent = "Standardavvik:";
-        return;
-    } else if (arrayNumbers.length === 1) {
-        outputTextElement.textContent = "Standardavvik:";
-        return;
-    };
     
-    if (arrayNumbers.some(n => Number.isNaN(n))) {
-        errorMessageContainer.classList.remove("hidden");
-        errorMessageText.textContent = "Ugyldig tallformat (sjekk bruk av punktum/komma)";
-        outputTextElement.textContent = "Standardavvik:";
-        return;
-    };
-    
-    arrayNumbers.forEach((element) => {
+    dataset.forEach((element) => {
         sum += element;
     });
 
-    const theAverage = sum / arrayNumbers.length;
+    const theAverage = sum / dataset.length;
 
-    arrayNumbers.forEach((element) => {
+    dataset.forEach((element) => {
         squareSum += (element - theAverage)**2;
     });
 
-    if (stdavvikPopulasjonValg.checked) {
-        standarddeviation = Math.sqrt(squareSum / arrayNumbers.length);
+    if (stdPopulationChoice.checked) {
+        standarddeviation = Math.sqrt(squareSum / dataset.length);
 
-    } else if (stdavvikStikkproeveValg.checked) {
-        standarddeviation = Math.sqrt(squareSum / (arrayNumbers.length - 1));
-    }
-
-    if (standarddeviation > 100000) {
-        standarddeviation = standarddeviation.toExponential(4);
-    } else {
-        standarddeviation = Math.round((standarddeviation + Number.EPSILON)*1000)/1000;
+    } else if (stdSampleChoice.checked) {
+        standarddeviation = Math.sqrt(squareSum / (dataset.length - 1));
     };
-    outputTextElement.textContent = `Standardavvik: ${standarddeviation}`;
+
+    const result = prepExpOutput(standarddeviation, outputDecimals, expDecimals);
+    outputTextElement.textContent = `Standardavvik: ${result}`;
 };
 
+function displayError(errormsg) {
+    errorMessageContainer.classList.remove("hidden");
+    errorMessageText.textContent = errormsg;
+    outputTextElement.textContent = "Standardavvik:";
+};

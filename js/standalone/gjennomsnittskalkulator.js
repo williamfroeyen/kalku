@@ -1,61 +1,54 @@
+import { prepDatasetInput, prepExpOutput } from '../core/calcfunctions.js';
+
 const userInput = document.querySelector("#textareastat");
 const outputTextElement = document.querySelector("#oneResultText");
 const errorMessageContainer = document.querySelector("#errorMessageContainer");
 const errorMessageText = document.querySelector("#errorMessageText");
 
-userInput.addEventListener("input", charCheck);
+const outputDecimals = 3;
+const expDecimals = 4;
 
-function charCheck() {
-    let inputValueString = String(userInput.value);
-    inputValueString = inputValueString.replace(/\s+/g, "");
-    const allowedChars = /^[0-9.,]+$/;
+userInput.addEventListener("input", handleInput);
 
-    const isCharsAllowed = allowedChars.test(inputValueString);
-    
-    if (isCharsAllowed === false && !!inputValueString) {
-        errorMessageContainer.classList.remove("hidden");
-        errorMessageText.textContent="Bare tall, komma og punktum er tillatt";
-    } else if (isCharsAllowed === true && !!inputValueString) {
-        errorMessageContainer.classList.add("hidden");
-        calculateResult(inputValueString);
-    } else {
-        errorMessageContainer.classList.add("hidden");
-        outputTextElement.textContent=`Gjennomsnitt:`;
+function handleInput() {
+    errorMessageContainer.classList.add("hidden");
+    outputTextElement.textContent = "Gjennomsnitt:";
+
+    const dataset = prepDatasetInput(userInput.value);
+
+    if (dataset === "invalidInput") {
+        displayError("Bare tall, komma og punktum er tillatt");
+        return;
+
+    } else if (dataset === "invalidFormat") {
+        displayError("Ugyldig tallformat (sjekk bruk av punktum/komma)");
+        return;
+
+    } else if (dataset === "noNumbers") {
+        displayError("Fyll feltet med tall");
+        return;
+
+    } else if (dataset) {
+        calculateResult(dataset);
     };
 };
 
-function calculateResult(inputValueString) {
-    const inputValueArray = inputValueString.split(",");
-    const arrayRemovedEmptyStrings = inputValueArray.filter(Boolean);
-    const arrayNumbers = arrayRemovedEmptyStrings.map(Number);
-    let theAverage;
+function calculateResult(dataset) {
     let sum = 0;
 
-    if (arrayNumbers.length === 0) {
-        errorMessageContainer.classList.remove("hidden");
-        errorMessageText.textContent = "Fyll feltet med tall";
-        outputTextElement.textContent = "Gjennomsnitt:";
-        return;
-    };
-    
-    if (arrayNumbers.some(n => Number.isNaN(n))) {
-        errorMessageContainer.classList.remove("hidden");
-        errorMessageText.textContent = "Ugyldig tallformat (sjekk bruk av punktum/komma)";
-        outputTextElement.textContent = "Gjennomsnitt:";
-        return;
-    };
-    
-    arrayNumbers.forEach((element) => {
+    dataset.forEach((element) => {
         sum += element;
+        
     });
 
-    theAverage = sum / arrayNumbers.length;
+    const theAverage = sum / dataset.length;
 
-    if (theAverage > 100000000) {
-        theAverage = theAverage.toExponential(4);
-    } else {
-        theAverage = Math.round((theAverage + Number.EPSILON)*10000)/10000;
-    };
-    outputTextElement.textContent = `Gjennomsnitt: ${theAverage}`;
+    const result = prepExpOutput(theAverage, outputDecimals, expDecimals);
+    outputTextElement.textContent = `Gjennomsnitt: ${result}`;
 };
 
+function displayError(errormsg) {
+    errorMessageContainer.classList.remove("hidden");
+    errorMessageText.textContent = errormsg;
+    outputTextElement.textContent = "Gjennomsnitt:";
+};
