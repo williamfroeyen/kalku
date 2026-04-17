@@ -18,6 +18,16 @@ function inputEvent() {
     errorMessageContainer.classList.add("hidden");
     resultsList.innerHTML = "";
 
+    if (verticalHeight.value === "0" || horizontalLength.value === "0" || slopedLength.value === "0") {
+        displayError("Ingen av verdiene kan være 0");
+        return;
+    };
+
+    if (verticalHeight.value !== "" && horizontalLength.value !== "" && slopedLength.value !== "") {
+        displayError("Fyll maksimalt to felt");
+        return;
+    };
+
     if (verticalHeight.value === "" && horizontalLength.value !== "" && slopedLength.value !== "") {
         const numberArray = prepInput([horizontalLength, slopedLength]);
         if (errorCheck(numberArray)) calcVerticalHeight(numberArray);
@@ -29,18 +39,16 @@ function inputEvent() {
     } else if (verticalHeight.value !== "" && horizontalLength.value !== "" && slopedLength.value === "") {
         const numberArray = prepInput([verticalHeight, horizontalLength]);
         if (errorCheck(numberArray)) calcSlopedLength(numberArray);
-    } else if (verticalHeight.value !== "" && horizontalLength.value !== "" && slopedLength.value !== "") {
-        displayError("Fyll maksimalt to felt.");
     };
 };
 
 function errorCheck(numberArray) {
     if (numberArray === "invalidInput") {
-        displayError("Bare tall, komma og punktum er tillatt.");
+        displayError("Bare tall, komma og punktum er tillatt");
         return false;
 
     } else if (numberArray === "tooManyPeriods") {
-        displayError("Kun ett komma eller punktum er tillatt.");
+        displayError("Kun ett komma eller punktum er tillatt");
         return false;
     };
 
@@ -51,7 +59,7 @@ function calcVerticalHeight(numberArray) {
     const [horizontalNum, slopedNum] = numberArray;
 
     if (slopedNum <= horizontalNum) {
-        displayError("Skrå taklengde må være lengre enn vannrett lengde.");
+        displayError("Skrå taklengde må være lengre enn vannrett lengde");
         return;
     };
 
@@ -64,7 +72,7 @@ function calcHorizontalLength(numberArray) {
     const [verticalNum, slopedNum] = numberArray;
 
     if (slopedNum <= verticalNum) {
-        displayError("Skrå taklengde må være lengre enn høyden.");
+        displayError("Skrå taklengde må være lengre enn høyden");
         return;
     };
     
