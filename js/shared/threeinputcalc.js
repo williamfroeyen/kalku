@@ -1,4 +1,5 @@
 import { prepInput, round } from '../core/calcfunctions.js';
+import { formulaTable } from '../core/formulas.js';
 
 const inputElement1 = document.querySelector("#input1");
 const inputElement2 = document.querySelector("#input2");
@@ -6,18 +7,15 @@ const inputElement3 = document.querySelector("#input3");
 const outputTextElement = document.querySelector("#oneResultText");
 const errorDiv = document.querySelector("#errorMessageContainer");
 const errorTxt = document.querySelector("#errorMessageText");
-const formula = outputTextElement.dataset.formula;
-const outputDecimals = outputTextElement.dataset.decimals;
-const outputTextPrefix = outputTextElement.dataset.text;
-const noZero = outputTextElement.dataset.nozero;
-const outputUnit = outputTextElement.dataset.unit;
+const calcType = outputTextElement.dataset.calctype;
+const config = formulaTable[calcType];
 
 inputElement1.addEventListener("input", errorCheck);
 inputElement2.addEventListener("input", errorCheck);
 inputElement3.addEventListener("input", errorCheck);
 
 function errorCheck() {
-    outputTextElement.textContent = outputTextPrefix;
+    outputTextElement.textContent = config.prefix;
     errorDiv.classList.add("hidden");
     errorTxt.textContent="";
 
@@ -35,7 +33,7 @@ function errorCheck() {
     } else if (numberArray) {
         const [input1, input2, input3] = numberArray;
 
-        if (noZero === "true" && (input1 === 0 || input2 === 0 || input3 === 0)) {
+        if (config.noZero === true && (input1 === 0 || input2 === 0 || input3 === 0)) {
             errorDiv.classList.remove("hidden");
             errorTxt.textContent="Ingen av verdiene kan være lik 0.";
             
@@ -47,7 +45,7 @@ function errorCheck() {
 
 function calculate(numberArray) {
     const [input1, input2, input3] = numberArray;
-    const calculated = Function("input1", "input2", "input3", `return ${formula};`)(input1, input2, input3);
-    const finalString = `${outputTextPrefix} ${round(calculated, outputDecimals)} ${outputUnit}`
+    const calculated = config.formula(input1, input2, input3);
+    const finalString = `${config.prefix} ${round(calculated, config.decimals)} ${config.unit}`
     outputTextElement.textContent = finalString;
 };

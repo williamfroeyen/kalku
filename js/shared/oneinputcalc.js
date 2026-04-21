@@ -1,13 +1,12 @@
 import { prepInput, round } from '../core/calcfunctions.js';
+import { formulaTable } from '../core/formulas.js';
 
 const inputElement = document.querySelector("#input1");
 const outputElement = document.querySelector("#output1");
 const errorDiv = document.querySelector("#errorMessageContainer");
 const errorTxt = document.querySelector("#errorMessageText");
-const formula = inputElement.dataset.formula;
-const outputDecimals = inputElement.dataset.decimals;
-const noZero = inputElement.dataset.nozero;
-const negAllowed = inputElement.dataset.neg;
+const calcType = inputElement.dataset.calctype;
+const config = formulaTable[calcType];
 
 inputElement.addEventListener("input", (e) => {
     outputElement.value = "";
@@ -15,7 +14,7 @@ inputElement.addEventListener("input", (e) => {
     errorTxt.textContent="";
 
     const inputArray = [e.target];
-    const preppedArray = prepInput(inputArray, negAllowed);
+    const preppedArray = prepInput(inputArray, config.neg);
 
     if (preppedArray === "invalidInput") {
         errorDiv.classList.remove("hidden");
@@ -26,7 +25,7 @@ inputElement.addEventListener("input", (e) => {
         errorTxt.textContent="Kun ett komma eller punktum er tillatt.";
 
     } else if (preppedArray) {
-        if (noZero === "true" && preppedArray[0] === 0) {
+        if (config.noZero === true && preppedArray[0] === 0) {
             errorDiv.classList.remove("hidden");
             errorTxt.textContent="Verdien kan ikke være lik 0.";
             
@@ -37,7 +36,7 @@ inputElement.addEventListener("input", (e) => {
 });
 
 function calculate(preppedNum) {
-    const calculated = Function("x", `return ${formula}`)(preppedNum);
-    const finalString = round(calculated, outputDecimals);
+    const calculated =  config.formula(preppedNum); 
+    const finalString = round(calculated, config.decimals);
     outputElement.value = finalString;
 };
