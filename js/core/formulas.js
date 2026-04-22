@@ -34,7 +34,7 @@ export const formulaTable = {
     },
     "kvadratmeter-til-hektar": {
         formula: (x) => x * 0.0001,
-        decimals: 3,
+        decimals: 4, // Må være minst 4 for å unngå vitenskapelig notasjon ved 1 som input
         noZero: false,
         neg: false
     },
@@ -160,7 +160,12 @@ export const formulaTable = {
         isStandalone: true
     },
     "magnetisk-fluks-kalkulator": {
-        formula: (x, y, z) => x * y* Math.cos(z * Math.PI / 180),
+        formula: (x, y, z) => {
+            if (Math.abs(z % 180) === 90) {
+                return 0;
+            }
+            return x * y * Math.cos(z * Math.PI / 180);
+        },
         decimals: 3,
         noZero: false,
         neg: false,
@@ -452,10 +457,13 @@ export const formulaTable = {
 
     // MEKANIKK OG ARBEID
     "beregn-arbeid": {
-        formula: (x, y, z) => x * y * Math.cos(z * Math.PI / 180),
+        formula: (x, y, z) => {
+            if (Math.abs(z % 180) === 90) {
+                return 0;
+            }
+            return x * y * Math.cos(z * Math.PI / 180);
+        },
         decimals: 3,
-        noZero: false,
-        neg: false,
         unit: "J",
         prefix: "Arbeid:"
     },
@@ -574,7 +582,7 @@ export const formulaTable = {
     },
     "joule-til-wattimer": {
         formula: (x) => x / 3600,
-        decimals: 3,
+        decimals: 4, // Må være minst 4 for å unngå vitenskapelig notasjon ved 1 som input
         noZero: false,
         neg: false
     },

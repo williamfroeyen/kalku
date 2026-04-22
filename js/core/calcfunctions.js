@@ -1,10 +1,3 @@
-export function prepOut(num) {
-    return new Intl.NumberFormat('nb-NO', { 
-        minimumFractionDigits: 0, 
-        maximumFractionDigits: 2 
-    }).format(num);
-}
-
 export function prepInput(inputArray, negAllowed) {
     let regexAllowedChars = "";
 
@@ -85,28 +78,46 @@ export function validateExponential(inputString) {
 };
 
 export function round(value, decimals) {
-    if (value === 0) {
-        return 0;
-    } else if (value > 10**15 || value < 10**(-decimals)) {
-        return String(value.toExponential(6)).replace(".", ",");
-    } else {
-        return rounding(value, decimals);
+    const numAbs = Math.abs(value);
+
+    if (numAbs === 0 || numAbs < 10**(-15)) {
+        return "0";
     };
+    
+    if ((numAbs > 10**12 || numAbs < 10**(-decimals) || numAbs < 10**(-4))) {
+        return String(value.toExponential(6)).replace(".", ",");
+    };
+
+    return prepOut(value, decimals);
 };
 
 export function prepExpOutput(value, decimals, expDecimals) {
-    if (value === 0) {
-        return 0;
-    } else if (value > 1_000_000 || value < 0.001) {
-        return String(value.toExponential(expDecimals)).replace(".", ",");
-    } else {
-        return rounding(value, decimals);
+    const numAbs = Math.abs(value);
+
+    if (numAbs === 0 || numAbs < 10**(-15)) {
+        return "0";
     };
+    
+    if ((numAbs > 10**9 || numAbs < 10**(-decimals) || numAbs < 10**(-3))) {
+        return String(value.toExponential(expDecimals)).replace(".", ",");
+    };
+
+    return prepOut(value, decimals);
 };
 
-function rounding(value, decimals) {
-    const factor = 10**decimals;
-    const roundedValue = Math.round((value + Number.EPSILON)*factor)/factor;
-    const finalString = String(roundedValue).replace(".", ",");
-    return finalString;
+export function prepOut(value, decimals) {
+    let correctedValue;
+    if (value >= 0) {
+        correctedValue = value + Number.EPSILON;
+    } else {
+        correctedValue = value - Number.EPSILON;
+    };
+
+    const formatter = new Intl.NumberFormat('nb-NO', { 
+        minimumFractionDigits: 0, 
+        maximumFractionDigits: decimals
+    });
+
+    const formattedNum = formatter.format(correctedValue);
+    return String(formattedNum);
 };
