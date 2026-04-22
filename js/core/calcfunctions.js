@@ -80,7 +80,7 @@ export function validateExponential(inputString) {
 export function round(value, decimals) {
     const numAbs = Math.abs(value);
 
-    if (numAbs === 0 || numAbs < 10**(-15)) {
+    if (numAbs === 0) {
         return "0";
     };
     
@@ -94,7 +94,7 @@ export function round(value, decimals) {
 export function prepExpOutput(value, decimals, expDecimals) {
     const numAbs = Math.abs(value);
 
-    if (numAbs === 0 || numAbs < 10**(-15)) {
+    if (numAbs === 0) {
         return "0";
     };
     
