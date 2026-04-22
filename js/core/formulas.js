@@ -264,7 +264,12 @@ export const formulaTable = {
 
     // HELSE
     "bmi-kalkulator": {
-        isStandalone: true
+        formula: (x, y) => y / ((x / 100)**2),
+        decimals: 1,
+        noZero: true,
+        neg: false,
+        unit: "",
+        prefix: "BMI:"
     },
     "kcal-til-kilojoule": {
         formula: (x) => x * 4.184,
